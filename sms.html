@@ -8,22 +8,24 @@
   <link rel="icon" href="./assets/immense-air-logo.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <!-- Header -->
+  <!-- Top Navigation -->
   <header class="site-header" id="siteHeader">
     <div class="header-inner">
       <a href="./index.html#top" class="brand-logo" aria-label="Immense Air Home">
         <img src="./assets/immense-air-logo.jpg" alt="Immense Air Logo" class="brand-logo-img" />
       </a>
-      <nav class="desktop-nav" aria-label="Primary Navigation">
+
+      <nav class="desktop-nav" aria-label="Main Navigation">
         <a href="./index.html#top" class="nav-link">Home</a>
         <a href="./products.html" class="nav-link">Products</a>
         <a href="./index.html#how-it-works" class="nav-link">How it works</a>
         <a href="./index.html#faqs" class="nav-link">FAQs</a>
       </nav>
+
       <div class="header-actions">
         <a href="./contact.html" class="nav-cta">Contact Us</a>
         <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu" aria-expanded="false">
@@ -38,6 +40,8 @@
         </button>
       </div>
     </div>
+
+    <!-- Mobile Dropdown Menu -->
     <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
       <a href="./index.html#top" class="mobile-nav-link">Home</a>
       <a href="./products.html" class="mobile-nav-link">Products</a>
@@ -47,309 +51,522 @@
     </div>
   </header>
 
-  <main>
-    <!-- SMS Hero -->
-    <section class="products-hero-section">
+  <main id="top">
+    <!-- Hero Section (Home-Style Interactive Phone + Zig-Zag Popout Cards) -->
+    <section class="hero-section">
       <div class="container">
-        <div class="products-hero-card">
+        <div class="hero-card" id="heroCard">
           <div class="hero-grid-pattern" aria-hidden="true"></div>
           <div class="hero-glow hero-glow--blue" aria-hidden="true"></div>
           <div class="hero-glow hero-glow--orange" aria-hidden="true"></div>
 
-          <div class="products-hero-inner">
-            <div class="hero-badge">
-              <span class="badge-dot" aria-hidden="true"></span>
-              <span>IMMENSE AIR BULK SMS SUITE</span>
+          <div class="hero-grid">
+            <div class="hero-content">
+              <div class="hero-badge">
+                <span class="badge-dot" aria-hidden="true"></span>
+                <span>IMMENSE AIR BULK SMS</span>
+              </div>
+
+              <h1 class="hero-title" id="smsHeroTitle">
+                <span class="title-primary">Reach Every Phone</span>
+                <span class="title-accent">In Under 3 Seconds.</span>
+              </h1>
+
+              <p class="hero-subtitle">
+                High-deliverability DLT-compliant Promotional, Transactional, OTP, and Personalized SMS campaigns with direct operator connectivity.
+              </p>
+
+              <div class="sms-hero-stats">
+                <div class="sms-stat-chip">
+                  <strong>99.9%</strong>
+                  <span>DLT Delivery</span>
+                </div>
+                <div class="sms-stat-chip">
+                  <strong>&lt; 2 sec</strong>
+                  <span>OTP Latency</span>
+                </div>
+                <div class="sms-stat-chip">
+                  <strong>15 Min</strong>
+                  <span>Template Setup</span>
+                </div>
+              </div>
             </div>
-            <h1 class="products-hero-title">
-              <span class="title-primary">Bulk SMS Built for</span>
-              <span class="title-accent">Speed &amp; 99.9% Delivery.</span>
-            </h1>
-            <p class="products-hero-sub">
-              Reach every mobile user across India in under 3 seconds with DLT-compliant Promotional, Transactional, OTP, and Personalized SMS routes.
+
+            <div class="hero-visual">
+              <div class="phone-stage">
+                <!-- Left Popout Card -->
+                <div class="popout-stack popout-stack--left" id="smsPopoutLeft">
+                  <div class="popout-card popout-card--left">
+                    <span class="popout-connector" aria-hidden="true"></span>
+                    <div class="popout-kicker" id="smsPop1Kicker">TRAI DLT Ready</div>
+                    <div class="popout-title" id="smsPop1Title">9 AM – 9 PM Window</div>
+                    <p class="popout-desc" id="smsPop1Desc">Automatic DND scrubbing &amp; high-volume promotional blast.</p>
+                  </div>
+                </div>
+
+                <!-- Center Phone Mockup -->
+                <div class="phone-mockup">
+                  <div class="phone-screen">
+                    <div class="phone-notch" aria-hidden="true"></div>
+                    <div class="phone-statusbar">
+                      <span>9:41</span>
+                      <span class="statusbar-icons">5G · 100%</span>
+                    </div>
+
+                    <div class="phone-chat-header">
+                      <div class="chat-brand-left">
+                        <span class="chat-back" aria-hidden="true">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="19" y1="12" x2="5" y2="12" />
+                            <polyline points="12 19 5 12 12 5" />
+                          </svg>
+                        </span>
+                        <div class="chat-avatar">
+                          <img src="./assets/immense-air-logo.jpg" alt="Immense Air" class="chat-avatar-img" />
+                        </div>
+                        <div class="chat-brand-meta">
+                          <div class="chat-brand-name">
+                            <span id="smsPhoneSender">AX-IMMAIR-P</span>
+                          </div>
+                          <div class="chat-brand-sub" id="smsPhoneSub">6-Char DLT Sender ID</div>
+                        </div>
+                      </div>
+                      <span class="chat-more-dots" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                          <circle cx="12" cy="5.5" r="1.75" />
+                          <circle cx="12" cy="12" r="1.75" />
+                          <circle cx="12" cy="18.5" r="1.75" />
+                        </svg>
+                      </span>
+                    </div>
+
+                    <div class="phone-preview-body" id="smsPhoneBody">
+                      <div class="sms-chat-wrap">
+                        <div class="sms-time-chip" id="smsPhoneTime">Today · 10:30 AM</div>
+                        <div class="sms-bubble" id="smsPhoneBubble">
+                          Festive vibes are here with Immense Air! Get flat 25% OFF on your next order. Use code <strong>FEST25</strong><br />👉 <span class="sms-link">immenseair.in/offers</span>
+                        </div>
+                        <div class="sms-meta-bar" id="smsPhoneMeta">
+                          <span>✓ Delivered in 2.1s</span>
+                          <span>DLT Verified</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="phone-input-bar">
+                      <span class="input-placeholder">Sender can't accept replies</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Right Popout Cards -->
+                <div class="popout-stack popout-stack--right" id="smsPopoutRight">
+                  <div class="popout-card">
+                    <span class="popout-connector" aria-hidden="true"></span>
+                    <div class="popout-kicker" id="smsPopBadgeKicker">6-Char Sender ID</div>
+                    <div class="popout-title" id="smsPopBadgeTitle">AX-IMMAIR-P</div>
+                    <p class="popout-desc" id="smsPopBadgeDesc">Your verified brand header on every message.</p>
+                  </div>
+
+                  <div class="popout-card">
+                    <span class="popout-connector" aria-hidden="true"></span>
+                    <div class="popout-kicker" id="smsPop2Kicker">Click Tracking</div>
+                    <div class="popout-title" id="smsPop2Title">Short Links &amp; CTR</div>
+                    <p class="popout-desc" id="smsPop2Desc">Track clicks, conversions &amp; live delivery reports.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive 4-Type SMS Switcher Tabs -->
+          <div class="phone-tabs" id="smsHeroTabs" role="tablist" aria-label="Bulk SMS Types">
+            <button type="button" class="phone-tab active" data-sms-type="promotional" role="tab" aria-selected="true">Promotional</button>
+            <button type="button" class="phone-tab" data-sms-type="transactional" role="tab" aria-selected="false">Transactional</button>
+            <button type="button" class="phone-tab" data-sms-type="otp" role="tab" aria-selected="false">OTP SMS</button>
+            <button type="button" class="phone-tab" data-sms-type="personalized" role="tab" aria-selected="false">Personalized</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SMS Capabilities Ticker -->
+    <section class="ticker-section" aria-label="SMS Features">
+      <div class="ticker-track">
+        <div class="ticker-group">
+          <a href="#sms-types" class="ticker-item">Promotional SMS</a>
+          <a href="#sms-types" class="ticker-item">Transactional SMS</a>
+          <a href="#sms-types" class="ticker-item">OTP SMS (&lt;2s)</a>
+          <a href="#sms-types" class="ticker-item">Personalized SMS</a>
+          <a href="#sms-types" class="ticker-item">DLT Chain Ready</a>
+          <a href="#sms-types" class="ticker-item">HTTP &amp; SMPP API</a>
+          <a href="#sms-types" class="ticker-item">Regional Unicode</a>
+        </div>
+        <div class="ticker-group" aria-hidden="true">
+          <a href="#sms-types" class="ticker-item">Promotional SMS</a>
+          <a href="#sms-types" class="ticker-item">Transactional SMS</a>
+          <a href="#sms-types" class="ticker-item">OTP SMS (&lt;2s)</a>
+          <a href="#sms-types" class="ticker-item">Personalized SMS</a>
+          <a href="#sms-types" class="ticker-item">DLT Chain Ready</a>
+          <a href="#sms-types" class="ticker-item">HTTP &amp; SMPP API</a>
+          <a href="#sms-types" class="ticker-item">Regional Unicode</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive SMS Solutions Deck (Matches Home Industries Section) -->
+    <section class="industries-section" id="sms-types">
+      <div class="container">
+        <div class="section-header-center">
+          <div class="section-pill">4 CORE SMS SOLUTIONS</div>
+          <h2 class="section-title">Choose the right SMS route for every campaign</h2>
+          <p class="section-subtitle">
+            Click any SMS type below to explore real message templates, DLT rules, and high-converting use cases.
+          </p>
+        </div>
+
+        <div class="industries-card">
+          <aside class="industries-sidebar">
+            <div class="industries-tabs" role="tablist" aria-label="SMS Route Types">
+              <button type="button" class="industry-tab active" data-sms-deck="promotional" role="tab" aria-selected="true">
+                <span class="industry-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </span>
+                <span>Promotional SMS</span>
+              </button>
+              <button type="button" class="industry-tab" data-sms-deck="transactional" role="tab" aria-selected="false">
+                <span class="industry-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                </span>
+                <span>Transactional SMS</span>
+              </button>
+              <button type="button" class="industry-tab" data-sms-deck="otp" role="tab" aria-selected="false">
+                <span class="industry-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                </span>
+                <span>OTP SMS</span>
+              </button>
+              <button type="button" class="industry-tab" data-sms-deck="personalized" role="tab" aria-selected="false">
+                <span class="industry-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </span>
+                <span>Personalized SMS</span>
+              </button>
+            </div>
+          </aside>
+
+          <div class="industries-stage" id="smsDeckStage" aria-live="polite">
+            <div class="sms-deck-grid" id="smsDeckGrid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Bento Summary (Matches Home Style) -->
+    <section class="products-section" id="sms-features">
+      <div class="container">
+        <div class="section-header-center">
+          <div class="section-pill">WHY IMMENSE AIR SMS</div>
+          <h2 class="section-title">Built for enterprises, agencies &amp; developers</h2>
+          <p class="section-subtitle">
+            Everything you need to launch, automate, and track millions of SMS messages effortlessly.
+          </p>
+        </div>
+
+        <div class="products-bento-grid">
+          <!-- Featured Left Card -->
+          <div class="product-card product-card--dark product-bento-featured">
+            <div class="product-card-top">
+              <div class="product-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                </svg>
+              </div>
+              <span class="bento-badge-pill">99.9% Uptime</span>
+            </div>
+            <div class="product-bento-body">
+              <h3 class="product-title">Direct Operator &amp; DLT Routing</h3>
+              <p class="product-desc">
+                Multi-operator direct binds across Jio, Airtel, Vi &amp; BSNL with automatic PE-TM chain hashing, smart retry failover, and real-time DLR webhooks.
+              </p>
+              <div class="feature-tags">
+                <span>HTTP &amp; SMPP v3.4</span>
+                <span>15-Min DLT Setup</span>
+                <span>Live DLR Logs</span>
+              </div>
+              <div class="bento-mini-metrics">
+                <div class="bento-metric-box">
+                  <strong>5,000+</strong>
+                  <span>TPS Capacity</span>
+                </div>
+                <div class="bento-metric-box">
+                  <strong>&lt; 2s</strong>
+                  <span>OTP Delivery</span>
+                </div>
+                <div class="bento-metric-box">
+                  <strong>24×7</strong>
+                  <span>Support</span>
+                </div>
+              </div>
+            </div>
+            <a href="./contact.html" class="bento-cta-btn">
+              <span>Get SMS Demo &amp; Pricing</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Middle Column -->
+          <div class="product-bento-col">
+            <div class="product-card product-card--light">
+              <div class="product-card-top">
+                <div class="product-icon-box product-icon-box--orange">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                  </svg>
+                </div>
+                <span class="bento-status-tag">Promotional</span>
+              </div>
+              <h3 class="product-title">Smart DND &amp; Link Tracking</h3>
+              <p class="product-desc">
+                Auto-scrub DND numbers, schedule 9 AM–9 PM blasts, and track every link click in real time.
+              </p>
+              <div class="feature-tags feature-tags--light">
+                <span>DND Scrubbing</span>
+                <span>CTR Analytics</span>
+              </div>
+            </div>
+
+            <div class="product-card product-card--dark">
+              <div class="product-card-top">
+                <div class="product-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  </svg>
+                </div>
+                <span class="bento-status-tag bento-status-tag--dark">OTP &amp; 2FA</span>
+              </div>
+              <h3 class="product-title">Priority OTP Failover</h3>
+              <p class="product-desc">
+                Sub-2-second OTP delivery with instant backup carrier switching if any operator slows down.
+              </p>
+              <div class="feature-tags">
+                <span>&lt; 2s Delivery</span>
+                <span>24×7 DND Route</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="product-bento-col">
+            <div class="product-card product-card--dark">
+              <div class="product-card-top">
+                <div class="product-icon-box product-icon-box--orange">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                  </svg>
+                </div>
+                <span class="bento-status-tag bento-status-tag--dark">Transactional</span>
+              </div>
+              <h3 class="product-title">24×7 Order &amp; Alert APIs</h3>
+              <p class="product-desc">
+                Trigger instant invoices, dispatch updates, and banking alerts to DND &amp; Non-DND users.
+              </p>
+              <div class="feature-tags">
+                <span>Alpha Header</span>
+                <span>CRM Webhooks</span>
+              </div>
+            </div>
+
+            <div class="product-card product-card--light">
+              <div class="product-card-top">
+                <div class="product-icon-box product-icon-box--orange">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                  </svg>
+                </div>
+                <span class="bento-status-tag">Personalized</span>
+              </div>
+              <h3 class="product-title">Dynamic {#var#} &amp; Regional</h3>
+              <p class="product-desc">
+                Merge customer names, coupon codes &amp; due dates from Excel/CSV in English or Indian languages.
+              </p>
+              <div class="feature-tags feature-tags--light">
+                <span>CSV Merge</span>
+                <span>Unicode SMS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SMS FAQs (Matches Home Split-Stage FAQ) -->
+    <section class="faq-section" id="faqs">
+      <div class="container">
+        <div class="faq-split-grid">
+          <div class="faq-left-panel">
+            <div class="section-pill">SMS FAQS</div>
+            <h2 class="faq-split-title">Bulk SMS Questions? Answered.</h2>
+            <p class="faq-split-sub">
+              Everything you need to know about Promotional, Transactional, OTP, and Personalized SMS on Immense Air.
             </p>
 
-            <div class="products-filter-bar" role="navigation" aria-label="SMS Types">
-              <a href="#sms-promotional" class="product-filter-btn active">Promotional SMS</a>
-              <a href="#sms-transactional" class="product-filter-btn">Transactional SMS</a>
-              <a href="#sms-otp" class="product-filter-btn">OTP SMS</a>
-              <a href="#sms-personalized" class="product-filter-btn">Personalized SMS</a>
+            <div class="faq-support-card">
+              <div class="faq-support-pill">DLT &amp; API ONBOARDING</div>
+              <h3>Need help with DLT registration or SMPP?</h3>
+              <p>Our onboarding team helps you register Entity ID, Sender Headers, and Templates in 15 minutes.</p>
+              <a href="./contact.html" class="faq-support-btn">
+                <span>Talk to SMS Specialist</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="faq-list">
+            <div class="faq-card is-open">
+              <button type="button" class="faq-question" aria-expanded="true">
+                <span class="faq-q-left">
+                  <span class="faq-num">01</span>
+                  <span class="faq-q-title">What is the difference between Promotional and Transactional SMS?</span>
+                </span>
+                <span class="faq-toggle-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Promotional SMS is used for marketing offers and delivers between 9:00 AM and 9:00 PM to Non-DND numbers. Transactional &amp; Service SMS delivers 24×7 to both DND and Non-DND numbers for order alerts, OTPs, and customer updates.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-card">
+              <button type="button" class="faq-question" aria-expanded="false">
+                <span class="faq-q-left">
+                  <span class="faq-num">02</span>
+                  <span class="faq-q-title">How fast are OTP SMS delivered on Immense Air?</span>
+                </span>
+                <span class="faq-toggle-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Our dedicated OTP routes deliver in under 2 seconds across all major Indian telecom operators, with automatic multi-carrier failover so logins and payments never stall.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-card">
+              <button type="button" class="faq-question" aria-expanded="false">
+                <span class="faq-q-left">
+                  <span class="faq-num">03</span>
+                  <span class="faq-q-title">How does Personalized SMS work with Excel or API?</span>
+                </span>
+                <span class="faq-toggle-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Simply upload a CSV/Excel sheet with columns like Name, Coupon, or Due Date and map them to your DLT {#var#} placeholders — or pass variables directly via our REST API in English or regional Unicode languages.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-card">
+              <button type="button" class="faq-question" aria-expanded="false">
+                <span class="faq-q-left">
+                  <span class="faq-num">04</span>
+                  <span class="faq-q-title">Do you provide HTTP REST API and SMPP connectivity?</span>
+                </span>
+                <span class="faq-toggle-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes! You get plug-and-play HTTP/JSON REST APIs, webhook DLRs, and high-throughput SMPP v3.4/v5.0 binds with full TRAI PE-TM chain compliance.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 4 SMS Solutions Grid -->
-    <section class="subpage-content-section">
-      <div class="container">
-        <div class="sms-solutions-grid">
-          <!-- 01. Promotional SMS -->
-          <article class="product-detail-card product-detail-card--dark" id="sms-promotional">
-            <div>
-              <div class="product-card-head">
-                <div class="product-card-brand">
-                  <div class="product-card-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                    </svg>
-                  </div>
-                  <h2 class="product-card-title">Promotional SMS</h2>
-                </div>
-                <span class="product-card-badge">01 · Marketing &amp; Offers</span>
-              </div>
-              <p class="product-card-desc">
-                Drive instant sales, festive offers, store openings, and lead-generation campaigns to targeted audiences with automatic DND scrubbing.
+    <!-- Footer Band -->
+    <div class="bottom-band">
+      <footer class="site-footer">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand-col">
+              <a href="./index.html#top" class="footer-brand-link" aria-label="Immense Air Home">
+                <img src="./assets/immense-air-logo.jpg" alt="Immense Air" class="footer-logo-img" />
+              </a>
+              <p class="footer-brand-desc">
+                Enterprise CPaaS &amp; omnichannel messaging platform built for high-deliverability Indian &amp; global campaigns.
               </p>
-              <ul class="product-bullets">
-                <li>Automatic TRAI DND filtering (9:00 AM – 9:00 PM delivery window)</li>
-                <li>High-volume bulk upload via Excel/CSV or instant HTTP API</li>
-                <li>Short clickable links with real-time CTR &amp; campaign analytics</li>
-              </ul>
-            </div>
-            <div class="product-card-footer">
-              <div class="feature-tags">
-                <span>DND Scrubbing</span>
-                <span>Link Tracking</span>
-                <span>High Volume</span>
-              </div>
-              <a href="./contact.html" class="btn-primary-orange">
-                <span>Launch Promotional</span>
+              <a href="./contact.html" class="footer-contact-pill">
+                <span>support@immenseair.in</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="5" y1="12" x2="19" y2="12" />
                   <polyline points="12 5 19 12 12 19" />
                 </svg>
               </a>
             </div>
-          </article>
 
-          <!-- 02. Transactional SMS -->
-          <article class="product-detail-card product-detail-card--light" id="sms-transactional">
-            <div>
-              <div class="product-card-head">
-                <div class="product-card-brand">
-                  <div class="product-card-icon product-card-icon--orange">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                      <polyline points="14 2 14 8 20 8" />
-                      <line x1="16" y1="13" x2="8" y2="13" />
-                      <line x1="16" y1="17" x2="8" y2="17" />
-                    </svg>
-                  </div>
-                  <h2 class="product-card-title">Transactional SMS</h2>
-                </div>
-                <span class="product-card-badge">02 · 24×7 Alerts</span>
-              </div>
-              <p class="product-card-desc">
-                Deliver critical order updates, payment receipts, dispatch alerts, and appointment confirmations round the clock — including DND numbers.
-              </p>
-              <ul class="product-bullets">
-                <li>24×7 instant delivery to both DND &amp; Non-DND subscribers</li>
-                <li>Custom 6-character Alpha Sender ID (e.g. AX-IMMAIR-T)</li>
-                <li>Direct operator priority routing with live DLR webhooks</li>
+            <div class="footer-col">
+              <h4 class="footer-col-title">Products</h4>
+              <ul class="footer-col-list">
+                <li><a href="./sms.html" class="footer-link">Bulk SMS</a></li>
+                <li><a href="./products.html?channel=rcs" class="footer-link">RCS Messaging</a></li>
+                <li><a href="./products.html?channel=whatsapp" class="footer-link">Meta WhatsApp API</a></li>
+                <li><a href="./products.html?channel=obd" class="footer-link">OBD Voice Blast</a></li>
+                <li><a href="./products.html?channel=ivr" class="footer-link">Cloud IVR</a></li>
+                <li><a href="./products.html?channel=smpp" class="footer-link">SMPP Gateway</a></li>
               </ul>
             </div>
-            <div class="product-card-footer">
-              <div class="feature-tags feature-tags--light">
-                <span>24×7 Delivery</span>
-                <span>DND Allowed</span>
-                <span>Alpha Sender ID</span>
-              </div>
-              <a href="./contact.html" class="btn-primary-orange">
-                <span>Setup Transactional</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg>
-              </a>
-            </div>
-          </article>
 
-          <!-- 03. OTP SMS -->
-          <article class="product-detail-card product-detail-card--light" id="sms-otp">
-            <div>
-              <div class="product-card-head">
-                <div class="product-card-brand">
-                  <div class="product-card-icon product-card-icon--orange">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                    </svg>
-                  </div>
-                  <h2 class="product-card-title">OTP SMS</h2>
-                </div>
-                <span class="product-card-badge">03 · &lt; 2 Sec Delivery</span>
-              </div>
-              <p class="product-card-desc">
-                Ultra-low-latency verification codes for app logins, 2FA security, wallet transactions, and KYC onboarding with zero drop-offs.
-              </p>
-              <ul class="product-bullets">
-                <li>Sub-2-second delivery via dedicated high-priority OTP routes</li>
-                <li>Multi-operator automatic failover if primary carrier lags</li>
-                <li>Easy REST HTTP API &amp; SMPP v3.4 / v5.0 integration</li>
+            <div class="footer-col">
+              <h4 class="footer-col-title">Platform</h4>
+              <ul class="footer-col-list">
+                <li><a href="./index.html#top" class="footer-link">Home</a></li>
+                <li><a href="./products.html" class="footer-link">All Products</a></li>
+                <li><a href="./index.html#industries" class="footer-link">Industries</a></li>
+                <li><a href="./index.html#how-it-works" class="footer-link">How it works</a></li>
+                <li><a href="./index.html#faqs" class="footer-link">FAQs</a></li>
               </ul>
             </div>
-            <div class="product-card-footer">
-              <div class="feature-tags feature-tags--light">
-                <span>&lt; 2s Latency</span>
-                <span>Auto Failover</span>
-                <span>REST &amp; SMPP</span>
-              </div>
-              <a href="./contact.html" class="btn-primary-orange">
-                <span>Get OTP API</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg>
-              </a>
-            </div>
-          </article>
 
-          <!-- 04. Personalized SMS -->
-          <article class="product-detail-card product-detail-card--dark" id="sms-personalized">
-            <div>
-              <div class="product-card-head">
-                <div class="product-card-brand">
-                  <div class="product-card-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                      <circle cx="12" cy="7" r="4" />
-                    </svg>
-                  </div>
-                  <h2 class="product-card-title">Personalized SMS</h2>
-                </div>
-                <span class="product-card-badge">04 · Dynamic Variables</span>
-              </div>
-              <p class="product-card-desc">
-                Send tailored messages with each customer's name, unique coupon code, EMI due date, or invoice amount in English or regional languages.
-              </p>
-              <ul class="product-bullets">
-                <li>1-click Excel/CSV column mapping into DLT {#var#} placeholders</li>
-                <li>Full Unicode support (Hindi, Marathi, Tamil, Gujarati &amp; more)</li>
-                <li>Higher open &amp; conversion rates with custom per-user links</li>
+            <div class="footer-col">
+              <h4 class="footer-col-title">Legal &amp; Support</h4>
+              <ul class="footer-col-list">
+                <li><a href="./contact.html" class="footer-link">Contact Us</a></li>
+                <li><a href="./terms.html" class="footer-link">Terms &amp; Conditions</a></li>
+                <li><a href="./privacy.html" class="footer-link">Privacy Policy</a></li>
+                <li><a href="./contact.html" class="footer-link">Book a Demo</a></li>
               </ul>
-            </div>
-            <div class="product-card-footer">
-              <div class="feature-tags">
-                <span>Dynamic {#var#}</span>
-                <span>Regional Unicode</span>
-                <span>Excel / API</span>
-              </div>
-              <a href="./contact.html" class="btn-primary-orange">
-                <span>Try Personalized SMS</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg>
-              </a>
-            </div>
-          </article>
-        </div>
-
-        <!-- Interactive SMS Live Preview Stage -->
-        <div class="sms-preview-stage">
-          <div class="sms-preview-left">
-            <span class="faq-support-pill">LIVE SMS PREVIEW</span>
-            <h2 class="sms-preview-heading">See how every SMS lands on your customer's phone.</h2>
-            <p class="sms-preview-sub">Switch between Promotional, Transactional, OTP, and Personalized templates to inspect sender headers and speed specs.</p>
-
-            <div class="sms-preview-tabs" id="smsPreviewTabs" role="tablist">
-              <button type="button" class="sms-type-tab active" data-sms="promotional">Promotional</button>
-              <button type="button" class="sms-type-tab" data-sms="transactional">Transactional</button>
-              <button type="button" class="sms-type-tab" data-sms="otp">OTP SMS</button>
-              <button type="button" class="sms-type-tab" data-sms="personalized">Personalized</button>
-            </div>
-
-            <div class="sms-specs-row" id="smsSpecsRow">
-              <div class="sms-spec-pill"><span>Sender Header</span><strong id="specHeader">AX-IMMAIR-P</strong></div>
-              <div class="sms-spec-pill"><span>Delivery Window</span><strong id="specWindow">9 AM – 9 PM (Non-DND)</strong></div>
-              <div class="sms-spec-pill"><span>Avg. Speed</span><strong id="specSpeed">&lt; 3 Seconds</strong></div>
             </div>
           </div>
 
-          <div class="sms-preview-phone-card">
-            <div class="sms-phone-topbar">
-              <span class="sms-phone-sender" id="previewSender">AX-IMMAIR-P</span>
-              <span class="sms-phone-badge" id="previewBadge">Promotional</span>
+          <div class="footer-bottom-bar">
+            <div class="footer-copy">
+              &copy; 2026 Immense Air. All rights reserved.
             </div>
-            <div class="sms-phone-time">Today &middot; 10:30 AM</div>
-            <div class="sms-phone-bubble" id="previewBubble">
-              Festive Offer! Get flat 25% OFF on your next order with Immense Air. Use code FEST25 at checkout: <span class="sms-link">immenseair.in/offers</span>
+            <div class="footer-bottom-links">
+              <a href="./terms.html">Terms &amp; Conditions</a>
+              <span>&middot;</span>
+              <a href="./privacy.html">Privacy Policy</a>
+              <span>&middot;</span>
+              <a href="./contact.html">Contact Us</a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand-col">
-          <a href="./index.html#top" class="footer-brand-link" aria-label="Immense Air Home">
-            <img src="./assets/immense-air-logo.jpg" alt="Immense Air" class="footer-logo-img" />
-          </a>
-          <p class="footer-brand-desc">
-            Enterprise CPaaS &amp; omnichannel messaging platform built for high-deliverability Indian &amp; global campaigns.
-          </p>
-          <a href="./contact.html" class="footer-contact-pill">
-            <span>support@immenseair.in</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </a>
-        </div>
-
-        <div class="footer-col">
-          <h4 class="footer-col-title">Products</h4>
-          <ul class="footer-col-list">
-            <li><a href="./sms.html" class="footer-link">Bulk SMS</a></li>
-            <li><a href="./products.html?channel=rcs" class="footer-link">RCS Messaging</a></li>
-            <li><a href="./products.html?channel=whatsapp" class="footer-link">Meta WhatsApp API</a></li>
-            <li><a href="./products.html?channel=obd" class="footer-link">OBD Voice Blast</a></li>
-            <li><a href="./products.html?channel=ivr" class="footer-link">Cloud IVR</a></li>
-            <li><a href="./products.html?channel=smpp" class="footer-link">SMPP Gateway</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4 class="footer-col-title">Platform</h4>
-          <ul class="footer-col-list">
-            <li><a href="./index.html#top" class="footer-link">Home</a></li>
-            <li><a href="./products.html" class="footer-link">All Products</a></li>
-            <li><a href="./index.html#industries" class="footer-link">Industries</a></li>
-            <li><a href="./index.html#how-it-works" class="footer-link">How it works</a></li>
-            <li><a href="./index.html#faqs" class="footer-link">FAQs</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4 class="footer-col-title">Legal &amp; Support</h4>
-          <ul class="footer-col-list">
-            <li><a href="./contact.html" class="footer-link">Contact Us</a></li>
-            <li><a href="./terms.html" class="footer-link">Terms &amp; Conditions</a></li>
-            <li><a href="./privacy.html" class="footer-link">Privacy Policy</a></li>
-            <li><a href="./contact.html" class="footer-link">Book a Demo</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom-bar">
-        <div class="footer-copy">
-          &copy; 2026 Immense Air. All rights reserved.
-        </div>
-        <div class="footer-bottom-links">
-          <a href="./terms.html">Terms &amp; Conditions</a>
-          <span>&middot;</span>
-          <a href="./privacy.html">Privacy Policy</a>
-          <span>&middot;</span>
-          <a href="./contact.html">Contact Us</a>
-        </div>
-      </div>
+      </footer>
     </div>
-  </footer>
+  </main>
 
   <script>
     (() => {
@@ -369,57 +586,238 @@
         });
       }
 
-      const smsSamples = {
+      // 1. Hero SMS Phone + Popout Switcher
+      const smsHeroData = {
         promotional: {
           sender: 'AX-IMMAIR-P',
-          badge: 'Promotional',
-          window: '9 AM – 9 PM (Non-DND)',
-          speed: '< 3 Seconds',
-          body: 'Festive Offer! Get flat 25% OFF on your next order with Immense Air. Use code FEST25 at checkout: <span class="sms-link">immenseair.in/offers</span>'
+          sub: 'Promotional · 9 AM–9 PM',
+          time: 'Today · 10:30 AM',
+          bubble: 'Festive vibes are here with Immense Air! Get flat 25% OFF on your next order. Use code <strong>FEST25</strong><br />👉 <span class="sms-link">immenseair.in/offers</span>',
+          meta: '<span>✓ Delivered in 2.1s</span><span>Non-DND Blast</span>',
+          pop1Kicker: 'TRAI DLT Ready',
+          pop1Title: '9 AM – 9 PM Window',
+          pop1Desc: 'Automatic DND scrubbing & high-volume promotional blast.',
+          popBadgeKicker: '6-Char Sender ID',
+          popBadgeTitle: 'AX-IMMAIR-P',
+          popBadgeDesc: 'Your verified brand header on every message.',
+          pop2Kicker: 'Click Tracking',
+          pop2Title: 'Short Links & CTR',
+          pop2Desc: 'Track clicks, conversions & live delivery reports.'
         },
         transactional: {
           sender: 'AD-IMMAIR-T',
-          badge: 'Transactional',
-          window: '24×7 (DND Allowed)',
-          speed: '< 2.5 Seconds',
-          body: 'Dear Customer, your order #IA-84920 of Rs. 2,499 is confirmed and packed for dispatch. Track live here: <span class="sms-link">immenseair.in/track</span>'
+          sub: 'Transactional · 24×7 DND',
+          time: 'Today · 11:15 PM',
+          bubble: 'Order Confirmed! Your Immense Air shipment <strong>#IA-84920</strong> (Rs. 2,499) is packed &amp; ready for dispatch.<br />Track: <span class="sms-link">immenseair.in/track</span>',
+          meta: '<span>✓ Delivered in 1.9s</span><span>24×7 Priority</span>',
+          pop1Kicker: '24×7 Delivery',
+          pop1Title: 'DND & Non-DND',
+          pop1Desc: 'Critical alerts reach customers round the clock without DND blocks.',
+          popBadgeKicker: 'Alpha Sender ID',
+          popBadgeTitle: 'AD-IMMAIR-T',
+          popBadgeDesc: 'Instant trust with your dedicated transactional header.',
+          pop2Kicker: 'Webhook DLRs',
+          pop2Title: 'Real-Time Receipts',
+          pop2Desc: 'Trigger instant order, invoice & banking alerts via REST API.'
         },
         otp: {
           sender: 'VK-IMMAIR-S',
-          badge: 'OTP Priority',
-          window: '24×7 (DND Allowed)',
-          speed: '< 1.8 Seconds',
-          body: '482910 is your One-Time Password (OTP) for Immense Air login. Valid for 5 minutes. Please do not share this code with anyone.'
+          sub: 'OTP Priority · < 2s Route',
+          time: 'Just now',
+          bubble: '<div class="sms-otp-code">482910</div>is your One-Time Password (OTP) for Immense Air login. Valid for 5 minutes. Do not share this code with anyone.',
+          meta: '<span>⚡ Delivered in 1.4s</span><span>OTP Failover</span>',
+          pop1Kicker: 'Ultra-Low Latency',
+          pop1Title: '< 2 Sec Delivery',
+          pop1Desc: 'Dedicated high-priority OTP routes for zero login drop-offs.',
+          popBadgeKicker: 'Auto Failover',
+          popBadgeTitle: 'Multi-Operator',
+          popBadgeDesc: 'Instant carrier switching if any telecom network lags.',
+          pop2Kicker: 'Developer Ready',
+          pop2Title: 'HTTP & SMPP v3.4',
+          pop2Desc: 'Plug-and-play 2FA & KYC verification APIs in 5 minutes.'
         },
         personalized: {
           sender: 'AX-IMMAIR-S',
-          badge: 'Personalized',
-          window: '24×7 / Custom Variable',
-          speed: '< 3 Seconds',
-          body: 'Hi <strong>Rahul</strong>, your exclusive VIP voucher <strong>RAHUL20</strong> (20% OFF) expires on <strong>18 Nov</strong>. Redeem now: <span class="sms-link">immenseair.in/vip</span>'
+          sub: 'Personalized · {#var#} Merge',
+          time: 'Today · 02:10 PM',
+          bubble: 'Hi <strong>Rahul</strong>, your VIP voucher <strong>RAHUL20</strong> (20% OFF) expires on <strong>18 Nov</strong>. Use it before midnight:<br />👉 <span class="sms-link">immenseair.in/vip</span>',
+          meta: '<span>✓ Dynamic {#var#}</span><span>Unicode Ready</span>',
+          pop1Kicker: 'Excel / CSV Merge',
+          pop1Title: 'Dynamic {#var#} Tags',
+          pop1Desc: 'Insert unique customer names, coupons & due dates automatically.',
+          popBadgeKicker: 'Regional Languages',
+          popBadgeTitle: 'Unicode Support',
+          popBadgeDesc: 'Send in Hindi, Marathi, Tamil, Gujarati & 15+ Indian scripts.',
+          pop2Kicker: '3X Engagement',
+          pop2Title: '1-to-1 Personalization',
+          pop2Desc: 'Boost conversions with custom per-user offers & reminders.'
         }
       };
 
-      const tabs = Array.from(document.querySelectorAll('.sms-type-tab'));
-      const senderEl = document.getElementById('previewSender');
-      const badgeEl = document.getElementById('previewBadge');
-      const bubbleEl = document.getElementById('previewBubble');
-      const specHeader = document.getElementById('specHeader');
-      const specWindow = document.getElementById('specWindow');
-      const specSpeed = document.getElementById('specSpeed');
-
-      tabs.forEach((tab) => {
+      const heroTabs = Array.from(document.querySelectorAll('#smsHeroTabs .phone-tab'));
+      heroTabs.forEach((tab) => {
         tab.addEventListener('click', () => {
-          const key = tab.dataset.sms;
-          const data = smsSamples[key];
-          if (!data) return;
-          tabs.forEach((t) => t.classList.toggle('active', t === tab));
-          if (senderEl) senderEl.textContent = data.sender;
-          if (badgeEl) badgeEl.textContent = data.badge;
-          if (bubbleEl) bubbleEl.innerHTML = data.body;
-          if (specHeader) specHeader.textContent = data.sender;
-          if (specWindow) specWindow.textContent = data.window;
-          if (specSpeed) specSpeed.textContent = data.speed;
+          const key = tab.dataset.smsType;
+          const d = smsHeroData[key];
+          if (!d) return;
+          heroTabs.forEach((t) => {
+            const active = t === tab;
+            t.classList.toggle('active', active);
+            t.setAttribute('aria-selected', String(active));
+          });
+          document.getElementById('smsPhoneSender').textContent = d.sender;
+          document.getElementById('smsPhoneSub').textContent = d.sub;
+          document.getElementById('smsPhoneTime').textContent = d.time;
+          document.getElementById('smsPhoneBubble').innerHTML = d.bubble;
+          document.getElementById('smsPhoneMeta').innerHTML = d.meta;
+          document.getElementById('smsPop1Kicker').textContent = d.pop1Kicker;
+          document.getElementById('smsPop1Title').textContent = d.pop1Title;
+          document.getElementById('smsPop1Desc').textContent = d.pop1Desc;
+          document.getElementById('smsPopBadgeKicker').textContent = d.popBadgeKicker;
+          document.getElementById('smsPopBadgeTitle').textContent = d.popBadgeTitle;
+          document.getElementById('smsPopBadgeDesc').textContent = d.popBadgeDesc;
+          document.getElementById('smsPop2Kicker').textContent = d.pop2Kicker;
+          document.getElementById('smsPop2Title').textContent = d.pop2Title;
+          document.getElementById('smsPop2Desc').textContent = d.pop2Desc;
+        });
+      });
+
+      // 2. Interactive 4-Type SMS Deck
+      const smsDeckData = {
+        promotional: [
+          {
+            badge: 'Flash Sale Blast',
+            title: 'Festive & Seasonal Offers',
+            desc: 'Reach lakhs of Non-DND shoppers in minutes with clickable short links and live CTR reports.',
+            sample: 'Flat 30% OFF this weekend! Shop new arrivals before stock runs out: immenseair.in/sale',
+            tags: ['9 AM–9 PM', 'DND Scrubbed', 'Link Tracking']
+          },
+          {
+            badge: 'Lead Generation',
+            title: 'Real Estate & Auto Launches',
+            desc: 'Promote new project launches, test-drive camps, and webinar invites with geo-targeted lists.',
+            sample: 'Skyview 3BHK Residences starting Rs. 79L! Book your site visit today: immenseair.in/visit',
+            tags: ['High Throughput', 'CSV Upload', 'Instant Reports']
+          },
+          {
+            badge: 'Retail Footfall',
+            title: 'Store Opening & Coupons',
+            desc: 'Drive walk-ins to local retail outlets with exclusive promo codes and store-locator URLs.',
+            sample: 'Grand Opening in Andheri! Show code STORE500 for Rs. 500 OFF on Rs. 1,999+.',
+            tags: ['6-Char Header', 'Bulk Scheduling', 'DLT Ready']
+          }
+        ],
+        transactional: [
+          {
+            badge: 'E-Commerce',
+            title: 'Order & Dispatch Updates',
+            desc: 'Keep buyers informed at every step — order placed, packed, shipped, and out for delivery.',
+            sample: 'Order #IA-90412 shipped via BlueDart. Expected delivery: Tomorrow by 6 PM.',
+            tags: ['24×7 Delivery', 'DND Allowed', 'Webhook DLR']
+          },
+          {
+            badge: 'Finance & Fintech',
+            title: 'Account & EMI Alerts',
+            desc: 'Deliver instant payment receipts, EMI confirmations, and policy renewals with 99.9% uptime.',
+            sample: 'Payment of Rs. 4,500 received for Loan A/c **8912. Thank you for banking with us.',
+            tags: ['Alpha Sender ID', 'Priority Queue', 'Audit Logs']
+          },
+          {
+            badge: 'Healthcare & Services',
+            title: 'Booking & Lab Reports',
+            desc: 'Send automated appointment reminders and downloadable diagnostic report links 24×7.',
+            sample: 'Reminder: Dr. Mehta consultation tomorrow at 11:00 AM. Carry your Booking ID #412.',
+            tags: ['CRM API', 'Zero Delay', 'High Trust']
+          }
+        ],
+        otp: [
+          {
+            badge: 'App & Web Login',
+            title: 'Sub-2-Second 2FA Codes',
+            desc: 'Ensure users never abandon signups or logins with dedicated low-latency OTP routes.',
+            sample: '739204 is your verification code for login. Valid for 5 minutes. Do not share.',
+            tags: ['< 2s Speed', 'Auto Failover', '24×7 Route']
+          },
+          {
+            badge: 'Payments & Checkout',
+            title: 'Transaction Verification',
+            desc: 'Multi-operator redundant binds guarantee instant delivery even during peak sale traffic.',
+            sample: 'OTP 558192 for payment of Rs. 1,299 at Merchant Store. Expires in 180 seconds.',
+            tags: ['99.99% Uptime', 'SMPP & REST', 'PE-TM Hashed']
+          },
+          {
+            badge: 'KYC & Onboarding',
+            title: 'Instant Mobile Verify',
+            desc: 'Verify new borrowers, riders, and customers seamlessly with real-time delivery callbacks.',
+            sample: 'Use OTP 910443 to complete your digital KYC verification on Immense Air.',
+            tags: ['REST API', 'Live DLR', 'Encrypted']
+          }
+        ],
+        personalized: [
+          {
+            badge: 'Dynamic {#var#}',
+            title: 'Customer Name & Offers',
+            desc: 'Address every customer by name with unique discount codes merged directly from CSV/API.',
+            sample: 'Hi Priya, your loyalty points (1,250 pts) expire in 3 days! Redeem: immenseair.in/pts',
+            tags: ['Excel Merge', 'Custom {#var#}', '3X CTR']
+          },
+          {
+            badge: 'Regional Unicode',
+            title: 'Hindi & 15+ Languages',
+            desc: 'Connect deeply with regional audiences in Hindi, Marathi, Tamil, Telugu, Gujarati & Bengali.',
+            sample: 'नमस्ते अमित, आपका ऑर्डर #4821 आज शाम 5 बजे तक डिलीवर हो जाएगा।',
+            tags: ['Unicode SMS', 'Pan-India', 'High Recall']
+          },
+          {
+            badge: 'Billing & Renewals',
+            title: 'Custom Due Dates & Links',
+            desc: 'Send personalized invoice amounts, due dates, and 1-click payment links to each user.',
+            sample: 'Hi Rohan, your renewal of Rs. 999 is due on 20 Nov. Pay now: immenseair.in/pay',
+            tags: ['API Variables', '24×7 Support', 'DLT Ready']
+          }
+        ]
+      };
+
+      const deckTabs = Array.from(document.querySelectorAll('[data-sms-deck]'));
+      const deckGrid = document.getElementById('smsDeckGrid');
+
+      function renderSmsDeck(key) {
+        const items = smsDeckData[key] || smsDeckData.promotional;
+        deckTabs.forEach((t) => {
+          const active = t.dataset.smsDeck === key;
+          t.classList.toggle('active', active);
+          t.setAttribute('aria-selected', String(active));
+        });
+        if (!deckGrid) return;
+        deckGrid.innerHTML = items.map((item) => `
+          <article class="sms-deck-card">
+            <span class="sms-deck-badge">${item.badge}</span>
+            <h3 class="sms-deck-title">${item.title}</h3>
+            <p class="sms-deck-desc">${item.desc}</p>
+            <div class="sms-deck-sample">${item.sample}</div>
+            <div class="sms-deck-tags">${item.tags.map((t) => `<span>${t}</span>`).join('')}</div>
+          </article>
+        `).join('');
+      }
+
+      deckTabs.forEach((tab) => {
+        tab.addEventListener('click', () => renderSmsDeck(tab.dataset.smsDeck));
+      });
+      renderSmsDeck('promotional');
+
+      // 3. FAQ Accordion
+      document.querySelectorAll('.faq-question').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const card = btn.closest('.faq-card');
+          const isOpen = card.classList.contains('is-open');
+          document.querySelectorAll('.faq-card.is-open').forEach((c) => {
+            c.classList.remove('is-open');
+            c.querySelector('.faq-question')?.setAttribute('aria-expanded', 'false');
+          });
+          if (!isOpen) {
+            card.classList.add('is-open');
+            btn.setAttribute('aria-expanded', 'true');
+          }
         });
       });
     })();
