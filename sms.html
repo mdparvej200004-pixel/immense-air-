@@ -241,7 +241,7 @@
             </aside>
 
             <div class="industries-stage" id="smsDeckStage" aria-live="polite">
-              <div class="sms-graph-board" id="smsGraphBoard"></div>
+              <div class="sms-simple-stage" id="smsSimpleStage"></div>
             </div>
           </div>
         </div>
@@ -726,153 +726,125 @@
         activateNotification(orderKeys[autoCycleIdx]);
       }, 3600);
 
-      // 2. Interactive 4-Type SMS Performance Graph Dashboard
-      const smsGraphData = {
+      // 2. Simple & Unique 3-Step SMS Delivery Flow
+      const smsFlowData = {
         promotional: {
-          title: 'Promotional SMS · Campaign Reach & Click Performance',
-          sub: 'Live delivery & link-click velocity across Non-DND audiences (9 AM – 9 PM window)',
-          kpis: [
-            { label: 'Delivery Rate', value: '99.4%', delta: 'Non-DND Clean' },
-            { label: 'Avg. Link CTR', value: '18.6%', delta: '+3.1× vs plain' },
-            { label: 'Avg. Speed', value: '2.1 sec', delta: 'Bulk Blast' }
+          tag: 'Marketing & Offers',
+          title: 'Promotional SMS',
+          lead: 'Reach lakhs of Non-DND shoppers in minutes with clean DLT compliance.',
+          steps: [
+            { num: '01', title: 'Upload CSV / API', sub: 'Excel or bulk list' },
+            { num: '02', title: 'Auto DND Scrub', sub: '9 AM – 9 PM window' },
+            { num: '03', title: 'Delivered + CTR', sub: 'Live link tracking' }
           ],
-          chartLabel: 'Hourly Engagement & Delivery (%)',
-          bars: [
-            { label: '10 AM', val: 78, tone: 'navy' },
-            { label: '12 PM', val: 92, tone: 'orange' },
-            { label: '2 PM', val: 84, tone: 'navy' },
-            { label: '4 PM', val: 95, tone: 'orange' },
-            { label: '6 PM', val: 98, tone: 'orange' },
-            { label: '8 PM', val: 89, tone: 'navy' }
+          points: [
+            'Automatic TRAI DND filtering before blast',
+            '6-character numeric/alpha Promotional header',
+            'Real-time short link click & delivery report'
           ],
-          sampleHeader: 'AX-IMMAIR-P',
-          sample: 'Festive Sale! Flat 25% OFF on your next order. Use code FEST25 👉 immenseair.in/offers',
-          tags: ['9 AM–9 PM', 'DND Scrubbed', 'Link Tracking']
+          sender: 'AX-IMMAIR-P',
+          sample: 'Festive Sale! Flat 25% OFF on your next order. Use code FEST25 👉 immenseair.in/offers'
         },
         transactional: {
-          title: 'Transactional SMS · 24×7 Operator Delivery Graph',
-          sub: 'Round-the-clock order, banking & dispatch delivery across all Indian telecom circles',
-          kpis: [
-            { label: 'Delivery Rate', value: '99.9%', delta: '24×7 DND Route' },
-            { label: 'Avg. Latency', value: '1.9 sec', delta: 'Priority Queue' },
-            { label: 'Uptime SLA', value: '99.99%', delta: 'Multi-Bind' }
+          tag: '24×7 Critical Alerts',
+          title: 'Transactional SMS',
+          lead: 'Deliver order updates, invoices, and alerts round the clock — even on DND numbers.',
+          steps: [
+            { num: '01', title: 'Event Trigger', sub: 'Order / Payment / CRM' },
+            { num: '02', title: 'Priority DLT Route', sub: '24×7 DND allowed' },
+            { num: '03', title: 'Instant Alert', sub: 'Delivered in 1.9s' }
           ],
-          chartLabel: 'Operator-Wise Delivery Success (%)',
-          bars: [
-            { label: 'Jio', val: 99, tone: 'orange' },
-            { label: 'Airtel', val: 99, tone: 'navy' },
-            { label: 'Vi', val: 98, tone: 'navy' },
-            { label: 'BSNL', val: 97, tone: 'navy' },
-            { label: 'MTNL', val: 96, tone: 'navy' },
-            { label: 'Global', val: 99, tone: 'orange' }
+          points: [
+            'Works 24×7 on both DND & Non-DND numbers',
+            'Custom 6-character Alpha Sender ID (AD-IMMAIR-T)',
+            'Instant webhook delivery receipts (DLR) to your server'
           ],
-          sampleHeader: 'AD-IMMAIR-T',
-          sample: 'Order #IA-84920 (Rs. 2,499) is confirmed & packed for dispatch. Track: immenseair.in/track',
-          tags: ['24×7 Delivery', 'DND Allowed', 'Webhook DLR']
+          sender: 'AD-IMMAIR-T',
+          sample: 'Order #IA-84920 (Rs. 2,499) is confirmed & packed for dispatch. Track: immenseair.in/track'
         },
         otp: {
-          title: 'OTP SMS · Sub-2-Second Latency & Failover Graph',
-          sub: 'Ultra-low-latency 2FA & payment verification speed across peak traffic hours',
-          kpis: [
-            { label: 'Avg. OTP Speed', value: '1.4 sec', delta: 'Direct Bind' },
-            { label: 'Success Rate', value: '99.98%', delta: 'Auto Failover' },
-            { label: 'Drop-Offs', value: '0.02%', delta: 'Peak Safe' }
+          tag: 'Sub-2-Second 2FA',
+          title: 'OTP SMS',
+          lead: 'Ultra-fast verification codes with automatic carrier failover so logins never fail.',
+          steps: [
+            { num: '01', title: 'User Requests OTP', sub: 'Login / Checkout / KYC' },
+            { num: '02', title: 'Direct Bind + Failover', sub: 'Multi-operator switch' },
+            { num: '03', title: 'Verified in 1.4s', sub: '99.98% success' }
           ],
-          chartLabel: 'OTP Delivery Speed (% under 2 seconds)',
-          bars: [
-            { label: 'Login 2FA', val: 99, tone: 'orange' },
-            { label: 'Checkout', val: 98, tone: 'orange' },
-            { label: 'KYC', val: 97, tone: 'navy' },
-            { label: 'Reset', val: 99, tone: 'orange' },
-            { label: 'Banking', val: 99, tone: 'navy' },
-            { label: 'Signup', val: 98, tone: 'navy' }
+          points: [
+            'Dedicated low-latency OTP route (< 2 seconds)',
+            'Automatic backup operator switch if primary lags',
+            'Plug-and-play REST HTTP & SMPP v3.4/v5.0 APIs'
           ],
-          sampleHeader: 'VK-IMMAIR-S',
-          sample: '482910 is your One-Time Password (OTP) for Immense Air login. Valid for 5 minutes.',
-          tags: ['< 2s Speed', 'Auto Failover', 'REST & SMPP']
+          sender: 'VK-IMMAIR-S',
+          sample: '482910 is your One-Time Password (OTP) for Immense Air login. Valid for 5 minutes.'
         },
         personalized: {
-          title: 'Personalized SMS · Dynamic {#var#} Conversion Graph',
-          sub: 'Engagement lift when sending customer-named & regional Unicode campaigns vs generic blasts',
-          kpis: [
-            { label: 'CTR Lift', value: '3.2×', delta: 'vs Generic SMS' },
-            { label: 'Open Rate', value: '98.5%', delta: '1-to-1 Merge' },
-            { label: 'Languages', value: '15+', delta: 'Unicode Ready' }
+          tag: '1-to-1 Dynamic {#var#}',
+          title: 'Personalized SMS',
+          lead: 'Send every customer their own name, coupon, or due date in English or regional languages.',
+          steps: [
+            { num: '01', title: 'Map CSV Columns', sub: 'Name, Code, Date' },
+            { num: '02', title: 'Fill {#var#} Tags', sub: 'English or Unicode' },
+            { num: '03', title: '3× Higher Replies', sub: 'Personal experience' }
           ],
-          chartLabel: 'Conversion Lift by Personalization Type (%)',
-          bars: [
-            { label: 'Generic', val: 38, tone: 'navy' },
-            { label: 'First Name', val: 68, tone: 'navy' },
-            { label: 'Coupon', val: 82, tone: 'orange' },
-            { label: 'Regional', val: 88, tone: 'orange' },
-            { label: 'Due Alert', val: 91, tone: 'navy' },
-            { label: 'VIP Offer', val: 96, tone: 'orange' }
+          points: [
+            '1-click Excel/CSV variable merge into DLT {#var#} slots',
+            'Supports Hindi, Marathi, Tamil, Gujarati & 15+ scripts',
+            'Unique coupon codes & payment links per recipient'
           ],
-          sampleHeader: 'AX-IMMAIR-S',
-          sample: 'Hi Rahul, your VIP voucher RAHUL20 (20% OFF) expires on 18 Nov! 👉 immenseair.in/vip',
-          tags: ['CSV {#var#}', 'Unicode SMS', '3× Higher CTR']
+          sender: 'AX-IMMAIR-S',
+          sample: 'Hi Rahul, your VIP voucher RAHUL20 (20% OFF) expires on 18 Nov! 👉 immenseair.in/vip'
         }
       };
 
       const deckTabs = Array.from(document.querySelectorAll('[data-sms-deck]'));
-      const graphBoard = document.getElementById('smsGraphBoard');
+      const simpleStage = document.getElementById('smsSimpleStage');
 
-      function renderSmsGraph(key) {
-        const g = smsGraphData[key] || smsGraphData.promotional;
+      function renderSmsFlow(key) {
+        const d = smsFlowData[key] || smsFlowData.promotional;
         deckTabs.forEach((t) => {
           const active = t.dataset.smsDeck === key;
           t.classList.toggle('active', active);
           t.setAttribute('aria-selected', String(active));
         });
-        if (!graphBoard) return;
-        graphBoard.innerHTML = `
-          <div class="sms-graph-head">
-            <div>
-              <h3 class="sms-graph-title">${g.title}</h3>
-              <p class="sms-graph-sub">${g.sub}</p>
-            </div>
-            <div class="sms-deck-tags">${g.tags.map((t) => `<span>${t}</span>`).join('')}</div>
+        if (!simpleStage) return;
+        simpleStage.innerHTML = `
+          <div class="sms-simple-top">
+            <span class="sms-simple-tag">${d.tag}</span>
+            <h3 class="sms-simple-title">${d.title}</h3>
+            <p class="sms-simple-lead">${d.lead}</p>
           </div>
 
-          <div class="sms-kpi-row">
-            ${g.kpis.map((k) => `
-              <div class="sms-kpi-card">
-                <span class="sms-kpi-label">${k.label}</span>
-                <strong class="sms-kpi-val">${k.value}</strong>
-                <span class="sms-kpi-delta">${k.delta}</span>
+          <div class="sms-flow-track">
+            ${d.steps.map((s, idx) => `
+              <div class="sms-flow-node ${idx === 2 ? 'is-final' : ''}">
+                <span class="sms-flow-num">${s.num}</span>
+                <div class="sms-flow-text">
+                  <strong>${s.title}</strong>
+                  <span>${s.sub}</span>
+                </div>
               </div>
+              ${idx < 2 ? '<span class="sms-flow-arrow" aria-hidden="true">→</span>' : ''}
             `).join('')}
           </div>
 
-          <div class="sms-chart-card">
-            <div class="sms-chart-top">
-              <span>${g.chartLabel}</span>
-              <span class="sms-chart-live"><i class="bento-secure-dot"></i> Live Route Telemetry</span>
+          <div class="sms-simple-bottom">
+            <ul class="sms-simple-points">
+              ${d.points.map((p) => `<li>${p}</li>`).join('')}
+            </ul>
+            <div class="sms-simple-bubble">
+              <div class="sms-simple-bubble-hdr">${d.sender}</div>
+              <p>${d.sample}</p>
             </div>
-            <div class="sms-bars-chart">
-              ${g.bars.map((b) => `
-                <div class="sms-bar-col">
-                  <span class="sms-bar-val">${b.val}%</span>
-                  <div class="sms-bar-track">
-                    <div class="sms-bar-fill sms-bar-fill--${b.tone}" style="height: ${b.val}%"></div>
-                  </div>
-                  <span class="sms-bar-label">${b.label}</span>
-                </div>
-              `).join('')}
-            </div>
-          </div>
-
-          <div class="sms-graph-sample">
-            <span class="sms-graph-sample-hdr">${g.sampleHeader}</span>
-            <span class="sms-graph-sample-txt">${g.sample}</span>
           </div>
         `;
       }
 
       deckTabs.forEach((tab) => {
-        tab.addEventListener('click', () => renderSmsGraph(tab.dataset.smsDeck));
+        tab.addEventListener('click', () => renderSmsFlow(tab.dataset.smsDeck));
       });
-      renderSmsGraph('promotional');
+      renderSmsFlow('promotional');
 
       // 3. FAQ Accordion (Exact Home Accordion)
       document.querySelectorAll('.faq-trigger').forEach((btn) => {

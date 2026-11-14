@@ -5283,205 +5283,178 @@ img {
   padding: 0 4px;
 }
 
-.sms-graph-board {
+.sms-simple-stage {
+  background: #ffffff;
+  border: 1px solid rgba(11, 37, 89, 0.08);
+  border-radius: 26px;
+  padding: 30px 32px;
+  box-shadow: 0 16px 40px rgba(11, 37, 89, 0.05);
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
 }
 
-.sms-graph-head {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.sms-graph-title {
-  font-size: 19px;
+.sms-simple-tag {
+  display: inline-block;
+  font-size: 11.5px;
   font-weight: 700;
-  color: var(--primary);
-  margin: 0 0 4px;
+  color: var(--accent-orange);
+  background: var(--accent-orange-tint);
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 10px;
 }
 
-.sms-graph-sub {
-  font-size: 13.5px;
+.sms-simple-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--primary);
+  margin: 0 0 6px;
+}
+
+.sms-simple-lead {
+  font-size: 15px;
+  line-height: 1.55;
   color: var(--text-muted);
   margin: 0;
 }
 
-.sms-kpi-row {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-}
-
-.sms-kpi-card {
-  background: #ffffff;
-  border: 1px solid rgba(11, 37, 89, 0.08);
-  border-radius: 18px;
-  padding: 14px 16px;
-  box-shadow: 0 8px 20px rgba(11, 37, 89, 0.04);
-}
-
-.sms-kpi-label {
-  display: block;
-  font-size: 11.5px;
-  font-weight: 600;
-  color: var(--text-muted);
-}
-
-.sms-kpi-val {
-  display: block;
-  font-size: 24px;
-  font-weight: 800;
-  color: var(--primary);
-  margin: 4px 0 2px;
-  line-height: 1.1;
-}
-
-.sms-kpi-delta {
-  font-size: 11.5px;
-  font-weight: 700;
-  color: var(--accent-orange);
-}
-
-.sms-chart-card {
-  background: #ffffff;
-  border: 1px solid rgba(11, 37, 89, 0.08);
-  border-radius: 22px;
-  padding: 18px 20px 16px;
-  box-shadow: 0 12px 28px rgba(11, 37, 89, 0.05);
-}
-
-.sms-chart-top {
+.sms-flow-track {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px;
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--primary);
-  margin-bottom: 16px;
+  gap: 10px;
+  background: #f5f8fd;
+  border: 1px solid rgba(11, 37, 89, 0.07);
+  border-radius: 18px;
+  padding: 16px 18px;
 }
 
-.sms-chart-live {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 11.5px;
-  font-weight: 600;
-  color: #16a34a;
-  background: rgba(22, 163, 74, 0.09);
-  padding: 4px 10px;
-  border-radius: 999px;
-}
-
-.sms-bars-chart {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 14px;
-  align-items: end;
-  height: 168px;
-  padding-top: 10px;
-}
-
-.sms-bar-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  height: 100%;
-  justify-content: flex-end;
-}
-
-.sms-bar-val {
-  font-size: 11.5px;
-  font-weight: 700;
-  color: var(--primary);
-}
-
-.sms-bar-track {
-  width: 100%;
-  max-width: 42px;
-  height: 112px;
-  background: #eff4fc;
-  border-radius: 12px;
-  display: flex;
-  align-items: flex-end;
-  overflow: hidden;
-  padding: 3px;
-}
-
-.sms-bar-fill {
-  width: 100%;
-  border-radius: 9px;
-  animation: smsBarGrow 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-.sms-bar-fill--navy {
-  background: linear-gradient(180deg, #1d4ed8 0%, #0b2559 100%);
-}
-
-.sms-bar-fill--orange {
-  background: linear-gradient(180deg, #ff7a33 0%, #ff5a00 100%);
-}
-
-@keyframes smsBarGrow {
-  from {
-    transform: scaleY(0.1);
-    transform-origin: bottom;
-  }
-  to {
-    transform: scaleY(1);
-    transform-origin: bottom;
-  }
-}
-
-.sms-bar-label {
-  font-size: 11.5px;
-  font-weight: 600;
-  color: var(--text-muted);
-  white-space: nowrap;
-}
-
-.sms-graph-sample {
+.sms-flow-node {
   display: flex;
   align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.sms-flow-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
   background: #ffffff;
-  border: 1px solid rgba(11, 37, 89, 0.08);
-  border-left: 4px solid var(--accent-orange);
-  border-radius: 14px;
-  padding: 12px 16px;
-}
-
-.sms-graph-sample-hdr {
+  border: 1px solid rgba(11, 37, 89, 0.12);
+  color: var(--primary);
   font-size: 12px;
   font-weight: 800;
-  color: #ffffff;
-  background: var(--primary);
-  padding: 4px 10px;
-  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
 }
 
-.sms-graph-sample-txt {
-  font-size: 13px;
+.sms-flow-node.is-final .sms-flow-num {
+  background: var(--accent-orange);
+  border-color: var(--accent-orange);
+  color: #ffffff;
+}
+
+.sms-flow-text strong {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 700;
   color: var(--primary);
-  line-height: 1.45;
+}
+
+.sms-flow-text span {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.sms-flow-arrow {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--accent-orange);
+  flex-shrink: 0;
+}
+
+.sms-simple-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.sms-simple-points {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sms-simple-points li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.sms-simple-points li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent-orange);
+  font-weight: 800;
+}
+
+.sms-simple-bubble {
+  background: linear-gradient(135deg, #0b2559 0%, #07193d 100%);
+  color: #ffffff;
+  border-radius: 18px 18px 18px 6px;
+  padding: 18px 20px;
+}
+
+.sms-simple-bubble-hdr {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #ff9a62;
+  background: rgba(255, 90, 0, 0.16);
+  padding: 3px 9px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+.sms-simple-bubble p {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 @media (max-width: 809px) {
-  .sms-kpi-row {
-    grid-template-columns: 1fr;
+  .sms-simple-stage {
+    padding: 22px 18px;
+    border-radius: 20px;
   }
 
-  .sms-bars-chart {
-    gap: 8px;
-    height: 150px;
+  .sms-flow-track {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sms-flow-arrow {
+    display: none;
+  }
+
+  .sms-simple-bottom {
+    grid-template-columns: 1fr;
   }
 }
 
