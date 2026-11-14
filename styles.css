@@ -5071,6 +5071,168 @@ img {
   color: #dc2626;
 }
 
+/* =========================================
+   Bulk SMS Page (sms.html)
+   ========================================= */
+.sms-solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.sms-preview-stage {
+  background: linear-gradient(135deg, #0b2559 0%, #07193d 100%);
+  border-radius: 30px;
+  padding: 40px 44px;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 32px;
+  align-items: center;
+  box-shadow: 0 24px 60px rgba(11, 37, 89, 0.16);
+}
+
+.sms-preview-heading {
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 14px 0 10px;
+}
+
+.sms-preview-sub {
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.78);
+  margin: 0 0 22px;
+}
+
+.sms-preview-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.sms-type-tab {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 9px 16px;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.sms-type-tab:hover {
+  border-color: rgba(255, 90, 0, 0.7);
+  transform: translateY(-1px);
+}
+
+.sms-type-tab.active {
+  background: var(--accent-orange);
+  border-color: var(--accent-orange);
+  box-shadow: 0 8px 20px rgba(255, 90, 0, 0.35);
+}
+
+.sms-specs-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.sms-spec-pill {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+
+.sms-spec-pill span {
+  display: block;
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 4px;
+}
+
+.sms-spec-pill strong {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.sms-preview-phone-card {
+  background: #ffffff;
+  color: var(--primary);
+  border-radius: 24px;
+  padding: 22px 22px 26px;
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.25);
+}
+
+.sms-phone-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(11, 37, 89, 0.08);
+  margin-bottom: 14px;
+}
+
+.sms-phone-sender {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.sms-phone-badge {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--accent-orange);
+  background: var(--accent-orange-tint);
+  padding: 4px 10px;
+  border-radius: 9999px;
+}
+
+.sms-phone-time {
+  text-align: center;
+  font-size: 11.5px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.sms-phone-bubble {
+  background: #eff4fb;
+  border: 1px solid rgba(11, 37, 89, 0.08);
+  border-radius: 18px 18px 18px 6px;
+  padding: 15px 16px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--primary);
+}
+
+@media (max-width: 960px) {
+  .sms-solutions-grid,
+  .sms-preview-stage {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 809px) {
+  .sms-preview-stage {
+    padding: 28px 20px;
+    border-radius: 22px;
+  }
+
+  .sms-specs-row {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 809px) {
   .legal-card {
     padding: 28px 20px;
