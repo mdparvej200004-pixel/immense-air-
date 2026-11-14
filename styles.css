@@ -347,9 +347,15 @@ img {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: minmax(430px, 0.9fr) 1.1fr;
-  gap: 28px;
+  grid-template-columns: minmax(360px, 0.78fr) 1.22fr;
+  gap: 18px;
   align-items: center;
+}
+
+.hero-content {
+  min-width: 0;
+  position: relative;
+  z-index: 5;
 }
 
 .hero-badge {
@@ -377,11 +383,11 @@ img {
 
 .hero-title {
   margin: 0 0 20px;
-  font-size: 48px;
+  font-size: clamp(36px, 3.2vw, 44px);
   font-weight: 700;
   line-height: 1.08;
   letter-spacing: -0.03em;
-  min-height: 106px;
+  min-height: 98px;
   transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
@@ -1283,18 +1289,25 @@ img {
   padding: 20px 0 12px;
   gap: 0;
   z-index: 4;
-  width: 222px;
+  width: 196px;
 }
 
 .popout-stack--right {
-  margin-left: -14px;
+  margin-left: -10px;
 }
 
 .popout-stack--left {
-  width: 206px;
+  width: 184px;
   margin-left: 0;
-  margin-right: -14px;
+  margin-right: -10px;
   padding: 0;
+}
+
+@media (max-width: 1240px) and (min-width: 1025px) {
+  .phone-stage {
+    transform: scale(0.88);
+    transform-origin: center center;
+  }
 }
 
 .popout-stack--left .popout-card {
