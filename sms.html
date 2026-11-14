@@ -61,33 +61,33 @@
           <div class="hero-glow hero-glow--orange" aria-hidden="true"></div>
 
           <div class="hero-grid">
-            <div class="hero-content">
+            <div class="hero-content" id="smsHeroCaption">
               <div class="hero-badge">
                 <span class="badge-dot" aria-hidden="true"></span>
-                <span>IMMENSE AIR BULK SMS</span>
+                <span id="smsHeroBadgeText">PROMOTIONAL SMS</span>
               </div>
 
               <h1 class="hero-title" id="smsHeroTitle">
-                <span class="title-primary">Reach Every Phone</span>
-                <span class="title-accent">In Under 3 Seconds.</span>
+                <span class="title-primary">Launch Flash Offers</span>
+                <span class="title-accent">Across India Instantly.</span>
               </h1>
 
-              <p class="hero-subtitle">
-                High-deliverability DLT-compliant Promotional, Transactional, OTP, and Personalized SMS campaigns with direct operator connectivity.
+              <p class="hero-subtitle" id="smsHeroSubtitle">
+                Reach lakhs of Non-DND shoppers between 9 AM – 9 PM with automatic DND scrubbing and clickable CTR link tracking.
               </p>
 
-              <div class="sms-hero-stats">
+              <div class="sms-hero-stats" id="smsHeroStats">
                 <div class="sms-stat-chip">
                   <strong>99.9%</strong>
-                  <span>DLT Delivery</span>
+                  <span>Non-DND Delivery</span>
                 </div>
                 <div class="sms-stat-chip">
-                  <strong>&lt; 2 sec</strong>
-                  <span>OTP Latency</span>
+                  <strong>9AM–9PM</strong>
+                  <span>TRAI Window</span>
                 </div>
                 <div class="sms-stat-chip">
-                  <strong>15 Min</strong>
-                  <span>Template Setup</span>
+                  <strong>Live CTR</strong>
+                  <span>Link Tracking</span>
                 </div>
               </div>
             </div>
@@ -616,12 +616,86 @@
         });
       }
 
-      // 1. Hero SMS Phone Notification Pop-In Cycle
+      // 1. Hero SMS Phone Notification Pop-In Cycle + Synced Left Caption
       const notifStack = document.getElementById('smsNotifStack');
-      const orderKeys = ['promotional', 'transactional', 'otp', 'personalized'];
+      const heroCaption = document.getElementById('smsHeroCaption');
+      const heroBadgeText = document.getElementById('smsHeroBadgeText');
+      const heroTitle = document.getElementById('smsHeroTitle');
+      const heroSubtitle = document.getElementById('smsHeroSubtitle');
+      const heroStats = document.getElementById('smsHeroStats');
+
+      const captionData = {
+        promotional: {
+          badge: 'PROMOTIONAL SMS',
+          l1: 'Launch Flash Offers',
+          l2: 'Across India Instantly.',
+          sub: 'Reach lakhs of Non-DND shoppers between 9 AM – 9 PM with automatic DND scrubbing and clickable CTR link tracking.',
+          stats: [
+            ['99.9%', 'Non-DND Delivery'],
+            ['9AM–9PM', 'TRAI Window'],
+            ['Live CTR', 'Link Tracking']
+          ]
+        },
+        transactional: {
+          badge: 'TRANSACTIONAL SMS',
+          l1: '24×7 Order & Alert',
+          l2: 'Delivery Guaranteed.',
+          sub: 'Send instant payment receipts, dispatch updates, and banking alerts round the clock — even to DND-registered numbers.',
+          stats: [
+            ['24×7', 'DND Allowed'],
+            ['Alpha ID', '6-Char Header'],
+            ['Webhooks', 'Live DLR']
+          ]
+        },
+        otp: {
+          badge: 'OTP & 2FA SMS',
+          l1: 'Sub-2-Second OTPs',
+          l2: 'Zero Login Drop-Offs.',
+          sub: 'Dedicated high-priority OTP routes with automatic multi-operator failover so logins, checkouts, and KYC never stall.',
+          stats: [
+            ['1.4 sec', 'Avg. OTP Speed'],
+            ['Auto', 'Carrier Failover'],
+            ['REST & SMPP', 'Instant API']
+          ]
+        },
+        personalized: {
+          badge: 'PERSONALIZED SMS',
+          l1: '1-to-1 Dynamic SMS',
+          l2: 'In Any Language.',
+          sub: 'Merge customer names, coupon codes, and due dates from Excel or API into {#var#} templates in English or 15+ Indian scripts.',
+          stats: [
+            ['3× CTR', 'Personalization'],
+            ['{#var#}', 'CSV / API Merge'],
+            ['15+', 'Indian Scripts']
+          ]
+        }
+      };
+
+      const orderKeys = ['promotional', 'otp', 'transactional', 'personalized'];
       let autoCycleIdx = 0;
 
+      function updateHeroCaption(key) {
+        const c = captionData[key];
+        if (!c || !heroCaption) return;
+        heroCaption.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
+        heroCaption.style.opacity = '0';
+        heroCaption.style.transform = 'translateY(6px)';
+        setTimeout(() => {
+          if (heroBadgeText) heroBadgeText.textContent = c.badge;
+          if (heroTitle) {
+            heroTitle.innerHTML = `<span class="title-primary">${c.l1}</span><span class="title-accent">${c.l2}</span>`;
+          }
+          if (heroSubtitle) heroSubtitle.textContent = c.sub;
+          if (heroStats) {
+            heroStats.innerHTML = c.stats.map(([v, l]) => `<div class="sms-stat-chip"><strong>${v}</strong><span>${l}</span></div>`).join('');
+          }
+          heroCaption.style.opacity = '1';
+          heroCaption.style.transform = 'translateY(0)';
+        }, 180);
+      }
+
       function activateNotification(key) {
+        updateHeroCaption(key);
         if (!notifStack) return;
         const target = notifStack.querySelector(`[data-notif="${key}"]`);
         if (!target) return;
