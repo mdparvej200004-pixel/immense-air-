@@ -117,14 +117,6 @@
                     </div>
                   </div>
 
-                  <!-- Quick Switcher Tabs inside Phone: Plain Text | Rich Card | Carousel | Chatbot -->
-                  <div class="rcs-mode-tabs rcs-mode-tabs--4" role="tablist" aria-label="RCS Preview Formats">
-                    <button type="button" class="rcs-mode-tab is-active" data-rcs-tab="text" role="tab" aria-selected="true">Plain Text</button>
-                    <button type="button" class="rcs-mode-tab" data-rcs-tab="rich" role="tab" aria-selected="false">Rich Card</button>
-                    <button type="button" class="rcs-mode-tab" data-rcs-tab="carousel" role="tab" aria-selected="false">Carousel</button>
-                    <button type="button" class="rcs-mode-tab" data-rcs-tab="bot" role="tab" aria-selected="false">Chatbot</button>
-                  </div>
-
                   <!-- RCS Interactive Slides -->
                   <div class="rcs-stage-wrap" id="rcsStageWrap" aria-live="polite">
                     <!-- Slide 0: Plain Text RCS -->
@@ -853,18 +845,12 @@
       const rcsSubtitle = document.getElementById('rcsHeroSubtitle');
       const rcsStats = document.getElementById('rcsHeroStats');
       const rcsSlides = Array.from(document.querySelectorAll('.rcs-slide'));
-      const rcsModeTabs = Array.from(document.querySelectorAll('[data-rcs-tab]'));
 
       function activateRcsSlide(key) {
         const c = rcsCaptionData[key];
         if (!c) return;
         rcsIdx = Math.max(0, rcsOrder.indexOf(key));
         rcsSlides.forEach((s) => s.classList.toggle('is-active', s.dataset.rcs === key));
-        rcsModeTabs.forEach((t) => {
-          const active = t.dataset.rcsTab === key;
-          t.classList.toggle('is-active', active);
-          t.setAttribute('aria-selected', String(active));
-        });
         if (rcsCaption) {
           rcsCaption.style.opacity = '0';
           rcsCaption.style.transform = 'translateY(6px)';
@@ -882,12 +868,6 @@
           }, 160);
         }
       }
-
-      rcsModeTabs.forEach((tab) => {
-        tab.addEventListener('click', () => {
-          activateRcsSlide(tab.dataset.rcsTab);
-        });
-      });
 
       setInterval(() => {
         rcsIdx = (rcsIdx + 1) % rcsOrder.length;
