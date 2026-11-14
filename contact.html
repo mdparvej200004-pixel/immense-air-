@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us — Immense Air</title>
   <meta name="description" content="Get in touch with Immense Air for Bulk SMS, RCS Messaging, Meta WhatsApp API, Cloud IVR, OBD Voice Blast, and SMPP Gateway demos and pricing." />
+  <link rel="icon" href="./assets/immense-air-logo.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -15,26 +16,34 @@
   <header class="site-header" id="siteHeader">
     <div class="header-inner">
       <a href="./index.html#top" class="brand-logo" aria-label="Immense Air Home">
-        <img src="./assets/immense-air-logo.jpg" alt="Immense Air" class="brand-logo-img" />
+        <img src="./assets/immense-air-logo.jpg" alt="Immense Air Logo" class="brand-logo-img" />
       </a>
-      <nav class="nav-links" aria-label="Primary Navigation">
+      <nav class="desktop-nav" aria-label="Primary Navigation">
         <a href="./index.html#top" class="nav-link">Home</a>
         <a href="./products.html" class="nav-link">Products</a>
         <a href="./index.html#how-it-works" class="nav-link">How it works</a>
         <a href="./index.html#faqs" class="nav-link">FAQs</a>
-        <a href="./contact.html" class="nav-link nav-cta">Contact Us</a>
       </nav>
-      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu" aria-expanded="false">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
+      <div class="header-actions">
+        <a href="./contact.html" class="nav-cta">Contact Us</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="4" cy="6" r="1.2" fill="currentColor" stroke="none" />
+            <line x1="8" y1="6" x2="21" y2="6" />
+            <circle cx="4" cy="12" r="1.2" fill="currentColor" stroke="none" />
+            <line x1="8" y1="12" x2="21" y2="12" />
+            <circle cx="4" cy="18" r="1.2" fill="currentColor" stroke="none" />
+            <line x1="8" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
     </div>
     <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
       <a href="./index.html#top" class="mobile-nav-link">Home</a>
       <a href="./products.html" class="mobile-nav-link">Products</a>
       <a href="./index.html#how-it-works" class="mobile-nav-link">How it works</a>
       <a href="./index.html#faqs" class="mobile-nav-link">FAQs</a>
-      <a href="./contact.html" class="mobile-nav-link mobile-nav-cta">Contact Us</a>
+      <a href="./contact.html" class="mobile-nav-cta">Contact Us</a>
     </div>
   </header>
 

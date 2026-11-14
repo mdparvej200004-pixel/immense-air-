@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terms &amp; Conditions — Immense Air</title>
   <meta name="description" content="Terms and Conditions governing Immense Air's Bulk SMS, RCS Messaging, Meta WhatsApp API, Cloud IVR, OBD Voice Blast, and SMPP Gateway services." />
+  <link rel="icon" href="./assets/immense-air-logo.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -15,26 +16,34 @@
   <header class="site-header" id="siteHeader">
     <div class="header-inner">
       <a href="./index.html#top" class="brand-logo" aria-label="Immense Air Home">
-        <img src="./assets/immense-air-logo.jpg" alt="Immense Air" class="brand-logo-img" />
+        <img src="./assets/immense-air-logo.jpg" alt="Immense Air Logo" class="brand-logo-img" />
       </a>
-      <nav class="nav-links" aria-label="Primary Navigation">
+      <nav class="desktop-nav" aria-label="Primary Navigation">
         <a href="./index.html#top" class="nav-link">Home</a>
         <a href="./products.html" class="nav-link">Products</a>
         <a href="./index.html#how-it-works" class="nav-link">How it works</a>
         <a href="./index.html#faqs" class="nav-link">FAQs</a>
-        <a href="./contact.html" class="nav-link nav-cta">Contact Us</a>
       </nav>
-      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu" aria-expanded="false">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
+      <div class="header-actions">
+        <a href="./contact.html" class="nav-cta">Contact Us</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="4" cy="6" r="1.2" fill="currentColor" stroke="none" />
+            <line x1="8" y1="6" x2="21" y2="6" />
+            <circle cx="4" cy="12" r="1.2" fill="currentColor" stroke="none" />
+            <line x1="8" y1="12" x2="21" y2="12" />
+            <circle cx="4" cy="18" r="1.2" fill="currentColor" stroke="none" />
+            <line x1="8" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
     </div>
     <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
       <a href="./index.html#top" class="mobile-nav-link">Home</a>
       <a href="./products.html" class="mobile-nav-link">Products</a>
       <a href="./index.html#how-it-works" class="mobile-nav-link">How it works</a>
       <a href="./index.html#faqs" class="mobile-nav-link">FAQs</a>
-      <a href="./contact.html" class="mobile-nav-link mobile-nav-cta">Contact Us</a>
+      <a href="./contact.html" class="mobile-nav-cta">Contact Us</a>
     </div>
   </header>
 
@@ -57,60 +66,112 @@
               <span class="title-accent">Conditions.</span>
             </h1>
             <p class="products-hero-sub">
-              Last updated: November 2026 &middot; Please read these terms carefully before using Immense Air's messaging, voice, and gateway services.
+              Last updated: November 2026 &middot; Clear service terms governing Immense Air's Bulk SMS, RCS, Meta WhatsApp API, Cloud IVR, OBD, and SMPP Gateway.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Legal Content -->
+    <!-- Split Legal Stage -->
     <section class="subpage-content-section">
       <div class="container">
-        <div class="legal-card">
-          <div class="legal-section">
-            <h2>1. Acceptance of Terms</h2>
-            <p>
-              By accessing or using Immense Air's platform, APIs, SMPP Gateway, Bulk SMS, RCS Messaging, Meta WhatsApp Business API, Cloud IVR, or OBD Voice Blast services ("Services"), you agree to be bound by these Terms &amp; Conditions and all applicable telecom regulations in India, including TRAI (Telecom Regulatory Authority of India) TCCCPR 2018 guidelines.
-            </p>
-          </div>
+        <div class="legal-split-grid">
+          <!-- Left Sticky Dark Navy Card -->
+          <aside class="legal-sidebar-card">
+            <div>
+              <span class="faq-support-pill">QUICK OVERVIEW</span>
+              <h2 class="legal-sidebar-title">Built on TRAI &amp; Meta Compliance.</h2>
+              <p class="legal-sidebar-desc">
+                All messaging and voice routes follow Indian telecom TCCCPR 2018 rules and official Meta &amp; Google RCS verification standards.
+              </p>
 
-          <div class="legal-section">
-            <h2>2. DLT Registration &amp; Regulatory Compliance</h2>
-            <ul>
-              <li>All commercial SMS, promotional, transactional, and service campaigns in India require valid Principal Entity (PE) ID, Header (Sender ID), and approved Content Templates registered on an authorized telecom DLT portal.</li>
-              <li>Clients must maintain accurate PE-TM (Telemarketer) chain hashing as mandated by TRAI. Immense Air is not liable for operator rejections arising from unapproved headers, expired templates, or incomplete DLT chain bindings.</li>
-              <li>For Meta WhatsApp Business API and RCS Messaging, clients must comply with Meta Commerce &amp; Business Messaging policies and Google Jibe/carrier verification guidelines respectively.</li>
-            </ul>
-          </div>
+              <nav class="legal-toc" aria-label="Terms Sections">
+                <a href="#term-01" class="legal-toc-link"><span>01</span> Acceptance of Terms</a>
+                <a href="#term-02" class="legal-toc-link"><span>02</span> DLT &amp; Regulatory Rules</a>
+                <a href="#term-03" class="legal-toc-link"><span>03</span> Acceptable Use Policy</a>
+                <a href="#term-04" class="legal-toc-link"><span>04</span> Uptime &amp; Service Credits</a>
+                <a href="#term-05" class="legal-toc-link"><span>05</span> Limitation of Liability</a>
+                <a href="#term-06" class="legal-toc-link"><span>06</span> Contact &amp; Grievances</a>
+              </nav>
+            </div>
 
-          <div class="legal-section">
-            <h2>3. Acceptable Use &amp; Prohibited Content</h2>
-            <p>
-              You agree not to use Immense Air Services to transmit unsolicited spam, phishing links, fraudulent financial offers, abusive or defamatory content, or messages violating DND (Do Not Disturb) preferences. Accounts found engaging in unauthorized traffic, caller ID spoofing, or illegal OBD/IVR broadcasts will be suspended immediately without refund.
-            </p>
-          </div>
+            <div class="legal-sidebar-footer">
+              <a href="./contact.html" class="btn-primary-orange legal-sidebar-cta">
+                <span>Contact Legal Desk</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </a>
+              <a href="./privacy.html" class="legal-sidebar-alt">Read Privacy Policy &rarr;</a>
+            </div>
+          </aside>
 
-          <div class="legal-section">
-            <h2>4. Service Availability &amp; Credits</h2>
-            <ul>
-              <li>Immense Air strives for 99.9% platform uptime across HTTP APIs, SMPP v3.4/v5.0 binds, and Cloud IVR servers. Delivery rates depend on end-user handset availability and recipient telecom operator networks.</li>
-              <li>Prepaid messaging and voice credits are valid as per the active commercial plan and are non-transferable and non-refundable once consumed or expired.</li>
-            </ul>
-          </div>
+          <!-- Right Numbered Clause Cards -->
+          <div class="legal-clauses-stack">
+            <article class="legal-clause-card" id="term-01">
+              <div class="legal-clause-head">
+                <span class="faq-num">01</span>
+                <h2>Acceptance of Terms</h2>
+              </div>
+              <p>
+                By accessing or using Immense Air's platform, APIs, SMPP Gateway, Bulk SMS, RCS Messaging, Meta WhatsApp Business API, Cloud IVR, or OBD Voice Blast services ("Services"), you agree to be bound by these Terms &amp; Conditions and all applicable telecom regulations in India, including TRAI (Telecom Regulatory Authority of India) TCCCPR 2018 guidelines.
+              </p>
+            </article>
 
-          <div class="legal-section">
-            <h2>5. Limitation of Liability</h2>
-            <p>
-              To the maximum extent permitted by law, Immense Air shall not be liable for indirect, incidental, or consequential damages resulting from telecom operator outages, third-party API downtime (including Meta or carrier RCS hubs), or regulatory blocks.
-            </p>
-          </div>
+            <article class="legal-clause-card" id="term-02">
+              <div class="legal-clause-head">
+                <span class="faq-num">02</span>
+                <h2>DLT Registration &amp; Regulatory Compliance</h2>
+              </div>
+              <ul>
+                <li>All commercial SMS, promotional, transactional, and service campaigns in India require valid Principal Entity (PE) ID, Header (Sender ID), and approved Content Templates registered on an authorized telecom DLT portal.</li>
+                <li>Clients must maintain accurate PE-TM (Telemarketer) chain hashing as mandated by TRAI. Immense Air is not liable for operator rejections arising from unapproved headers, expired templates, or incomplete DLT chain bindings.</li>
+                <li>For Meta WhatsApp Business API and RCS Messaging, clients must comply with Meta Commerce &amp; Business Messaging policies and Google Jibe/carrier verification guidelines respectively.</li>
+              </ul>
+            </article>
 
-          <div class="legal-section">
-            <h2>6. Contact &amp; Grievances</h2>
-            <p>
-              For questions regarding these Terms &amp; Conditions or regulatory compliance, please reach out via our <a href="./contact.html" class="inline-link">Contact Us</a> page or email <strong>support@immenseair.in</strong>.
-            </p>
+            <article class="legal-clause-card" id="term-03">
+              <div class="legal-clause-head">
+                <span class="faq-num">03</span>
+                <h2>Acceptable Use &amp; Prohibited Content</h2>
+              </div>
+              <p>
+                You agree not to use Immense Air Services to transmit unsolicited spam, phishing links, fraudulent financial offers, abusive or defamatory content, or messages violating DND (Do Not Disturb) preferences. Accounts found engaging in unauthorized traffic, caller ID spoofing, or illegal OBD/IVR broadcasts will be suspended immediately without refund.
+              </p>
+            </article>
+
+            <article class="legal-clause-card" id="term-04">
+              <div class="legal-clause-head">
+                <span class="faq-num">04</span>
+                <h2>Service Availability &amp; Credits</h2>
+              </div>
+              <ul>
+                <li>Immense Air strives for 99.9% platform uptime across HTTP APIs, SMPP v3.4/v5.0 binds, and Cloud IVR servers. Delivery rates depend on end-user handset availability and recipient telecom operator networks.</li>
+                <li>Prepaid messaging and voice credits are valid as per the active commercial plan and are non-transferable and non-refundable once consumed or expired.</li>
+              </ul>
+            </article>
+
+            <article class="legal-clause-card" id="term-05">
+              <div class="legal-clause-head">
+                <span class="faq-num">05</span>
+                <h2>Limitation of Liability</h2>
+              </div>
+              <p>
+                To the maximum extent permitted by law, Immense Air shall not be liable for indirect, incidental, or consequential damages resulting from telecom operator outages, third-party API downtime (including Meta or carrier RCS hubs), or regulatory blocks.
+              </p>
+            </article>
+
+            <article class="legal-clause-card" id="term-06">
+              <div class="legal-clause-head">
+                <span class="faq-num">06</span>
+                <h2>Contact &amp; Grievances</h2>
+              </div>
+              <p>
+                For questions regarding these Terms &amp; Conditions or regulatory compliance, please reach out via our <a href="./contact.html" class="inline-link">Contact Us</a> page or email <strong>support@immenseair.in</strong>.
+              </p>
+            </article>
           </div>
         </div>
       </div>

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy — Immense Air</title>
   <meta name="description" content="Privacy Policy explaining how Immense Air collects, secures, and processes campaign, DLT, and account data." />
+  <link rel="icon" href="./assets/immense-air-logo.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -15,26 +16,34 @@
   <header class="site-header" id="siteHeader">
     <div class="header-inner">
       <a href="./index.html#top" class="brand-logo" aria-label="Immense Air Home">
-        <img src="./assets/immense-air-logo.jpg" alt="Immense Air" class="brand-logo-img" />
+        <img src="./assets/immense-air-logo.jpg" alt="Immense Air Logo" class="brand-logo-img" />
       </a>
-      <nav class="nav-links" aria-label="Primary Navigation">
+      <nav class="desktop-nav" aria-label="Primary Navigation">
         <a href="./index.html#top" class="nav-link">Home</a>
         <a href="./products.html" class="nav-link">Products</a>
         <a href="./index.html#how-it-works" class="nav-link">How it works</a>
         <a href="./index.html#faqs" class="nav-link">FAQs</a>
-        <a href="./contact.html" class="nav-link nav-cta">Contact Us</a>
       </nav>
-      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu" aria-expanded="false">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
+      <div class="header-actions">
+        <a href="./contact.html" class="nav-cta">Contact Us</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="4" cy="6" r="1.2" fill="currentColor" stroke="none" />
+            <line x1="8" y1="6" x2="21" y2="6" />
+            <circle cx="4" cy="12" r="1.2" fill="currentColor" stroke="none" />
+            <line x1="8" y1="12" x2="21" y2="12" />
+            <circle cx="4" cy="18" r="1.2" fill="currentColor" stroke="none" />
+            <line x1="8" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
     </div>
     <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
       <a href="./index.html#top" class="mobile-nav-link">Home</a>
       <a href="./products.html" class="mobile-nav-link">Products</a>
       <a href="./index.html#how-it-works" class="mobile-nav-link">How it works</a>
       <a href="./index.html#faqs" class="mobile-nav-link">FAQs</a>
-      <a href="./contact.html" class="mobile-nav-link mobile-nav-cta">Contact Us</a>
+      <a href="./contact.html" class="mobile-nav-cta">Contact Us</a>
     </div>
   </header>
 
@@ -57,52 +66,100 @@
               <span class="title-accent">Policy.</span>
             </h1>
             <p class="products-hero-sub">
-              Last updated: November 2026 &middot; Your campaign data, subscriber lists, and delivery logs are encrypted and protected at every layer.
+              Last updated: November 2026 &middot; Your campaign data, subscriber lists, and delivery logs are encrypted and strictly confidential.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Privacy Content -->
+    <!-- Split Privacy Stage -->
     <section class="subpage-content-section">
       <div class="container">
-        <div class="legal-card">
-          <div class="legal-section">
-            <h2>1. Information We Collect</h2>
-            <p>
-              We collect business account details (company name, GST/KYC verification, contact email, phone number), DLT registration identifiers (Principal Entity ID, Sender IDs, template IDs), and API/campaign transmission metadata required to deliver Bulk SMS, RCS, WhatsApp, IVR, OBD, and SMPP traffic.
-            </p>
-          </div>
+        <div class="legal-split-grid">
+          <!-- Left Sticky Dark Navy Card -->
+          <aside class="legal-sidebar-card">
+            <div>
+              <span class="faq-support-pill">DATA SECURITY FIRST</span>
+              <h2 class="legal-sidebar-title">Your Lists Stay 100% Yours.</h2>
+              <p class="legal-sidebar-desc">
+                Immense Air never sells, shares, or repurposes client phone numbers, message payloads, or delivery reports.
+              </p>
 
-          <div class="legal-section">
-            <h2>2. How We Use Your Data</h2>
-            <ul>
-              <li>To route, deliver, and report Delivery Receipts (DLRs) and call detail records (CDRs) in real time.</li>
-              <li>To enforce TRAI DND scrubbing, PE-TM chain compliance, and fraud prevention.</li>
-              <li>To provide dedicated technical support, onboarding assistance, and billing invoices.</li>
-            </ul>
-          </div>
+              <nav class="legal-toc" aria-label="Privacy Sections">
+                <a href="#priv-01" class="legal-toc-link"><span>01</span> Information We Collect</a>
+                <a href="#priv-02" class="legal-toc-link"><span>02</span> How We Use Your Data</a>
+                <a href="#priv-03" class="legal-toc-link"><span>03</span> List Confidentiality</a>
+                <a href="#priv-04" class="legal-toc-link"><span>04</span> Security &amp; Retention</a>
+                <a href="#priv-05" class="legal-toc-link"><span>05</span> Your Rights &amp; Contact</a>
+              </nav>
+            </div>
 
-          <div class="legal-section">
-            <h2>3. Strict Confidentiality of Contact Lists</h2>
-            <p>
-              Immense Air never sells, rents, shares, or repurposes client contact databases, phone numbers, or message payloads with third-party marketers. Subscriber lists uploaded to our dashboard or sent via HTTP/SMPP APIs are processed strictly to execute your authorized campaigns.
-            </p>
-          </div>
+            <div class="legal-sidebar-footer">
+              <a href="./contact.html" class="btn-primary-orange legal-sidebar-cta">
+                <span>Contact Privacy Team</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </a>
+              <a href="./terms.html" class="legal-sidebar-alt">Read Terms &amp; Conditions &rarr;</a>
+            </div>
+          </aside>
 
-          <div class="legal-section">
-            <h2>4. Data Security &amp; Retention</h2>
-            <p>
-              All dashboard sessions, API payloads, and SMPP binds support TLS encryption. Campaign delivery logs and call recordings are retained according to statutory telecom compliance windows and your account retention settings, after which they are securely purged.
-            </p>
-          </div>
+          <!-- Right Numbered Clause Cards -->
+          <div class="legal-clauses-stack">
+            <article class="legal-clause-card" id="priv-01">
+              <div class="legal-clause-head">
+                <span class="faq-num">01</span>
+                <h2>Information We Collect</h2>
+              </div>
+              <p>
+                We collect business account details (company name, GST/KYC verification, contact email, phone number), DLT registration identifiers (Principal Entity ID, Sender IDs, template IDs), and API/campaign transmission metadata required to deliver Bulk SMS, RCS, WhatsApp, IVR, OBD, and SMPP traffic.
+              </p>
+            </article>
 
-          <div class="legal-section">
-            <h2>5. Your Rights &amp; Contact</h2>
-            <p>
-              You may request access, correction, or deletion of your account data at any time by contacting our Data Protection team at <strong>support@immenseair.in</strong> or via the <a href="./contact.html" class="inline-link">Contact Us</a> page.
-            </p>
+            <article class="legal-clause-card" id="priv-02">
+              <div class="legal-clause-head">
+                <span class="faq-num">02</span>
+                <h2>How We Use Your Data</h2>
+              </div>
+              <ul>
+                <li>To route, deliver, and report Delivery Receipts (DLRs) and call detail records (CDRs) in real time.</li>
+                <li>To enforce TRAI DND scrubbing, PE-TM chain compliance, and fraud prevention.</li>
+                <li>To provide dedicated technical support, onboarding assistance, and billing invoices.</li>
+              </ul>
+            </article>
+
+            <article class="legal-clause-card" id="priv-03">
+              <div class="legal-clause-head">
+                <span class="faq-num">03</span>
+                <h2>Strict Confidentiality of Contact Lists</h2>
+              </div>
+              <p>
+                Immense Air never sells, rents, shares, or repurposes client contact databases, phone numbers, or message payloads with third-party marketers. Subscriber lists uploaded to our dashboard or sent via HTTP/SMPP APIs are processed strictly to execute your authorized campaigns.
+              </p>
+            </article>
+
+            <article class="legal-clause-card" id="priv-04">
+              <div class="legal-clause-head">
+                <span class="faq-num">04</span>
+                <h2>Data Security &amp; Retention</h2>
+              </div>
+              <p>
+                All dashboard sessions, API payloads, and SMPP binds support TLS encryption. Campaign delivery logs and call recordings are retained according to statutory telecom compliance windows and your account retention settings, after which they are securely purged.
+              </p>
+            </article>
+
+            <article class="legal-clause-card" id="priv-05">
+              <div class="legal-clause-head">
+                <span class="faq-num">05</span>
+                <h2>Your Rights &amp; Contact</h2>
+              </div>
+              <p>
+                You may request access, correction, or deletion of your account data at any time by contacting our Data Protection team at <strong>support@immenseair.in</strong> or via the <a href="./contact.html" class="inline-link">Contact Us</a> page.
+              </p>
+            </article>
           </div>
         </div>
       </div>
