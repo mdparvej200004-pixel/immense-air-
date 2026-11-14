@@ -103,41 +103,27 @@
 
                   <!-- Lockscreen / Notification Header -->
                   <div class="sms-lock-header">
+                    <div class="sms-lock-date">Immense Air · Live SMS</div>
                     <div class="sms-lock-clock" id="smsLockClock">09:41</div>
-                    <div class="sms-lock-date">Immense Air · Live SMS Notifications</div>
                   </div>
 
-                  <!-- Animated Message Notification Stack -->
+                  <!-- 3D Depth Pop-Out Message Notification Stack -->
                   <div class="sms-notif-stack" id="smsNotifStack" aria-live="polite">
-                    <div class="sms-notif-card is-featured" data-notif="promotional">
+                    <div class="sms-notif-card is-depth-3" data-notif="personalized">
                       <div class="sms-notif-top">
                         <div class="sms-notif-brand">
                           <img src="./assets/immense-air-logo.jpg" alt="" class="sms-notif-icon" />
-                          <span class="sms-notif-sender">AX-IMMAIR-P</span>
-                          <span class="sms-notif-tag">Promotional</span>
+                          <span class="sms-notif-sender">AX-IMMAIR-S</span>
+                          <span class="sms-notif-tag">Personalized</span>
                         </div>
-                        <span class="sms-notif-time">now</span>
+                        <span class="sms-notif-time">4m ago</span>
                       </div>
                       <div class="sms-notif-body">
-                        Festive Sale! Get flat <strong>25% OFF</strong> on your next order. Use code <strong>FEST25</strong> 👉 immenseair.in/offers
+                        Hi <strong>Rahul</strong>, your VIP voucher <strong>RAHUL20</strong> expires on 18 Nov!
                       </div>
                     </div>
 
-                    <div class="sms-notif-card" data-notif="otp">
-                      <div class="sms-notif-top">
-                        <div class="sms-notif-brand">
-                          <img src="./assets/immense-air-logo.jpg" alt="" class="sms-notif-icon" />
-                          <span class="sms-notif-sender">VK-IMMAIR-S</span>
-                          <span class="sms-notif-tag">OTP · 1.4s</span>
-                        </div>
-                        <span class="sms-notif-time">1m ago</span>
-                      </div>
-                      <div class="sms-notif-body">
-                        <strong>482910</strong> is your One-Time Password (OTP) for Immense Air login. Valid for 5 mins.
-                      </div>
-                    </div>
-
-                    <div class="sms-notif-card" data-notif="transactional">
+                    <div class="sms-notif-card is-depth-2" data-notif="transactional">
                       <div class="sms-notif-top">
                         <div class="sms-notif-brand">
                           <img src="./assets/immense-air-logo.jpg" alt="" class="sms-notif-icon" />
@@ -151,17 +137,31 @@
                       </div>
                     </div>
 
-                    <div class="sms-notif-card" data-notif="personalized">
+                    <div class="sms-notif-card is-depth-1" data-notif="otp">
                       <div class="sms-notif-top">
                         <div class="sms-notif-brand">
                           <img src="./assets/immense-air-logo.jpg" alt="" class="sms-notif-icon" />
-                          <span class="sms-notif-sender">AX-IMMAIR-S</span>
-                          <span class="sms-notif-tag">Personalized</span>
+                          <span class="sms-notif-sender">VK-IMMAIR-S</span>
+                          <span class="sms-notif-tag">OTP · 1.4s</span>
                         </div>
-                        <span class="sms-notif-time">4m ago</span>
+                        <span class="sms-notif-time">1m ago</span>
                       </div>
                       <div class="sms-notif-body">
-                        Hi <strong>Rahul</strong>, your VIP voucher <strong>RAHUL20</strong> expires on 18 Nov!
+                        <strong>482910</strong> is your One-Time Password (OTP) for Immense Air login.
+                      </div>
+                    </div>
+
+                    <div class="sms-notif-card is-depth-0" data-notif="promotional">
+                      <div class="sms-notif-top">
+                        <div class="sms-notif-brand">
+                          <img src="./assets/immense-air-logo.jpg" alt="" class="sms-notif-icon" />
+                          <span class="sms-notif-sender">AX-IMMAIR-P</span>
+                          <span class="sms-notif-tag">Promotional</span>
+                        </div>
+                        <span class="sms-notif-time">just now</span>
+                      </div>
+                      <div class="sms-notif-body">
+                        Festive Sale! Flat <strong>25% OFF</strong> on your next order. Use code <strong>FEST25</strong>
                       </div>
                     </div>
                   </div>
@@ -699,14 +699,17 @@
         if (!notifStack) return;
         const target = notifStack.querySelector(`[data-notif="${key}"]`);
         if (!target) return;
-        notifStack.querySelectorAll('.sms-notif-card').forEach((c) => {
-          c.classList.remove('is-featured', 'is-popping');
+        // Move selected notification to the front/bottom (depth-0 pop-out) & shift others up
+        notifStack.appendChild(target);
+        const cards = Array.from(notifStack.querySelectorAll('.sms-notif-card'));
+        const times = ['4m ago', '2m ago', '1m ago', 'just now'];
+        cards.forEach((c, idx) => {
+          c.classList.remove('is-depth-0', 'is-depth-1', 'is-depth-2', 'is-depth-3');
+          const depth = Math.max(0, cards.length - 1 - idx);
+          c.classList.add(`is-depth-${depth}`);
+          const tEl = c.querySelector('.sms-notif-time');
+          if (tEl) tEl.textContent = times[idx] || 'now';
         });
-        notifStack.prepend(target);
-        const timeEl = target.querySelector('.sms-notif-time');
-        if (timeEl) timeEl.textContent = 'just now';
-        void target.offsetWidth;
-        target.classList.add('is-featured', 'is-popping');
       }
 
       if (notifStack) {
