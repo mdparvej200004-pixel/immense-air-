@@ -5074,6 +5074,131 @@ img {
 /* =========================================
    Bulk SMS Page (sms.html — Home-Style)
    ========================================= */
+.sms-hero-visual {
+  justify-content: center;
+}
+
+.phone-mockup--sms-notif {
+  width: 316px;
+}
+
+.phone-screen--notif {
+  min-height: 492px;
+  background: linear-gradient(180deg, #eff5ff 0%, #f8fafd 45%, #fff5ee 100%);
+  padding: 16px 12px 16px;
+}
+
+.sms-lock-header {
+  text-align: center;
+  padding: 12px 0 14px;
+}
+
+.sms-lock-clock {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.sms-lock-date {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.sms-notif-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.sms-notif-card {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(11, 37, 89, 0.08);
+  border-radius: 16px;
+  padding: 10px 11px;
+  box-shadow: 0 6px 16px rgba(11, 37, 89, 0.06);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sms-notif-card.is-featured {
+  background: #ffffff;
+  border-color: rgba(255, 90, 0, 0.45);
+  box-shadow: 0 12px 26px rgba(255, 90, 0, 0.14), 0 4px 12px rgba(11, 37, 89, 0.08);
+}
+
+.sms-notif-card.is-popping {
+  animation: smsNotifPopIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes smsNotifPopIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-16px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.sms-notif-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  margin-bottom: 5px;
+}
+
+.sms-notif-brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.sms-notif-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  object-fit: contain;
+  background: #ffffff;
+  border: 1px solid rgba(11, 37, 89, 0.1);
+  flex-shrink: 0;
+}
+
+.sms-notif-sender {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--primary);
+  white-space: nowrap;
+}
+
+.sms-notif-tag {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--accent-orange);
+  background: var(--accent-orange-tint);
+  padding: 2px 6px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.sms-notif-time {
+  font-size: 10px;
+  font-weight: 600;
+  color: #64748b;
+  flex-shrink: 0;
+}
+
+.sms-notif-body {
+  font-size: 11px;
+  line-height: 1.42;
+  color: #334155;
+}
+
 .sms-hero-stats {
   display: flex;
   flex-wrap: wrap;
