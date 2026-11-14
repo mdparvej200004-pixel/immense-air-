@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meta WhatsApp Business API — Broadcasts, Catalogs &amp; Chatbots | Immense Air</title>
+  <meta name="description" content="Official Meta WhatsApp Business API by Immense Air: Green Tick verification, bulk template broadcasts, interactive catalogs, 24×7 AI chatbots, and shared team inbox." />
+  <link rel="icon" href="./assets/immense-air-logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- Top Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="./index.html#top" class="brand-logo" aria-label="Immense Air Home">
+        <img src="./assets/immense-air-logo.jpg" alt="Immense Air Logo" class="brand-logo-img" />
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="./index.html#top" class="nav-link">Home</a>
+        <a href="./products.html" class="nav-link">Products</a>
+        <a href="./index.html#how-it-works" class="nav-link">How it works</a>
+        <a href="./index.html#faqs" class="nav-link">FAQs</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="./contact.html" class="nav-cta">Contact Us</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="4" cy="6" r="1.2" fill="currentColor" stroke="none" />
+            <line x1="8" y1="6" x2="21" y2="6" />
+            <circle cx="4" cy="12" r="1.2" fill="currentColor" stroke="none" />
+            <line x1="8" y1="12" x2="21" y2="12" />
+            <circle cx="4" cy="18" r="1.2" fill="currentColor" stroke="none" />
+            <line x1="8" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <a href="./index.html#top" class="mobile-nav-link">Home</a>
+      <a href="./products.html" class="mobile-nav-link">Products</a>
+      <a href="./index.html#how-it-works" class="mobile-nav-link">How it works</a>
+      <a href="./index.html#faqs" class="mobile-nav-link">FAQs</a>
+      <a href="./contact.html" class="mobile-nav-cta">Contact Us</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero Section (Synced Official Meta WhatsApp Phone + Left Hero Caption) -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-card" id="heroCard">
+          <div class="hero-grid-pattern" aria-hidden="true"></div>
+          <div class="hero-glow hero-glow--blue" aria-hidden="true"></div>
+          <div class="hero-glow hero-glow--orange" aria-hidden="true"></div>
+
+          <div class="hero-grid">
+            <div class="hero-content" id="waHeroCaption">
+              <div class="hero-badge">
+                <span class="badge-dot" aria-hidden="true"></span>
+                <span id="waHeroBadgeText">OFFICIAL META WHATSAPP API</span>
+              </div>
+
+              <h1 class="hero-title" id="waHeroTitle">
+                <span class="title-primary">Broadcast, Automate</span>
+                <span class="title-accent">&amp; Sell On WhatsApp.</span>
+              </h1>
+
+              <p class="hero-subtitle" id="waHeroSubtitle">
+                Reach customers with 98% open rates using Meta-approved rich media templates, Green Tick branding, and 1-tap CTA buttons.
+              </p>
+
+              <div class="sms-hero-stats" id="waHeroStats">
+                <div class="sms-stat-chip">
+                  <strong>98% Open</strong>
+                  <span>WhatsApp Rate</span>
+                </div>
+                <div class="sms-stat-chip">
+                  <strong>Green Tick</strong>
+                  <span>Meta Verified</span>
+                </div>
+                <div class="sms-stat-chip">
+                  <strong>Official API</strong>
+                  <span>Zero Ban Risk</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-visual sms-hero-visual">
+              <div class="phone-mockup phone-mockup--sms-notif">
+                <div class="phone-screen phone-screen--wa">
+                  <div class="phone-notch" aria-hidden="true"></div>
+                  <div class="phone-statusbar">
+                    <span>9:41</span>
+                    <span class="statusbar-icons">5G · WhatsApp</span>
+                  </div>
+
+                  <!-- Official WhatsApp Business Header -->
+                  <div class="wa-phone-hdr">
+                    <div class="rcs-phone-brand">
+                      <img src="./assets/immense-air-logo.jpg" alt="Immense Air" class="rcs-phone-avatar" />
+                      <div>
+                        <div class="rcs-phone-name">
+                          <span>Immense Air</span>
+                          <svg viewBox="0 0 20 20" fill="currentColor" class="wa-verified-tick" aria-label="Meta Verified">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                          </svg>
+                        </div>
+                        <span class="rcs-phone-sub">Official Business Account</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Auto-Cycling WhatsApp Slides -->
+                  <div class="rcs-stage-wrap" id="waStageWrap" aria-live="polite">
+                    <!-- Slide 1: Broadcast Template -->
+                    <div class="rcs-slide is-active" data-wa="broadcast">
+                      <div class="rcs-rich-card">
+                        <img src="./assets/wa-luxury-collection.jpg" alt="WhatsApp Broadcast Template" class="rcs-rich-img" />
+                        <div class="rcs-rich-body">
+                          <strong>Festive VIP Launch · 30% OFF</strong>
+                          <p>Hi Rahul, unlock early access to our Festive Collection before tonight's drop.</p>
+                          <div class="rcs-action-row">
+                            <span class="rcs-action-btn rcs-action-btn--primary">Shop Now</span>
+                            <span class="rcs-action-btn">View Catalog</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Slide 2: Interactive Catalog -->
+                    <div class="rcs-slide" data-wa="catalog">
+                      <div class="rcs-carousel-scroll">
+                        <div class="rcs-mini-card">
+                          <img src="./assets/rcs-cozy-jacket.jpg" alt="Puffer Jacket" />
+                          <div class="rcs-mini-card-body">
+                            <strong>Puffer Jacket</strong>
+                            <span>₹2,499 · In Stock</span>
+                            <span class="rcs-mini-btn">Add to Cart</span>
+                          </div>
+                        </div>
+                        <div class="rcs-mini-card">
+                          <img src="./assets/rcs-warm-hoodie.jpg" alt="Fleece Hoodie" />
+                          <div class="rcs-mini-card-body">
+                            <strong>Fleece Hoodie</strong>
+                            <span>₹1,599 · In Stock</span>
+                            <span class="rcs-mini-btn">Add to Cart</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="rcs-chip-row">
+                        <span class="rcs-chip rcs-chip--accent">🛒 Checkout in Chat</span>
+                      </div>
+                    </div>
+
+                    <!-- Slide 3: 2-Way WhatsApp Chatbot -->
+                    <div class="rcs-slide" data-wa="chatbot">
+                      <div class="rcs-chat-thread">
+                        <div class="rcs-user-msg wa-user-msg">Hi, confirm my COD order #IA-84920</div>
+                        <div class="rcs-bot-bubble">
+                          <strong>Immense Air Bot · Automated</strong>
+                          <p>Order <strong>#IA-84920 (₹2,499)</strong> is ready! Tap below to confirm dispatch or pay via UPI.</p>
+                        </div>
+                      </div>
+                      <div class="rcs-chip-row rcs-chip-row--wrap">
+                        <span class="rcs-chip rcs-chip--accent">✓ Confirm COD</span>
+                        <span class="rcs-chip">Pay via UPI</span>
+                      </div>
+                    </div>
+
+                    <!-- Slide 4: Utility & Authentication OTP -->
+                    <div class="rcs-slide" data-wa="utility">
+                      <div class="rcs-text-bubble">
+                        <div class="wa-text-meta">Authentication Template · Verified ✓✓</div>
+                        <p><strong>482910</strong> is your verification code for Immense Air. For your security, do not share this code.</p>
+                      </div>
+                      <div class="rcs-chip-row">
+                        <span class="rcs-chip rcs-chip--accent">📋 Copy Code</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- WhatsApp Input Bar -->
+                  <div class="rcs-phone-input">
+                    <span>Type a message...</span>
+                    <span class="wa-read-receipt">✓✓ Read</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp Capabilities Ticker -->
+    <section class="ticker-section" aria-label="WhatsApp API Features">
+      <div class="ticker-track">
+        <div class="ticker-group">
+          <a href="#wa-types" class="ticker-item">Green Tick Verification</a>
+          <a href="#wa-types" class="ticker-item">Bulk Broadcasts</a>
+          <a href="#wa-types" class="ticker-item">WhatsApp Catalogs</a>
+          <a href="#wa-chatbot" class="ticker-item">24×7 AI Chatbot</a>
+          <a href="#wa-types" class="ticker-item">WhatsApp Flows</a>
+          <a href="#wa-types" class="ticker-item">Authentication OTP</a>
+          <a href="#wa-chatbot" class="ticker-item">Shared Team Inbox</a>
+        </div>
+        <div class="ticker-group" aria-hidden="true">
+          <a href="#wa-types" class="ticker-item">Green Tick Verification</a>
+          <a href="#wa-types" class="ticker-item">Bulk Broadcasts</a>
+          <a href="#wa-types" class="ticker-item">WhatsApp Catalogs</a>
+          <a href="#wa-chatbot" class="ticker-item">24×7 AI Chatbot</a>
+          <a href="#wa-types" class="ticker-item">WhatsApp Flows</a>
+          <a href="#wa-types" class="ticker-item">Authentication OTP</a>
+          <a href="#wa-chatbot" class="ticker-item">Shared Team Inbox</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 Core WhatsApp Solutions (Paper-Clipped Tactile Cards) -->
+    <section class="sms-clip-section" id="wa-types">
+      <div class="container">
+        <div class="section-header-center">
+          <div class="section-tag">6 Core WhatsApp Solutions</div>
+          <h2 class="section-title">Everything you need on Official Meta WhatsApp API</h2>
+          <p class="section-subtitle">
+            Six Meta-approved capabilities to broadcast offers, automate support, capture leads, and close orders inside WhatsApp.
+          </p>
+        </div>
+
+        <div class="sms-clip-grid sms-clip-grid--3col">
+          <!-- 01: Promotional Broadcasts -->
+          <a href="./contact.html" class="sms-clip-card sms-clip-card--promo">
+            <svg class="sms-clip-pin" viewBox="0 0 38 78" fill="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="clipMetalWa" x1="0" y1="0" x2="38" y2="78" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#f8fafc"/>
+                  <stop offset="35%" stop-color="#94a3b8"/>
+                  <stop offset="70%" stop-color="#e2e8f0"/>
+                  <stop offset="100%" stop-color="#475569"/>
+                </linearGradient>
+              </defs>
+              <path d="M12 24V56C12 62.6274 17.3726 68 24 68C30.6274 68 36 62.6274 36 56V16C36 8.26801 29.732 2 22 2C14.268 2 8 8.26801 8 16V52C8 56.4183 11.5817 60 16 60C20.4183 60 24 56.4183 24 52V20" stroke="#0f172a" stroke-opacity="0.22" stroke-width="5.2" stroke-linecap="round" transform="translate(1.5, 2)"/>
+              <path d="M12 24V56C12 62.6274 17.3726 68 24 68C30.6274 68 36 62.6274 36 56V16C36 8.26801 29.732 2 22 2C14.268 2 8 8.26801 8 16V52C8 56.4183 11.5817 60 16 60C20.4183 60 24 56.4183 24 52V20" stroke="url(#clipMetalWa)" stroke-width="4.2" stroke-linecap="round"/>
+            </svg>
+            <span class="sms-clip-badge sms-clip-badge--orange">01</span>
+
+            <div class="sms-clip-head">
+              <span class="sms-clip-kicker">Marketing Templates</span>
+              <h3 class="sms-clip-title">Bulk Broadcasts</h3>
+              <span class="sms-clip-sub">Images, PDFs &amp; CTA Buttons</span>
+            </div>
+
+            <div class="sms-clip-window">
+              <div class="sms-clip-win-top">
+                <span class="sms-clip-sender">MARKETING API</span>
+                <span class="sms-clip-status">98% Open</span>
+              </div>
+              <p class="sms-clip-msg">Send <strong>Meta-approved festive offers</strong> with banners, videos, coupons &amp; clickable Shop Now buttons.</p>
+            </div>
+
+            <div class="sms-clip-foot">
+              <div class="sms-clip-meta">
+                <strong>ZERO BAN RISK</strong>
+                <span>Schedule · Click Analytics</span>
+              </div>
+              <div class="sms-clip-num">
+                <strong>98%</strong>
+                <svg viewBox="0 0 28 14" fill="none" aria-hidden="true"><path d="M2 5c3-3 5-3 8 0s5 3 8 0 5-3 8 0M2 10c3-3 5-3 8 0s5 3 8 0 5-3 8 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- 02: Utility & Order Alerts -->
+          <a href="./contact.html" class="sms-clip-card sms-clip-card--trans">
+            <svg class="sms-clip-pin" viewBox="0 0 38 78" fill="none" aria-hidden="true">
+              <path d="M12 24V56C12 62.6274 17.3726 68 24 68C30.6274 68 36 62.6274 36 56V16C36 8.26801 29.732 2 22 2C14.268 2 8 8.26801 8 16V52C8 56.4183 11.5817 60 16 60C20.4183 60 24 56.4183 24 52V20" stroke="#0f172a" stroke-opacity="0.22" stroke-width="5.2" stroke-linecap="round" transform="translate(1.5, 2)"/>
+              <path d="M12 24V56C12 62.6274 17.3726 68 24 68C30.6274 68 36 62.6274 36 56V16C36 8.26801 29.732 2 22 2C14.268 2 8 8.26801 8 16V52C8 56.4183 11.5817 60 16 60C20.4183 60 24 56.4183 24 52V20" stroke="url(#clipMetalWa)" stroke-width="4.2" stroke-linecap="round"/>
+            </svg>
+            <span class="sms-clip-badge sms-clip-badge--navy">02</span>
+
+            <div class="sms-clip-head">
+              <span class="sms-clip-kicker">24×7 Transactional</span>
+              <h3 class="sms-clip-title">Utility &amp; Order Alerts</h3>
+              <span class="sms-clip-sub">Invoices, Tracking &amp; EMI</span>
+            </div>
+
+            <div class="sms-clip-window">
+              <div class="sms-clip-win-top">
+                <span class="sms-clip-sender">UTILITY API</span>
+                <span class="sms-clip-status">Instant</span>
+              </div>
+              <p class="sms-clip-msg">Trigger <strong>order confirmations, PDF invoices</strong>, shipping links &amp; payment reminders from Shopify or CRM.</p>
+            </div>
+
+            <div class="sms-clip-foot">
+              <div class="sms-clip-meta">
+                <strong>WEBHOOK READY</strong>
+                <span>Shopify · WooCommerce · API</span>
+              </div>
+              <div class="sms-clip-num">
+                <strong>24×7</strong>
+                <svg viewBox="0 0 28 14" fill="none" aria-hidden="true"><path d="M2 5c3-3 5-3 8 0s5 3 8 0 5-3 8 0M2 10c3-3 5-3 8 0s5 3 8 0 5-3 8 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- 03: WhatsApp Authentication OTP -->
+          <a href="./contact.html" class="sms-clip-card sms-clip-card--otp">
+            <svg class="sms-clip-pin" viewBox="0 0 38 78" fill="none" aria-hidden="true">
+              <path d="M12 24V56C12 62.6274 17.3726 68 24 68C30.6274 68 36 62.6274 36 56V16C36 8.26801 29.732 2 22 2C14.268 2 8 8.26801 8 16V52C8 56.4183 11.5817 60 16 60C20.4183 60 24 56.4183 24 52V20" stroke="#0f172a" stroke-opacity="0.22" stroke-width="5.2" stroke-linecap="round" transform="translate(1.5, 2)"/>
+              <path d="M12 24V56C12 62.6274 17.3726 68 24 68C30.6274 68 36 62.6274 36 56V16C36 8.26801 29.732 2 22 2C14.268 2 8 8.26801 8 16V52C8 56.4183 11.5817 60 16 60C20.4183 60 24 56.4183 24 52V20" stroke="url(#clipMetalWa)" stroke-width="4.2" stroke-linecap="round"/>
+            </svg>
+            <span class="sms-clip-badge sms-clip-badge--teal">03</span>
+
+            <div class="sms-clip-head">
+              <span class="sms-clip-kicker">Login &amp; 2FA</span>
+              <h3 class="sms-clip-title">WhatsApp OTP</h3>
+              <span class="sms-clip-sub">1-Tap Copy Code Button</span>
+            </div>
+
+            <div class="sms-clip-window">
+              <div class="sms-clip-win-top">
+                <span class="sms-clip-sender">AUTH TEMPLATE</span>
+                <span class="sms-clip-status">&lt; 2s</span>
+              </div>
+              <p class="sms-clip-msg">Deliver <strong>secure 2FA &amp; login OTPs</strong> inside WhatsApp with one-tap Copy Code &amp; optional SMS fallback.</p>
+            </div>
+
+            <div class="sms-clip-foot">
+              <div class="sms-clip-meta">
+                <strong>GLOBAL + INDIA</strong>
+                <span>Auto-Fill &amp; SMS Backup</span>
+              </div>
+              <div class="sms-clip-num">
+                <strong>&lt;2s</strong>
+                <svg viewBox="0 0 28 14" fill="none" aria-hidden="true"><path d="M2 5c3-3 5-3 8 0s5 3 8 0 5-3 8 0M2 10c3-3 5-3 8 0s5 3 8 0 5-3 8 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- 04: Interactive Catalogs -->
+          <a href="./contact.html" class="sms-clip-card sms-clip-card--pers">
+            <svg class="sms-clip-pin" viewBox="0 0 38 78" fill="none" aria-hidden="true">
+              <path d="M12 24V56C12 62.6274 17.3726 68 24 68C30.6274 68 36 62.6274 36 56V16C36 8.26801 29.732 2 22 2C14.268 2 8 8.26801 8 16V52C8 56.4183 11.5817 60 16 60C20.4183 60 24 56.4183 24 52V20" stroke="#0f172a" stroke-opacity="0.22" stroke-width="5.2" stroke-linecap="round" transform="translate(1.5, 2)"/>
+              <path d="M12 24V56C12 62.6274 17.3726 68 24 68C30.6274 68 36 62.6274 36 56V16C36 8.26801 29.732 2 22 2C14.268 2 8 8.26801 8 16V52C8 56.4183 11.5817 60 16 60C20.4183 60 24 56.4183 24 52V20" stroke="url(#clipMetalWa)" stroke-width="4.2" stroke-linecap="round"/>
+            </svg>
+            <span class="sms-clip-badge sms-clip-badge--blue">04</span>
+
+            <div class="sms-clip-head">
+              <span class="sms-clip-kicker">In-Chat Storefront</span>
+              <h3 class="sms-clip-title">WhatsApp Catalogs</h3>
+              <span class="sms-clip-sub">Multi-Product &amp; Cart</span>
+            </div>
+
+            <div class="sms-clip-window">
+              <div class="sms-clip-win-top">
+                <span class="sms-clip-sender">COMMERCE API</span>
+                <span class="sms-clip-status">3.8× Sales</span>
+              </div>
+              <p class="sms-clip-msg">Let buyers <strong>browse SKUs, add to cart &amp; pay via UPI</strong> directly inside WhatsApp with cart recovery.</p>
+            </div>
+
+            <div class="sms-clip-foot">
+              <div class="sms-clip-meta">
+                <strong>D2C &amp; RETAIL</strong>
+                <span>Cart Abandonment Flows</span>
+              </div>
+              <div class="sms-clip-num">
+                <strong>3.8×</strong>
+                <svg viewBox="0 0 28 14" fill="none" aria-hidden="true"><path d="M2 5c3-3 5-3 8 0s5 3 8 0 5-3 8 0M2 10c3-3 5-3 8 0s5 3 8 0 5-3 8 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- 05: Chatbot Automation -->
+          <a href="./contact.html" class="sms-clip-card sms-clip-card--promo">
+            <svg class="sms-clip-pin" viewBox="0 0 38 78" fill="none" aria-hidden="true">
+              <path d="M12 24V56C12 62.6274 17.3726 68 24 68C30.6274 68 36 62.6274 36 56V16C36 8.26801 29.732 2 22 2C14.268 2 8 8.26801 8 16V52C8 56.4183 11.5817 60 16 60C20.4183 60 24 56.4183 24 52V20" stroke="#0f172a" stroke-opacity="0.22" stroke-width="5.2" stroke-linecap="round" transform="translate(1.5, 2)"/>
+              <path d="M12 24V56C12 62.6274 17.3726 68 24 68C30.6274 68 36 62.6274 36 56V16C36 8.26801 29.732 2 22 2C14.268 2 8 8.26801 8 16V52C8 56.4183 11.5817 60 16 60C20.4183 60 24 56.4183 24 52V20" stroke="url(#clipMetalWa)" stroke-width="4.2" stroke-linecap="round"/>
+            </svg>
+            <span class="sms-clip-badge sms-clip-badge--orange">05</span>
+
+            <div class="sms-clip-head">
+              <span class="sms-clip-kicker">No-Code Builder</span>
+              <h3 class="sms-clip-title">AI Chatbot Flows</h3>
+              <span class="sms-clip-sub">24×7 Lead &amp; Support</span>
+            </div>
+
+            <div class="sms-clip-window">
+              <div class="sms-clip-win-top">
+                <span class="sms-clip-sender">WHATSAPP BOT</span>
+                <span class="sms-clip-status">Auto Flows</span>
+              </div>
+              <p class="sms-clip-msg">Qualify leads, answer FAQs, confirm COD orders &amp; route complex chats to your <strong>Shared Team Inbox</strong>.</p>
+            </div>
+
+            <div class="sms-clip-foot">
+              <div class="sms-clip-meta">
+                <strong>MULTI-AGENT INBOX</strong>
+                <span>CRM Sync · Live Handoff</span>
+              </div>
+              <div class="sms-clip-num">
+                <strong>24×7</strong>
+                <svg viewBox="0 0 28 14" fill="none" aria-hidden="true"><path d="M2 5c3-3 5-3 8 0s5 3 8 0 5-3 8 0M2 10c3-3 5-3 8 0s5 3 8 0 5-3 8 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- 06: WhatsApp Flows & Forms -->
+          <a href="./contact.html" class="sms-clip-card sms-clip-card--trans">
+            <svg class="sms-clip-pin" viewBox="0 0 38 78" fill="none" aria-hidden="true">
+              <path d="M12 24V56C12 62.6274 17.3726 68 24 68C30.6274 68 36 62.6274 36 56V16C36 8.26801 29.732 2 22 2C14.268 2 8 8.26801 8 16V52C8 56.4183 11.5817 60 16 60C20.4183 60 24 56.4183 24 52V20" stroke="#0f172a" stroke-opacity="0.22" stroke-width="5.2" stroke-linecap="round" transform="translate(1.5, 2)"/>
+              <path d="M12 24V56C12 62.6274 17.3726 68 24 68C30.6274 68 36 62.6274 36 56V16C36 8.26801 29.732 2 22 2C14.268 2 8 8.26801 8 16V52C8 56.4183 11.5817 60 16 60C20.4183 60 24 56.4183 24 52V20" stroke="url(#clipMetalWa)" stroke-width="4.2" stroke-linecap="round"/>
+            </svg>
+            <span class="sms-clip-badge sms-clip-badge--navy">06</span>
+
+            <div class="sms-clip-head">
+              <span class="sms-clip-kicker">Native Forms</span>
+              <h3 class="sms-clip-title">WhatsApp Flows</h3>
+              <span class="sms-clip-sub">Bookings, KYC &amp; Surveys</span>
+            </div>
+
+            <div class="sms-clip-window">
+              <div class="sms-clip-win-top">
+                <span class="sms-clip-sender">INTERACTIVE FORM</span>
+                <span class="sms-clip-status">4× Leads</span>
+              </div>
+              <p class="sms-clip-msg">Collect <strong>appointments, loan KYC, test drives &amp; feedback</strong> via native forms without opening a browser.</p>
+            </div>
+
+            <div class="sms-clip-foot">
+              <div class="sms-clip-meta">
+                <strong>ZERO DROP-OFF</strong>
+                <span>In-Chat Date &amp; Form UI</span>
+              </div>
+              <div class="sms-clip-num">
+                <strong>4×</strong>
+                <svg viewBox="0 0 28 14" fill="none" aria-hidden="true"><path d="M2 5c3-3 5-3 8 0s5 3 8 0 5-3 8 0M2 10c3-3 5-3 8 0s5 3 8 0 5-3 8 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dedicated WhatsApp Chatbot & Shared Inbox Section -->
+    <section class="rcs-bot-section" id="wa-chatbot">
+      <div class="container">
+        <div class="rcs-bot-grid">
+          <div class="rcs-bot-visual">
+            <div class="rcs-bot-phone-wrap">
+              <div class="rcs-bot-corner-badge" aria-hidden="true">
+                <img src="./assets/rcs-chatbot-icon.png" alt="Immense Air WhatsApp AI Chatbot" />
+                <span>WhatsApp Bot 24×7</span>
+              </div>
+
+              <div class="phone-mockup phone-mockup--sms-notif">
+                <div class="phone-screen phone-screen--wa">
+                  <div class="phone-notch" aria-hidden="true"></div>
+                  <div class="phone-statusbar">
+                    <span>9:41</span>
+                    <span class="statusbar-icons">5G · WhatsApp</span>
+                  </div>
+
+                  <div class="wa-phone-hdr">
+                    <div class="rcs-phone-brand">
+                      <img src="./assets/rcs-chatbot-icon.png" alt="WhatsApp Bot" class="rcs-phone-avatar" />
+                      <div>
+                        <div class="rcs-phone-name">
+                          <span>Immense Air Bot</span>
+                          <svg viewBox="0 0 20 20" fill="currentColor" class="wa-verified-tick" aria-label="Verified">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                          </svg>
+                        </div>
+                        <span class="rcs-phone-sub">Automated Assistant · Online</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="rcs-bot-thread" aria-live="polite">
+                    <div class="rcs-user-msg wa-user-msg">Hi! I want to check WhatsApp API &amp; Chatbot.</div>
+                    <div class="rcs-bot-bubble">
+                      <strong>Immense Air Bot · Just now</strong>
+                      <p>Namaste! 👋 Tap any option below to test our live WhatsApp Business flow:</p>
+                    </div>
+                    <div class="rcs-user-msg wa-user-msg" id="waBotUserReply">Green Tick &amp; API Setup</div>
+                    <div class="rcs-bot-bubble" id="waBotAnswer">
+                      <strong>Instant Reply · Meta Partner</strong>
+                      <p>We set up your <strong>Official Meta Cloud API</strong> in 24 hours &amp; assist with Green Tick verification!</p>
+                    </div>
+                  </div>
+
+                  <div class="rcs-chip-row rcs-chip-row--wrap" id="waBotActions">
+                    <button type="button" class="rcs-chip rcs-chip--btn is-selected" data-wa-q="Green Tick &amp; API Setup" data-wa-a="We set up your <strong>Official Meta Cloud API</strong> in 24 hours &amp; assist with Green Tick verification!">✓ Green Tick</button>
+                    <button type="button" class="rcs-chip rcs-chip--btn" data-wa-q="Recover Abandoned Cart" data-wa-a="Automated reminder sent! 🛒 Customers tap <strong>Pay via UPI</strong> to complete checkout right inside WhatsApp.">🛒 Cart Recovery</button>
+                    <button type="button" class="rcs-chip rcs-chip--btn" data-wa-q="Connect Human Agent" data-wa-a="Transferred to <strong>Team Inbox</strong>! Your support agent gets full chat history &amp; CRM details instantly.">👤 Live Agent</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rcs-bot-content">
+            <div class="section-tag">WhatsApp Chatbot &amp; Team Inbox</div>
+            <h2 class="section-title">Turn every WhatsApp reply into a closed deal.</h2>
+            <p class="section-subtitle">
+              Combine automated WhatsApp bots with a shared multi-agent inbox — answer 80% of queries automatically and hand off hot leads to your sales team on one official number.
+            </p>
+
+            <div class="rcs-bot-features">
+              <div class="rcs-bot-feat-item">
+                <span class="rcs-bot-feat-dot">01</span>
+                <div>
+                  <h3>24×7 Automated Bot Journeys</h3>
+                  <p>Build drag-and-drop welcome menus, COD confirmations, and catalog order flows.</p>
+                </div>
+              </div>
+              <div class="rcs-bot-feat-item">
+                <span class="rcs-bot-feat-dot">02</span>
+                <div>
+                  <h3>Shared Multi-Agent Inbox</h3>
+                  <p>Let your entire sales &amp; support team reply from one verified WhatsApp number.</p>
+                </div>
+              </div>
+              <div class="rcs-bot-feat-item">
+                <span class="rcs-bot-feat-dot">03</span>
+                <div>
+                  <h3>Shopify, Zoho &amp; Webhook Sync</h3>
+                  <p>Trigger instant WhatsApp alerts from your store, CRM, or custom backend APIs.</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="./contact.html" class="btn-primary-orange">
+              <span>Launch WhatsApp API</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Immense Air WhatsApp: Smoky Navy Tower Infrastructure -->
+    <section class="sms-tower-section" id="wa-features">
+      <div class="container">
+        <div class="sms-tower-header">
+          <div class="sms-tower-tag">Why Choose Immense Air WhatsApp</div>
+          <h2 class="sms-tower-title">Official Meta Cloud API. <span>Zero Middlemen.</span></h2>
+          <p class="sms-tower-subtitle">
+            Direct Meta WhatsApp Cloud infrastructure with Green Tick onboarding, 99.9% uptime, and real-time delivery webhooks.
+          </p>
+        </div>
+
+        <div class="sms-tower-layout">
+          <div class="sms-tower-col sms-tower-col--left">
+            <div class="sms-tower-node">
+              <div class="sms-tower-icon sms-tower-icon--cyan" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
+                </svg>
+              </div>
+              <div class="sms-tower-copy">
+                <h3>Green Tick Verified</h3>
+                <p>Official Meta Business<br>Trust Badge</p>
+              </div>
+            </div>
+
+            <div class="sms-tower-node">
+              <div class="sms-tower-icon sms-tower-icon--green" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                  <polyline points="17 6 23 6 23 12" />
+                </svg>
+              </div>
+              <div class="sms-tower-copy">
+                <h3>98% Open Rate</h3>
+                <p>Instant Read &amp; Click Logs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="sms-tower-stage">
+            <div class="sms-tower-glow" aria-hidden="true"></div>
+            <div class="sms-tower-ring sms-tower-ring--1" aria-hidden="true"></div>
+            <div class="sms-tower-ring sms-tower-ring--2" aria-hidden="true"></div>
+            <img src="./assets/telecom-tower.png" alt="Immense Air Official WhatsApp Cloud Infrastructure" class="sms-tower-img" loading="lazy" />
+          </div>
+
+          <div class="sms-tower-col sms-tower-col--right">
+            <div class="sms-tower-node">
+              <div class="sms-tower-icon sms-tower-icon--orange" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
+              <div class="sms-tower-copy">
+                <h3>Shared Team<br>Inbox</h3>
+                <p>Multi-Agent Support</p>
+              </div>
+            </div>
+
+            <div class="sms-tower-node">
+              <div class="sms-tower-icon sms-tower-icon--blue" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                  <polyline points="14 2 14 8 20 8" />
+                  <circle cx="11.5" cy="15.5" r="2.5" />
+                  <path d="M13.5 17.5L16 20" />
+                </svg>
+              </div>
+              <div class="sms-tower-copy">
+                <h3>Real-time Meta<br>Webhooks</h3>
+                <p>Sent | Delivered |<br>Read | Replied</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp FAQs -->
+    <section class="faq-section" id="faqs">
+      <div class="container">
+        <div class="faq-card-wrapper">
+          <div class="hero-grid-pattern" aria-hidden="true"></div>
+          <div class="faq-split-grid">
+            <div class="faq-left-col">
+              <div class="section-tag">WhatsApp FAQs</div>
+              <h2 class="section-title faq-left-title">
+                WhatsApp API Questions? <span class="title-accent">Answered.</span>
+              </h2>
+              <p class="section-subtitle faq-left-sub">
+                Everything you need to know about Meta Business verification, Green Tick, broadcasts, and chatbots on Immense Air.
+              </p>
+
+              <div class="faq-support-card">
+                <div class="faq-support-pill">
+                  <span class="bento-secure-dot" aria-hidden="true"></span>
+                  <span>24-Hour API Onboarding</span>
+                </div>
+                <h3>Ready to get your WhatsApp Business API?</h3>
+                <p>Our team assists with Meta Business Manager verification, template approvals, and Green Tick application.</p>
+                <a href="./contact.html" class="btn-primary-orange">
+                  <span>Book WhatsApp Demo</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="faq-list" id="faqList">
+              <div class="faq-item is-open">
+                <button type="button" class="faq-trigger" aria-expanded="true">
+                  <span class="faq-q-left">
+                    <span class="faq-num">01</span>
+                    <span class="faq-q-text">
+                      <span class="faq-q-cat">Green Tick</span>
+                      <span class="faq-q-title">How do we get the Official Meta WhatsApp Green Tick?</span>
+                    </span>
+                  </span>
+                  <span class="faq-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="12" y1="5" x2="12" y2="19" />
+                      <polyline points="19 12 12 19 5 12" />
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-panel" style="max-height: 220px;">
+                  <div class="faq-answer">
+                    Once your Meta Business Manager is verified and your WhatsApp API number is active, Immense Air prepares and submits your Official Business Account (Green Tick) application directly to Meta.
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button type="button" class="faq-trigger" aria-expanded="false">
+                  <span class="faq-q-left">
+                    <span class="faq-num">02</span>
+                    <span class="faq-q-text">
+                      <span class="faq-q-cat">Broadcasts</span>
+                      <span class="faq-q-title">Can we send bulk promotional messages without number blocking?</span>
+                    </span>
+                  </span>
+                  <span class="faq-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="12" y1="5" x2="12" y2="19" />
+                      <polyline points="19 12 12 19 5 12" />
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-panel">
+                  <div class="faq-answer">
+                    Yes! Unlike unofficial bulk tools, Immense Air uses Official Meta Cloud APIs with pre-approved templates and opt-out controls, so you can broadcast safely to opted-in customers.
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button type="button" class="faq-trigger" aria-expanded="false">
+                  <span class="faq-q-left">
+                    <span class="faq-num">03</span>
+                    <span class="faq-q-text">
+                      <span class="faq-q-cat">Automation</span>
+                      <span class="faq-q-title">Does it include a Chatbot and Shared Team Inbox?</span>
+                    </span>
+                  </span>
+                  <span class="faq-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="12" y1="5" x2="12" y2="19" />
+                      <polyline points="19 12 12 19 5 12" />
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-panel">
+                  <div class="faq-answer">
+                    Yes! You get both 24×7 automated chatbot flows (quick replies, catalogs, Flows) and a multi-agent Shared Team Inbox so multiple support or sales agents can reply from one number.
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button type="button" class="faq-trigger" aria-expanded="false">
+                  <span class="faq-q-left">
+                    <span class="faq-num">04</span>
+                    <span class="faq-q-text">
+                      <span class="faq-q-cat">Integrations</span>
+                      <span class="faq-q-title">Can we integrate WhatsApp API with Shopify or our CRM?</span>
+                    </span>
+                  </span>
+                  <span class="faq-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="12" y1="5" x2="12" y2="19" />
+                      <polyline points="19 12 12 19 5 12" />
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-panel">
+                  <div class="faq-answer">
+                    Yes! Connect directly via REST APIs and webhooks, or use ready plugins for Shopify, WooCommerce, Zoho, and HubSpot to trigger automated order &amp; cart alerts.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Band -->
+    <div class="bottom-band">
+      <footer class="site-footer">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand-col">
+              <a href="./index.html#top" class="footer-brand-link" aria-label="Immense Air Home">
+                <img src="./assets/immense-air-logo.jpg" alt="Immense Air" class="footer-logo-img" />
+              </a>
+              <p class="footer-brand-desc">
+                Enterprise CPaaS &amp; omnichannel messaging platform built for high-deliverability Indian &amp; global campaigns.
+              </p>
+              <a href="./contact.html" class="footer-contact-pill">
+                <span>support@immenseair.in</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </a>
+            </div>
+
+            <div class="footer-col">
+              <h4 class="footer-col-title">Products</h4>
+              <ul class="footer-col-list">
+                <li><a href="./sms.html" class="footer-link">Bulk SMS</a></li>
+                <li><a href="./rcs.html" class="footer-link">RCS Messaging</a></li>
+                <li><a href="./whatsapp.html" class="footer-link">Meta WhatsApp API</a></li>
+                <li><a href="./products.html?channel=obd" class="footer-link">OBD Voice Blast</a></li>
+                <li><a href="./products.html?channel=ivr" class="footer-link">Cloud IVR</a></li>
+                <li><a href="./products.html?channel=smpp" class="footer-link">SMPP Gateway</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4 class="footer-col-title">Platform</h4>
+              <ul class="footer-col-list">
+                <li><a href="./index.html#top" class="footer-link">Home</a></li>
+                <li><a href="./products.html" class="footer-link">All Products</a></li>
+                <li><a href="./index.html#industries" class="footer-link">Industries</a></li>
+                <li><a href="./index.html#how-it-works" class="footer-link">How it works</a></li>
+                <li><a href="./index.html#faqs" class="footer-link">FAQs</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4 class="footer-col-title">Legal &amp; Support</h4>
+              <ul class="footer-col-list">
+                <li><a href="./contact.html" class="footer-link">Contact Us</a></li>
+                <li><a href="./terms.html" class="footer-link">Terms &amp; Conditions</a></li>
+                <li><a href="./privacy.html" class="footer-link">Privacy Policy</a></li>
+                <li><a href="./contact.html" class="footer-link">Book a Demo</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-bottom-bar">
+            <div class="footer-copy">
+              &copy; 2026 Immense Air. All rights reserved.
+            </div>
+            <div class="footer-bottom-links">
+              <a href="./terms.html">Terms &amp; Conditions</a>
+              <span>&middot;</span>
+              <a href="./privacy.html">Privacy Policy</a>
+              <span>&middot;</span>
+              <a href="./contact.html">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    (() => {
+      const header = document.getElementById('siteHeader');
+      const hamburgerBtn = document.getElementById('hamburgerBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      function updateHeaderScroll() {
+        if (header) header.classList.toggle('is-scrolled', window.scrollY > 24);
+      }
+      window.addEventListener('scroll', updateHeaderScroll, { passive: true });
+      updateHeaderScroll();
+
+      if (hamburgerBtn && mobileMenu) {
+        hamburgerBtn.addEventListener('click', () => {
+          const isOpen = mobileMenu.classList.toggle('is-open');
+          hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
+          mobileMenu.setAttribute('aria-hidden', String(!isOpen));
+        });
+      }
+
+      // 1. Synced WhatsApp Hero Phone Slides & Left Caption
+      const waCaptionData = {
+        broadcast: {
+          badge: 'OFFICIAL META WHATSAPP API',
+          primary: 'Broadcast, Automate',
+          accent: '& Sell On WhatsApp.',
+          sub: 'Reach customers with 98% open rates using Meta-approved rich media templates, Green Tick branding, and 1-tap CTA buttons.',
+          stats: [['98% Open', 'WhatsApp Rate'], ['Green Tick', 'Meta Verified'], ['Official API', 'Zero Ban Risk']]
+        },
+        catalog: {
+          badge: 'WHATSAPP COMMERCE & CATALOG',
+          primary: 'Turn WhatsApp Chats',
+          accent: 'Into Instant Checkout.',
+          sub: 'Showcase product catalogs, let shoppers add items to their cart, and accept UPI payments right inside WhatsApp.',
+          stats: [['3.8× Sales', 'In-Chat Store'], ['Cart Sync', 'Shopify & Woo'], ['UPI Ready', '1-Tap Pay']]
+        },
+        chatbot: {
+          badge: '24×7 WHATSAPP AI CHATBOT',
+          primary: 'Automate Support',
+          accent: '& Lead Qualification.',
+          sub: 'Confirm COD orders, answer FAQs automatically, and route hot leads to your Shared Team Inbox in real time.',
+          stats: [['24×7 Bot', 'Instant Reply'], ['Team Inbox', 'Multi-Agent'], ['Webhooks', 'CRM Synced']]
+        },
+        utility: {
+          badge: 'WHATSAPP OTP & UTILITY',
+          primary: 'Deliver Alerts & OTPs',
+          accent: 'With Copy-Code Buttons.',
+          sub: 'Send order updates, PDF invoices, and sub-2-second authentication OTPs with one-tap Copy Code buttons.',
+          stats: [['< 2 sec', 'Auth OTP'], ['PDF Bills', 'Auto Dispatch'], ['100% Logs', 'Read Receipts']]
+        }
+      };
+
+      const waOrder = ['broadcast', 'catalog', 'chatbot', 'utility'];
+      let waIdx = 0;
+      const waCaption = document.getElementById('waHeroCaption');
+      const waBadgeText = document.getElementById('waHeroBadgeText');
+      const waTitle = document.getElementById('waHeroTitle');
+      const waSubtitle = document.getElementById('waHeroSubtitle');
+      const waStats = document.getElementById('waHeroStats');
+      const waSlides = Array.from(document.querySelectorAll('[data-wa]'));
+
+      function activateWaSlide(key) {
+        const c = waCaptionData[key];
+        if (!c) return;
+        waSlides.forEach((s) => s.classList.toggle('is-active', s.dataset.wa === key));
+        if (waCaption) {
+          waCaption.style.opacity = '0';
+          waCaption.style.transform = 'translateY(6px)';
+          setTimeout(() => {
+            if (waBadgeText) waBadgeText.textContent = c.badge;
+            if (waTitle) {
+              waTitle.innerHTML = `<span class="title-primary">${c.primary}</span><span class="title-accent">${c.accent}</span>`;
+            }
+            if (waSubtitle) waSubtitle.textContent = c.sub;
+            if (waStats) {
+              waStats.innerHTML = c.stats.map(([v, l]) => `<div class="sms-stat-chip"><strong>${v}</strong><span>${l}</span></div>`).join('');
+            }
+            waCaption.style.opacity = '1';
+            waCaption.style.transform = 'translateY(0)';
+          }, 160);
+        }
+      }
+
+      setInterval(() => {
+        waIdx = (waIdx + 1) % waOrder.length;
+        activateWaSlide(waOrder[waIdx]);
+      }, 3800);
+
+      // 1b. Interactive WhatsApp Chatbot Demo Buttons
+      const waBotUserReply = document.getElementById('waBotUserReply');
+      const waBotAnswer = document.getElementById('waBotAnswer');
+      const waBotBtns = Array.from(document.querySelectorAll('[data-wa-q]'));
+      waBotBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          waBotBtns.forEach((b) => b.classList.remove('is-selected'));
+          btn.classList.add('is-selected');
+          if (waBotUserReply) waBotUserReply.textContent = btn.dataset.waQ;
+          if (waBotAnswer) {
+            waBotAnswer.innerHTML = `<strong>Immense Air Bot · Instant Reply</strong><p>${btn.dataset.waA}</p>`;
+          }
+        });
+      });
+
+      // 2. FAQ Accordion
+      document.querySelectorAll('.faq-trigger').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const item = btn.closest('.faq-item');
+          const panel = item?.querySelector('.faq-panel');
+          const isOpen = item.classList.contains('is-open');
+          document.querySelectorAll('.faq-item.is-open').forEach((openItem) => {
+            openItem.classList.remove('is-open');
+            openItem.querySelector('.faq-trigger')?.setAttribute('aria-expanded', 'false');
+            const p = openItem.querySelector('.faq-panel');
+            if (p) p.style.maxHeight = '0px';
+          });
+          if (!isOpen && item && panel) {
+            item.classList.add('is-open');
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
