@@ -241,7 +241,7 @@
             </aside>
 
             <div class="industries-stage" id="smsDeckStage" aria-live="polite">
-              <div class="sms-deck-grid" id="smsDeckGrid"></div>
+              <div class="sms-graph-board" id="smsGraphBoard"></div>
             </div>
           </div>
         </div>
@@ -726,128 +726,153 @@
         activateNotification(orderKeys[autoCycleIdx]);
       }, 3600);
 
-      // 2. Interactive 4-Type SMS Deck
-      const smsDeckData = {
-        promotional: [
-          {
-            badge: 'Flash Sale Blast',
-            title: 'Festive & Seasonal Offers',
-            desc: 'Reach lakhs of Non-DND shoppers in minutes with clickable short links and live CTR reports.',
-            sample: 'Flat 30% OFF this weekend! Shop new arrivals before stock runs out: immenseair.in/sale',
-            tags: ['9 AM–9 PM', 'DND Scrubbed', 'Link Tracking']
-          },
-          {
-            badge: 'Lead Generation',
-            title: 'Real Estate & Auto Launches',
-            desc: 'Promote new project launches, test-drive camps, and webinar invites with geo-targeted lists.',
-            sample: 'Skyview 3BHK Residences starting Rs. 79L! Book your site visit today: immenseair.in/visit',
-            tags: ['High Throughput', 'CSV Upload', 'Instant Reports']
-          },
-          {
-            badge: 'Retail Footfall',
-            title: 'Store Opening & Coupons',
-            desc: 'Drive walk-ins to local retail outlets with exclusive promo codes and store-locator URLs.',
-            sample: 'Grand Opening in Andheri! Show code STORE500 for Rs. 500 OFF on Rs. 1,999+.',
-            tags: ['6-Char Header', 'Bulk Scheduling', 'DLT Ready']
-          }
-        ],
-        transactional: [
-          {
-            badge: 'E-Commerce',
-            title: 'Order & Dispatch Updates',
-            desc: 'Keep buyers informed at every step — order placed, packed, shipped, and out for delivery.',
-            sample: 'Order #IA-90412 shipped via BlueDart. Expected delivery: Tomorrow by 6 PM.',
-            tags: ['24×7 Delivery', 'DND Allowed', 'Webhook DLR']
-          },
-          {
-            badge: 'Finance & Fintech',
-            title: 'Account & EMI Alerts',
-            desc: 'Deliver instant payment receipts, EMI confirmations, and policy renewals with 99.9% uptime.',
-            sample: 'Payment of Rs. 4,500 received for Loan A/c **8912. Thank you for banking with us.',
-            tags: ['Alpha Sender ID', 'Priority Queue', 'Audit Logs']
-          },
-          {
-            badge: 'Healthcare & Services',
-            title: 'Booking & Lab Reports',
-            desc: 'Send automated appointment reminders and downloadable diagnostic report links 24×7.',
-            sample: 'Reminder: Dr. Mehta consultation tomorrow at 11:00 AM. Carry your Booking ID #412.',
-            tags: ['CRM API', 'Zero Delay', 'High Trust']
-          }
-        ],
-        otp: [
-          {
-            badge: 'App & Web Login',
-            title: 'Sub-2-Second 2FA Codes',
-            desc: 'Ensure users never abandon signups or logins with dedicated low-latency OTP routes.',
-            sample: '739204 is your verification code for login. Valid for 5 minutes. Do not share.',
-            tags: ['< 2s Speed', 'Auto Failover', '24×7 Route']
-          },
-          {
-            badge: 'Payments & Checkout',
-            title: 'Transaction Verification',
-            desc: 'Multi-operator redundant binds guarantee instant delivery even during peak sale traffic.',
-            sample: 'OTP 558192 for payment of Rs. 1,299 at Merchant Store. Expires in 180 seconds.',
-            tags: ['99.99% Uptime', 'SMPP & REST', 'PE-TM Hashed']
-          },
-          {
-            badge: 'KYC & Onboarding',
-            title: 'Instant Mobile Verify',
-            desc: 'Verify new borrowers, riders, and customers seamlessly with real-time delivery callbacks.',
-            sample: 'Use OTP 910443 to complete your digital KYC verification on Immense Air.',
-            tags: ['REST API', 'Live DLR', 'Encrypted']
-          }
-        ],
-        personalized: [
-          {
-            badge: 'Dynamic {#var#}',
-            title: 'Customer Name & Offers',
-            desc: 'Address every customer by name with unique discount codes merged directly from CSV/API.',
-            sample: 'Hi Priya, your loyalty points (1,250 pts) expire in 3 days! Redeem: immenseair.in/pts',
-            tags: ['Excel Merge', 'Custom {#var#}', '3X CTR']
-          },
-          {
-            badge: 'Regional Unicode',
-            title: 'Hindi & 15+ Languages',
-            desc: 'Connect deeply with regional audiences in Hindi, Marathi, Tamil, Telugu, Gujarati & Bengali.',
-            sample: 'नमस्ते अमित, आपका ऑर्डर #4821 आज शाम 5 बजे तक डिलीवर हो जाएगा।',
-            tags: ['Unicode SMS', 'Pan-India', 'High Recall']
-          },
-          {
-            badge: 'Billing & Renewals',
-            title: 'Custom Due Dates & Links',
-            desc: 'Send personalized invoice amounts, due dates, and 1-click payment links to each user.',
-            sample: 'Hi Rohan, your renewal of Rs. 999 is due on 20 Nov. Pay now: immenseair.in/pay',
-            tags: ['API Variables', '24×7 Support', 'DLT Ready']
-          }
-        ]
+      // 2. Interactive 4-Type SMS Performance Graph Dashboard
+      const smsGraphData = {
+        promotional: {
+          title: 'Promotional SMS · Campaign Reach & Click Performance',
+          sub: 'Live delivery & link-click velocity across Non-DND audiences (9 AM – 9 PM window)',
+          kpis: [
+            { label: 'Delivery Rate', value: '99.4%', delta: 'Non-DND Clean' },
+            { label: 'Avg. Link CTR', value: '18.6%', delta: '+3.1× vs plain' },
+            { label: 'Avg. Speed', value: '2.1 sec', delta: 'Bulk Blast' }
+          ],
+          chartLabel: 'Hourly Engagement & Delivery (%)',
+          bars: [
+            { label: '10 AM', val: 78, tone: 'navy' },
+            { label: '12 PM', val: 92, tone: 'orange' },
+            { label: '2 PM', val: 84, tone: 'navy' },
+            { label: '4 PM', val: 95, tone: 'orange' },
+            { label: '6 PM', val: 98, tone: 'orange' },
+            { label: '8 PM', val: 89, tone: 'navy' }
+          ],
+          sampleHeader: 'AX-IMMAIR-P',
+          sample: 'Festive Sale! Flat 25% OFF on your next order. Use code FEST25 👉 immenseair.in/offers',
+          tags: ['9 AM–9 PM', 'DND Scrubbed', 'Link Tracking']
+        },
+        transactional: {
+          title: 'Transactional SMS · 24×7 Operator Delivery Graph',
+          sub: 'Round-the-clock order, banking & dispatch delivery across all Indian telecom circles',
+          kpis: [
+            { label: 'Delivery Rate', value: '99.9%', delta: '24×7 DND Route' },
+            { label: 'Avg. Latency', value: '1.9 sec', delta: 'Priority Queue' },
+            { label: 'Uptime SLA', value: '99.99%', delta: 'Multi-Bind' }
+          ],
+          chartLabel: 'Operator-Wise Delivery Success (%)',
+          bars: [
+            { label: 'Jio', val: 99, tone: 'orange' },
+            { label: 'Airtel', val: 99, tone: 'navy' },
+            { label: 'Vi', val: 98, tone: 'navy' },
+            { label: 'BSNL', val: 97, tone: 'navy' },
+            { label: 'MTNL', val: 96, tone: 'navy' },
+            { label: 'Global', val: 99, tone: 'orange' }
+          ],
+          sampleHeader: 'AD-IMMAIR-T',
+          sample: 'Order #IA-84920 (Rs. 2,499) is confirmed & packed for dispatch. Track: immenseair.in/track',
+          tags: ['24×7 Delivery', 'DND Allowed', 'Webhook DLR']
+        },
+        otp: {
+          title: 'OTP SMS · Sub-2-Second Latency & Failover Graph',
+          sub: 'Ultra-low-latency 2FA & payment verification speed across peak traffic hours',
+          kpis: [
+            { label: 'Avg. OTP Speed', value: '1.4 sec', delta: 'Direct Bind' },
+            { label: 'Success Rate', value: '99.98%', delta: 'Auto Failover' },
+            { label: 'Drop-Offs', value: '0.02%', delta: 'Peak Safe' }
+          ],
+          chartLabel: 'OTP Delivery Speed (% under 2 seconds)',
+          bars: [
+            { label: 'Login 2FA', val: 99, tone: 'orange' },
+            { label: 'Checkout', val: 98, tone: 'orange' },
+            { label: 'KYC', val: 97, tone: 'navy' },
+            { label: 'Reset', val: 99, tone: 'orange' },
+            { label: 'Banking', val: 99, tone: 'navy' },
+            { label: 'Signup', val: 98, tone: 'navy' }
+          ],
+          sampleHeader: 'VK-IMMAIR-S',
+          sample: '482910 is your One-Time Password (OTP) for Immense Air login. Valid for 5 minutes.',
+          tags: ['< 2s Speed', 'Auto Failover', 'REST & SMPP']
+        },
+        personalized: {
+          title: 'Personalized SMS · Dynamic {#var#} Conversion Graph',
+          sub: 'Engagement lift when sending customer-named & regional Unicode campaigns vs generic blasts',
+          kpis: [
+            { label: 'CTR Lift', value: '3.2×', delta: 'vs Generic SMS' },
+            { label: 'Open Rate', value: '98.5%', delta: '1-to-1 Merge' },
+            { label: 'Languages', value: '15+', delta: 'Unicode Ready' }
+          ],
+          chartLabel: 'Conversion Lift by Personalization Type (%)',
+          bars: [
+            { label: 'Generic', val: 38, tone: 'navy' },
+            { label: 'First Name', val: 68, tone: 'navy' },
+            { label: 'Coupon', val: 82, tone: 'orange' },
+            { label: 'Regional', val: 88, tone: 'orange' },
+            { label: 'Due Alert', val: 91, tone: 'navy' },
+            { label: 'VIP Offer', val: 96, tone: 'orange' }
+          ],
+          sampleHeader: 'AX-IMMAIR-S',
+          sample: 'Hi Rahul, your VIP voucher RAHUL20 (20% OFF) expires on 18 Nov! 👉 immenseair.in/vip',
+          tags: ['CSV {#var#}', 'Unicode SMS', '3× Higher CTR']
+        }
       };
 
       const deckTabs = Array.from(document.querySelectorAll('[data-sms-deck]'));
-      const deckGrid = document.getElementById('smsDeckGrid');
+      const graphBoard = document.getElementById('smsGraphBoard');
 
-      function renderSmsDeck(key) {
-        const items = smsDeckData[key] || smsDeckData.promotional;
+      function renderSmsGraph(key) {
+        const g = smsGraphData[key] || smsGraphData.promotional;
         deckTabs.forEach((t) => {
           const active = t.dataset.smsDeck === key;
           t.classList.toggle('active', active);
           t.setAttribute('aria-selected', String(active));
         });
-        if (!deckGrid) return;
-        deckGrid.innerHTML = items.map((item) => `
-          <article class="sms-deck-card">
-            <span class="sms-deck-badge">${item.badge}</span>
-            <h3 class="sms-deck-title">${item.title}</h3>
-            <p class="sms-deck-desc">${item.desc}</p>
-            <div class="sms-deck-sample">${item.sample}</div>
-            <div class="sms-deck-tags">${item.tags.map((t) => `<span>${t}</span>`).join('')}</div>
-          </article>
-        `).join('');
+        if (!graphBoard) return;
+        graphBoard.innerHTML = `
+          <div class="sms-graph-head">
+            <div>
+              <h3 class="sms-graph-title">${g.title}</h3>
+              <p class="sms-graph-sub">${g.sub}</p>
+            </div>
+            <div class="sms-deck-tags">${g.tags.map((t) => `<span>${t}</span>`).join('')}</div>
+          </div>
+
+          <div class="sms-kpi-row">
+            ${g.kpis.map((k) => `
+              <div class="sms-kpi-card">
+                <span class="sms-kpi-label">${k.label}</span>
+                <strong class="sms-kpi-val">${k.value}</strong>
+                <span class="sms-kpi-delta">${k.delta}</span>
+              </div>
+            `).join('')}
+          </div>
+
+          <div class="sms-chart-card">
+            <div class="sms-chart-top">
+              <span>${g.chartLabel}</span>
+              <span class="sms-chart-live"><i class="bento-secure-dot"></i> Live Route Telemetry</span>
+            </div>
+            <div class="sms-bars-chart">
+              ${g.bars.map((b) => `
+                <div class="sms-bar-col">
+                  <span class="sms-bar-val">${b.val}%</span>
+                  <div class="sms-bar-track">
+                    <div class="sms-bar-fill sms-bar-fill--${b.tone}" style="height: ${b.val}%"></div>
+                  </div>
+                  <span class="sms-bar-label">${b.label}</span>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <div class="sms-graph-sample">
+            <span class="sms-graph-sample-hdr">${g.sampleHeader}</span>
+            <span class="sms-graph-sample-txt">${g.sample}</span>
+          </div>
+        `;
       }
 
       deckTabs.forEach((tab) => {
-        tab.addEventListener('click', () => renderSmsDeck(tab.dataset.smsDeck));
+        tab.addEventListener('click', () => renderSmsGraph(tab.dataset.smsDeck));
       });
-      renderSmsDeck('promotional');
+      renderSmsGraph('promotional');
 
       // 3. FAQ Accordion (Exact Home Accordion)
       document.querySelectorAll('.faq-trigger').forEach((btn) => {
