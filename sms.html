@@ -810,11 +810,11 @@
         notifStack.querySelectorAll('.sms-notif-card').forEach((c) => {
           c.classList.remove('is-featured', 'is-popping');
         });
-        notifStack.prepend(target);
         const timeEl = target.querySelector('.sms-notif-time');
         if (timeEl) timeEl.textContent = 'just now';
-        void target.offsetWidth;
-        target.classList.add('is-featured', 'is-popping');
+        requestAnimationFrame(() => {
+          target.classList.add('is-featured', 'is-popping');
+        });
       }
 
       if (notifStack) {
