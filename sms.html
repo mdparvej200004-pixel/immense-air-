@@ -169,14 +169,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Interactive 4-Type SMS Switcher Tabs -->
-          <div class="phone-tabs" id="smsHeroTabs" role="tablist" aria-label="Bulk SMS Types">
-            <button type="button" class="phone-tab active" data-sms-type="promotional" role="tab" aria-selected="true">Promotional</button>
-            <button type="button" class="phone-tab" data-sms-type="transactional" role="tab" aria-selected="false">Transactional</button>
-            <button type="button" class="phone-tab" data-sms-type="otp" role="tab" aria-selected="false">OTP SMS</button>
-            <button type="button" class="phone-tab" data-sms-type="personalized" role="tab" aria-selected="false">Personalized</button>
-          </div>
         </div>
       </div>
     </section>
@@ -624,25 +616,18 @@
         });
       }
 
-      // 1. Hero SMS Phone Notification Pop-In Switcher
+      // 1. Hero SMS Phone Notification Pop-In Cycle
       const notifStack = document.getElementById('smsNotifStack');
-      const heroTabs = Array.from(document.querySelectorAll('#smsHeroTabs .phone-tab'));
       const orderKeys = ['promotional', 'transactional', 'otp', 'personalized'];
       let autoCycleIdx = 0;
 
       function activateNotification(key) {
-        heroTabs.forEach((t) => {
-          const active = t.dataset.smsType === key;
-          t.classList.toggle('active', active);
-          t.setAttribute('aria-selected', String(active));
-        });
         if (!notifStack) return;
         const target = notifStack.querySelector(`[data-notif="${key}"]`);
         if (!target) return;
         notifStack.querySelectorAll('.sms-notif-card').forEach((c) => {
           c.classList.remove('is-featured', 'is-popping');
         });
-        // Move selected notification to the top & trigger pop-in animation
         notifStack.prepend(target);
         const timeEl = target.querySelector('.sms-notif-time');
         if (timeEl) timeEl.textContent = 'just now';
@@ -650,13 +635,17 @@
         target.classList.add('is-featured', 'is-popping');
       }
 
-      heroTabs.forEach((tab) => {
-        tab.addEventListener('click', () => {
-          const key = tab.dataset.smsType;
-          autoCycleIdx = Math.max(0, orderKeys.indexOf(key));
-          activateNotification(key);
+      if (notifStack) {
+        notifStack.querySelectorAll('.sms-notif-card').forEach((card) => {
+          card.addEventListener('click', () => {
+            const key = card.dataset.notif;
+            if (key) {
+              autoCycleIdx = Math.max(0, orderKeys.indexOf(key));
+              activateNotification(key);
+            }
+          });
         });
-      });
+      }
 
       setInterval(() => {
         autoCycleIdx = (autoCycleIdx + 1) % orderKeys.length;
