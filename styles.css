@@ -5874,6 +5874,35 @@ img {
   color: #64748b;
 }
 
+.rcs-mode-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  background: rgba(11, 37, 89, 0.06);
+  padding: 3px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+.rcs-mode-tab {
+  border: 0;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 5px 6px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.rcs-mode-tab.is-active {
+  background: #ffffff;
+  color: var(--primary);
+  box-shadow: 0 2px 6px rgba(11, 37, 89, 0.12);
+}
+
 .rcs-stage-wrap {
   flex: 1;
   display: flex;
@@ -5945,11 +5974,41 @@ img {
   color: #ffffff;
 }
 
-.rcs-carousel-strip {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.rcs-carousel-scroll {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.rcs-carousel-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.rcs-carousel-scroll .rcs-mini-card {
+  flex: 0 0 122px;
+  scroll-snap-align: start;
+}
+
+.rcs-chat-thread {
+  display: flex;
+  flex-direction: column;
   gap: 8px;
   margin-bottom: 10px;
+}
+
+.rcs-user-msg {
+  align-self: flex-end;
+  background: var(--primary);
+  color: #ffffff;
+  font-size: 10.5px;
+  font-weight: 600;
+  padding: 8px 11px;
+  border-radius: 12px 12px 3px 12px;
+  max-width: 85%;
 }
 
 .rcs-mini-card {

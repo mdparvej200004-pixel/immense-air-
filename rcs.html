@@ -117,6 +117,13 @@
                     </div>
                   </div>
 
+                  <!-- Quick Switcher Tabs inside Phone: Rich Card | Carousel | Chatbot -->
+                  <div class="rcs-mode-tabs" role="tablist" aria-label="RCS Preview Formats">
+                    <button type="button" class="rcs-mode-tab is-active" data-rcs-tab="rich" role="tab" aria-selected="true">Rich Card</button>
+                    <button type="button" class="rcs-mode-tab" data-rcs-tab="carousel" role="tab" aria-selected="false">Carousel</button>
+                    <button type="button" class="rcs-mode-tab" data-rcs-tab="bot" role="tab" aria-selected="false">Chatbot</button>
+                  </div>
+
                   <!-- RCS Interactive Slides -->
                   <div class="rcs-stage-wrap" id="rcsStageWrap" aria-live="polite">
                     <!-- Slide 1: Rich Card -->
@@ -134,9 +141,9 @@
                       </div>
                     </div>
 
-                    <!-- Slide 2: Product Carousel -->
+                    <!-- Slide 2: Product Carousel (Horizontal Swipeable Cards) -->
                     <div class="rcs-slide" data-rcs="carousel">
-                      <div class="rcs-carousel-strip">
+                      <div class="rcs-carousel-scroll">
                         <div class="rcs-mini-card">
                           <img src="./assets/rcs-cozy-jacket.jpg" alt="Cozy Jacket" />
                           <div class="rcs-mini-card-body">
@@ -153,24 +160,34 @@
                             <span class="rcs-mini-btn">Add to Bag</span>
                           </div>
                         </div>
+                        <div class="rcs-mini-card">
+                          <img src="./assets/rcs-winter-banner.jpg" alt="Winter Coat" />
+                          <div class="rcs-mini-card-body">
+                            <strong>Wool Overcoat</strong>
+                            <span>₹3,299 · Limited</span>
+                            <span class="rcs-mini-btn">View Item</span>
+                          </div>
+                        </div>
                       </div>
                       <div class="rcs-chip-row">
-                        <span class="rcs-chip">Browse Catalog</span>
-                        <span class="rcs-chip">Track Order</span>
+                        <span class="rcs-chip">← Swipe Cards →</span>
+                        <span class="rcs-chip">View Full Catalog</span>
                       </div>
                     </div>
 
-                    <!-- Slide 3: Conversational Bot / Quick Replies -->
+                    <!-- Slide 3: 2-Way RCS Chatbot (WhatsApp-style Automated Flow) -->
                     <div class="rcs-slide" data-rcs="bot">
-                      <div class="rcs-bot-bubble">
-                        <strong>Appointment Confirmed ✓</strong>
-                        <p>Hi Rahul, your service slot is booked for <strong>Tomorrow at 11:30 AM</strong>. Need to reschedule or get directions?</p>
+                      <div class="rcs-chat-thread">
+                        <div class="rcs-user-msg">Hi, track my order #IA-84920</div>
+                        <div class="rcs-bot-bubble">
+                          <strong>Immense Air AI Bot · Instant Reply</strong>
+                          <p>Order <strong>#IA-84920</strong> is Out for Delivery! Arriving today by <strong>4:30 PM</strong>. What would you like to do?</p>
+                        </div>
                       </div>
                       <div class="rcs-chip-row rcs-chip-row--wrap">
-                        <span class="rcs-chip rcs-chip--accent">✓ Confirm Slot</span>
+                        <span class="rcs-chip rcs-chip--accent">📍 Live Track</span>
                         <span class="rcs-chip">Reschedule</span>
-                        <span class="rcs-chip">Open Maps</span>
-                        <span class="rcs-chip">Call Support</span>
+                        <span class="rcs-chip">Talk to Agent</span>
                       </div>
                     </div>
                   </div>
@@ -300,7 +317,7 @@
             </div>
           </a>
 
-          <!-- 03: Conversational Bot -->
+          <!-- 03: 2-Way RCS Chatbot -->
           <a href="./contact.html" class="sms-clip-card sms-clip-card--otp">
             <svg class="sms-clip-pin" viewBox="0 0 38 78" fill="none" aria-hidden="true">
               <path d="M12 24V56C12 62.6274 17.3726 68 24 68C30.6274 68 36 62.6274 36 56V16C36 8.26801 29.732 2 22 2C14.268 2 8 8.26801 8 16V52C8 56.4183 11.5817 60 16 60C20.4183 60 24 56.4183 24 52V20" stroke="#0f172a" stroke-opacity="0.22" stroke-width="5.2" stroke-linecap="round" transform="translate(1.5, 2)"/>
@@ -309,23 +326,23 @@
             <span class="sms-clip-badge sms-clip-badge--teal">03</span>
 
             <div class="sms-clip-head">
-              <span class="sms-clip-kicker">2-Way Automation</span>
-              <h3 class="sms-clip-title">Conversational RCS</h3>
-              <span class="sms-clip-sub">Quick Replies &amp; Flows</span>
+              <span class="sms-clip-kicker">WhatsApp-Style Bot</span>
+              <h3 class="sms-clip-title">2-Way RCS Chatbot</h3>
+              <span class="sms-clip-sub">24×7 Auto Replies &amp; Flows</span>
             </div>
 
             <div class="sms-clip-window">
               <div class="sms-clip-win-top">
-                <span class="sms-clip-sender">INTERACTIVE BOT</span>
-                <span class="sms-clip-status">2-Way Chat</span>
+                <span class="sms-clip-sender">RCS CHATBOT</span>
+                <span class="sms-clip-status">Auto Flows</span>
               </div>
-              <p class="sms-clip-msg">Let users <strong>book appointments, confirm COD orders</strong> or request callbacks via suggested reply chips.</p>
+              <p class="sms-clip-msg">Build <strong>WhatsApp-like automated bots</strong> for lead capture, order tracking, COD confirmation &amp; live agent handoff.</p>
             </div>
 
             <div class="sms-clip-foot">
               <div class="sms-clip-meta">
-                <strong>WEBHOOKS + CRM</strong>
-                <span>Read &amp; Typing Receipts</span>
+                <strong>AI + WEBHOOKS</strong>
+                <span>Quick Replies · CRM Sync</span>
               </div>
               <div class="sms-clip-num">
                 <strong>24×7</strong>
@@ -711,11 +728,18 @@
       const rcsSubtitle = document.getElementById('rcsHeroSubtitle');
       const rcsStats = document.getElementById('rcsHeroStats');
       const rcsSlides = Array.from(document.querySelectorAll('.rcs-slide'));
+      const rcsModeTabs = Array.from(document.querySelectorAll('[data-rcs-tab]'));
 
       function activateRcsSlide(key) {
         const c = rcsCaptionData[key];
         if (!c) return;
+        rcsIdx = Math.max(0, rcsOrder.indexOf(key));
         rcsSlides.forEach((s) => s.classList.toggle('is-active', s.dataset.rcs === key));
+        rcsModeTabs.forEach((t) => {
+          const active = t.dataset.rcsTab === key;
+          t.classList.toggle('is-active', active);
+          t.setAttribute('aria-selected', String(active));
+        });
         if (rcsCaption) {
           rcsCaption.style.opacity = '0';
           rcsCaption.style.transform = 'translateY(6px)';
@@ -733,6 +757,12 @@
           }, 160);
         }
       }
+
+      rcsModeTabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          activateRcsSlide(tab.dataset.rcsTab);
+        });
+      });
 
       setInterval(() => {
         rcsIdx = (rcsIdx + 1) % rcsOrder.length;
