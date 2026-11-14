@@ -5302,6 +5302,11 @@ img {
   align-items: stretch;
 }
 
+.sms-clip-grid--3col {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 36px 28px;
+}
+
 .sms-clip-card {
   position: relative;
   display: flex;
