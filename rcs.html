@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RCS Business Messaging — Verified Brand, Carousels &amp; Rich Cards | Immense Air</title>
+  <meta name="description" content="Launch Verified RCS Business Messaging with Immense Air: brand logo &amp; checkmark, rich media cards, swipeable carousels, interactive buttons, and automatic SMS fallback." />
+  <link rel="icon" href="./assets/immense-air-logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- Top Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="./index.html#top" class="brand-logo" aria-label="Immense Air Home">
+        <img src="./assets/immense-air-logo.jpg" alt="Immense Air Logo" class="brand-logo-img" />
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="./index.html#top" class="nav-link">Home</a>
+        <a href="./products.html" class="nav-link">Products</a>
+        <a href="./index.html#how-it-works" class="nav-link">How it works</a>
+        <a href="./index.html#faqs" class="nav-link">FAQs</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="./contact.html" class="nav-cta">Contact Us</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="4" cy="6" r="1.2" fill="currentColor" stroke="none" />
+            <line x1="8" y1="6" x2="21" y2="6" />
+            <circle cx="4" cy="12" r="1.2" fill="currentColor" stroke="none" />
+            <line x1="8" y1="12" x2="21" y2="12" />
+            <circle cx="4" cy="18" r="1.2" fill="currentColor" stroke="none" />
+            <line x1="8" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <a href="./index.html#top" class="mobile-nav-link">Home</a>
+      <a href="./products.html" class="mobile-nav-link">Products</a>
+      <a href="./index.html#how-it-works" class="mobile-nav-link">How it works</a>
+      <a href="./index.html#faqs" class="mobile-nav-link">FAQs</a>
+      <a href="./contact.html" class="mobile-nav-cta">Contact Us</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero Section (Synced Verified RCS Phone + Left Hero Caption) -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-card" id="heroCard">
+          <div class="hero-grid-pattern" aria-hidden="true"></div>
+          <div class="hero-glow hero-glow--blue" aria-hidden="true"></div>
+          <div class="hero-glow hero-glow--orange" aria-hidden="true"></div>
+
+          <div class="hero-grid">
+            <div class="hero-content" id="rcsHeroCaption">
+              <div class="hero-badge">
+                <span class="badge-dot" aria-hidden="true"></span>
+                <span id="rcsHeroBadgeText">VERIFIED RCS RICH CARD</span>
+              </div>
+
+              <h1 class="hero-title" id="rcsHeroTitle">
+                <span class="title-primary">Upgrade Plain SMS</span>
+                <span class="title-accent">To Rich Verified Chats.</span>
+              </h1>
+
+              <p class="hero-subtitle" id="rcsHeroSubtitle">
+                Deliver your verified brand logo, high-res banners, and tap-to-shop buttons straight into the native Android Messages inbox.
+              </p>
+
+              <div class="sms-hero-stats" id="rcsHeroStats">
+                <div class="sms-stat-chip">
+                  <strong>3.5× CTR</strong>
+                  <span>vs Plain SMS</span>
+                </div>
+                <div class="sms-stat-chip">
+                  <strong>Verified</strong>
+                  <span>Blue Checkmark</span>
+                </div>
+                <div class="sms-stat-chip">
+                  <strong>100% Reach</strong>
+                  <span>Auto SMS Fallback</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-visual sms-hero-visual">
+              <div class="phone-mockup phone-mockup--sms-notif">
+                <div class="phone-screen phone-screen--rcs">
+                  <div class="phone-notch" aria-hidden="true"></div>
+                  <div class="phone-statusbar">
+                    <span>9:41</span>
+                    <span class="statusbar-icons">5G · RCS</span>
+                  </div>
+
+                  <!-- Verified RCS Chat Header -->
+                  <div class="rcs-phone-hdr">
+                    <div class="rcs-phone-brand">
+                      <img src="./assets/immense-air-logo.jpg" alt="Immense Air" class="rcs-phone-avatar" />
+                      <div>
+                        <div class="rcs-phone-name">
+                          <span>Immense Air</span>
+                          <svg viewBox="0 0 20 20" fill="currentColor" class="rcs-verified-tick" aria-label="Verified">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                          </svg>
+                        </div>
+                        <span class="rcs-phone-sub">Verified Business · Official</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- RCS Interactive Slides -->
+                  <div class="rcs-stage-wrap" id="rcsStageWrap" aria-live="polite">
+                    <!-- Slide 1: Rich Card -->
+                    <div class="rcs-slide is-active" data-rcs="rich">
+                      <div class="rcs-rich-card">
+                        <img src="./assets/rcs-winter-banner.jpg" alt="Winter Sale RCS Banner" class="rcs-rich-img" />
+                        <div class="rcs-rich-body">
+                          <strong>Winter Collection · Flat 30% OFF</strong>
+                          <p>Exclusive early-access deals for VIP members. Tap below to shop before midnight.</p>
+                          <div class="rcs-action-row">
+                            <span class="rcs-action-btn rcs-action-btn--primary">Shop Now</span>
+                            <span class="rcs-action-btn">View Offers</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Slide 2: Product Carousel -->
+                    <div class="rcs-slide" data-rcs="carousel">
+                      <div class="rcs-carousel-strip">
+                        <div class="rcs-mini-card">
+                          <img src="./assets/rcs-cozy-jacket.jpg" alt="Cozy Jacket" />
+                          <div class="rcs-mini-card-body">
+                            <strong>Cozy Puffer Jacket</strong>
+                            <span>₹2,499 · 20% OFF</span>
+                            <span class="rcs-mini-btn">Buy Now</span>
+                          </div>
+                        </div>
+                        <div class="rcs-mini-card">
+                          <img src="./assets/rcs-warm-hoodie.jpg" alt="Warm Hoodie" />
+                          <div class="rcs-mini-card-body">
+                            <strong>Fleece Warm Hoodie</strong>
+                            <span>₹1,599 · New</span>
+                            <span class="rcs-mini-btn">Add to Bag</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="rcs-chip-row">
+                        <span class="rcs-chip">Browse Catalog</span>
+                        <span class="rcs-chip">Track Order</span>
+                      </div>
+                    </div>
+
+                    <!-- Slide 3: Conversational Bot / Quick Replies -->
+                    <div class="rcs-slide" data-rcs="bot">
+                      <div class="rcs-bot-bubble">
+                        <strong>Appointment Confirmed ✓</strong>
+                        <p>Hi Rahul, your service slot is booked for <strong>Tomorrow at 11:30 AM</strong>. Need to reschedule or get directions?</p>
+                      </div>
+                      <div class="rcs-chip-row rcs-chip-row--wrap">
+                        <span class="rcs-chip rcs-chip--accent">✓ Confirm Slot</span>
+                        <span class="rcs-chip">Reschedule</span>
+                        <span class="rcs-chip">Open Maps</span>
+                        <span class="rcs-chip">Call Support</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- RCS Input Bar -->
+                  <div class="rcs-phone-input">
+                    <span>RCS message</span>
+                    <span class="rcs-read-receipt">Read · 09:41</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RCS Capabilities Ticker -->
+    <section class="ticker-section" aria-label="RCS Features">
+      <div class="ticker-track">
+        <div class="ticker-group">
+          <a href="#rcs-types" class="ticker-item">Verified Brand Badge</a>
+          <a href="#rcs-types" class="ticker-item">Rich Media Cards</a>
+          <a href="#rcs-types" class="ticker-item">Swipeable Carousels</a>
+          <a href="#rcs-types" class="ticker-item">Suggested Action Buttons</a>
+          <a href="#rcs-types" class="ticker-item">Read Receipts</a>
+          <a href="#rcs-types" class="ticker-item">Auto SMS Fallback</a>
+          <a href="#rcs-types" class="ticker-item">Google Jibe Direct</a>
+        </div>
+        <div class="ticker-group" aria-hidden="true">
+          <a href="#rcs-types" class="ticker-item">Verified Brand Badge</a>
+          <a href="#rcs-types" class="ticker-item">Rich Media Cards</a>
+          <a href="#rcs-types" class="ticker-item">Swipeable Carousels</a>
+          <a href="#rcs-types" class="ticker-item">Suggested Action Buttons</a>
+          <a href="#rcs-types" class="ticker-item">Read Receipts</a>
+          <a href="#rcs-types" class="ticker-item">Auto SMS Fallback</a>
+          <a href="#rcs-types" class="ticker-item">Google Jibe Direct</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 Core RCS Solutions (Paper-Clipped Tactile Cards) -->
+    <section class="sms-clip-section" id="rcs-types">
+      <div class="container">
+        <div class="section-header-center">
+          <div class="section-tag">4 Core RCS Solutions</div>
+          <h2 class="section-title">Choose the right RCS format for every customer journey</h2>
+          <p class="section-subtitle">
+            Four interactive RCS experiences built for higher conversions, product discovery, and zero-drop fallback.
+          </p>
+        </div>
+
+        <div class="sms-clip-grid" id="rcsClipGrid">
+          <!-- 01: Rich Media Cards -->
+          <a href="./contact.html" class="sms-clip-card sms-clip-card--promo">
+            <svg class="sms-clip-pin" viewBox="0 0 38 78" fill="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="clipMetalRcs" x1="0" y1="0" x2="38" y2="78" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#f8fafc"/>
+                  <stop offset="35%" stop-color="#94a3b8"/>
+                  <stop offset="70%" stop-color="#e2e8f0"/>
+                  <stop offset="100%" stop-color="#475569"/>
+                </linearGradient>
+              </defs>
+              <path d="M12 24V56C12 62.6274 17.3726 68 24 68C30.6274 68 36 62.6274 36 56V16C36 8.26801 29.732 2 22 2C14.268 2 8 8.26801 8 16V52C8 56.4183 11.5817 60 16 60C20.4183 60 24 56.4183 24 52V20" stroke="#0f172a" stroke-opacity="0.22" stroke-width="5.2" stroke-linecap="round" transform="translate(1.5, 2)"/>
+              <path d="M12 24V56C12 62.6274 17.3726 68 24 68C30.6274 68 36 62.6274 36 56V16C36 8.26801 29.732 2 22 2C14.268 2 8 8.26801 8 16V52C8 56.4183 11.5817 60 16 60C20.4183 60 24 56.4183 24 52V20" stroke="url(#clipMetalRcs)" stroke-width="4.2" stroke-linecap="round"/>
+            </svg>
+            <span class="sms-clip-badge sms-clip-badge--orange">01</span>
+
+            <div class="sms-clip-head">
+              <span class="sms-clip-kicker">Verified Brand</span>
+              <h3 class="sms-clip-title">Rich Media Cards</h3>
+              <span class="sms-clip-sub">HD Banner + CTA Buttons</span>
+            </div>
+
+            <div class="sms-clip-window">
+              <div class="sms-clip-win-top">
+                <span class="sms-clip-sender">VERIFIED RCS</span>
+                <span class="sms-clip-status">Blue Tick</span>
+              </div>
+              <p class="sms-clip-msg">Send full-bleed <strong>HD images, PDFs &amp; videos</strong> with one-tap <strong>Shop Now</strong> or <strong>Call Us</strong> action buttons.</p>
+            </div>
+
+            <div class="sms-clip-foot">
+              <div class="sms-clip-meta">
+                <strong>HIGH-CTR CAMPAIGNS</strong>
+                <span>Brand Logo · Deep Links</span>
+              </div>
+              <div class="sms-clip-num">
+                <strong>3.5×</strong>
+                <svg viewBox="0 0 28 14" fill="none" aria-hidden="true"><path d="M2 5c3-3 5-3 8 0s5 3 8 0 5-3 8 0M2 10c3-3 5-3 8 0s5 3 8 0 5-3 8 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- 02: Carousel Campaigns -->
+          <a href="./contact.html" class="sms-clip-card sms-clip-card--trans">
+            <svg class="sms-clip-pin" viewBox="0 0 38 78" fill="none" aria-hidden="true">
+              <path d="M12 24V56C12 62.6274 17.3726 68 24 68C30.6274 68 36 62.6274 36 56V16C36 8.26801 29.732 2 22 2C14.268 2 8 8.26801 8 16V52C8 56.4183 11.5817 60 16 60C20.4183 60 24 56.4183 24 52V20" stroke="#0f172a" stroke-opacity="0.22" stroke-width="5.2" stroke-linecap="round" transform="translate(1.5, 2)"/>
+              <path d="M12 24V56C12 62.6274 17.3726 68 24 68C30.6274 68 36 62.6274 36 56V16C36 8.26801 29.732 2 22 2C14.268 2 8 8.26801 8 16V52C8 56.4183 11.5817 60 16 60C20.4183 60 24 56.4183 24 52V20" stroke="url(#clipMetalRcs)" stroke-width="4.2" stroke-linecap="round"/>
+            </svg>
+            <span class="sms-clip-badge sms-clip-badge--navy">02</span>
+
+            <div class="sms-clip-head">
+              <span class="sms-clip-kicker">Product Showcase</span>
+              <h3 class="sms-clip-title">RCS Carousels</h3>
+              <span class="sms-clip-sub">Up to 10 Swipeable Cards</span>
+            </div>
+
+            <div class="sms-clip-window">
+              <div class="sms-clip-win-top">
+                <span class="sms-clip-sender">CATALOG CAROUSEL</span>
+                <span class="sms-clip-status">Swipeable</span>
+              </div>
+              <p class="sms-clip-msg">Showcase <strong>multiple SKUs, prices &amp; offers</strong> in a horizontal carousel inside the customer's messaging app.</p>
+            </div>
+
+            <div class="sms-clip-foot">
+              <div class="sms-clip-meta">
+                <strong>D2C &amp; E-COMMERCE</strong>
+                <span>Per-Card Click Tracking</span>
+              </div>
+              <div class="sms-clip-num">
+                <strong>10×</strong>
+                <svg viewBox="0 0 28 14" fill="none" aria-hidden="true"><path d="M2 5c3-3 5-3 8 0s5 3 8 0 5-3 8 0M2 10c3-3 5-3 8 0s5 3 8 0 5-3 8 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- 03: Conversational Bot -->
+          <a href="./contact.html" class="sms-clip-card sms-clip-card--otp">
+            <svg class="sms-clip-pin" viewBox="0 0 38 78" fill="none" aria-hidden="true">
+              <path d="M12 24V56C12 62.6274 17.3726 68 24 68C30.6274 68 36 62.6274 36 56V16C36 8.26801 29.732 2 22 2C14.268 2 8 8.26801 8 16V52C8 56.4183 11.5817 60 16 60C20.4183 60 24 56.4183 24 52V20" stroke="#0f172a" stroke-opacity="0.22" stroke-width="5.2" stroke-linecap="round" transform="translate(1.5, 2)"/>
+              <path d="M12 24V56C12 62.6274 17.3726 68 24 68C30.6274 68 36 62.6274 36 56V16C36 8.26801 29.732 2 22 2C14.268 2 8 8.26801 8 16V52C8 56.4183 11.5817 60 16 60C20.4183 60 24 56.4183 24 52V20" stroke="url(#clipMetalRcs)" stroke-width="4.2" stroke-linecap="round"/>
+            </svg>
+            <span class="sms-clip-badge sms-clip-badge--teal">03</span>
+
+            <div class="sms-clip-head">
+              <span class="sms-clip-kicker">2-Way Automation</span>
+              <h3 class="sms-clip-title">Conversational RCS</h3>
+              <span class="sms-clip-sub">Quick Replies &amp; Flows</span>
+            </div>
+
+            <div class="sms-clip-window">
+              <div class="sms-clip-win-top">
+                <span class="sms-clip-sender">INTERACTIVE BOT</span>
+                <span class="sms-clip-status">2-Way Chat</span>
+              </div>
+              <p class="sms-clip-msg">Let users <strong>book appointments, confirm COD orders</strong> or request callbacks via suggested reply chips.</p>
+            </div>
+
+            <div class="sms-clip-foot">
+              <div class="sms-clip-meta">
+                <strong>WEBHOOKS + CRM</strong>
+                <span>Read &amp; Typing Receipts</span>
+              </div>
+              <div class="sms-clip-num">
+                <strong>24×7</strong>
+                <svg viewBox="0 0 28 14" fill="none" aria-hidden="true"><path d="M2 5c3-3 5-3 8 0s5 3 8 0 5-3 8 0M2 10c3-3 5-3 8 0s5 3 8 0 5-3 8 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- 04: RCS + SMS Fallback -->
+          <a href="./contact.html" class="sms-clip-card sms-clip-card--pers">
+            <svg class="sms-clip-pin" viewBox="0 0 38 78" fill="none" aria-hidden="true">
+              <path d="M12 24V56C12 62.6274 17.3726 68 24 68C30.6274 68 36 62.6274 36 56V16C36 8.26801 29.732 2 22 2C14.268 2 8 8.26801 8 16V52C8 56.4183 11.5817 60 16 60C20.4183 60 24 56.4183 24 52V20" stroke="#0f172a" stroke-opacity="0.22" stroke-width="5.2" stroke-linecap="round" transform="translate(1.5, 2)"/>
+              <path d="M12 24V56C12 62.6274 17.3726 68 24 68C30.6274 68 36 62.6274 36 56V16C36 8.26801 29.732 2 22 2C14.268 2 8 8.26801 8 16V52C8 56.4183 11.5817 60 16 60C20.4183 60 24 56.4183 24 52V20" stroke="url(#clipMetalRcs)" stroke-width="4.2" stroke-linecap="round"/>
+            </svg>
+            <span class="sms-clip-badge sms-clip-badge--blue">04</span>
+
+            <div class="sms-clip-head">
+              <span class="sms-clip-kicker">Zero-Drop Delivery</span>
+              <h3 class="sms-clip-title">Auto SMS Fallback</h3>
+              <span class="sms-clip-sub">Offline &amp; iOS Coverage</span>
+            </div>
+
+            <div class="sms-clip-window">
+              <div class="sms-clip-win-top">
+                <span class="sms-clip-sender">SMART FALLBACK</span>
+                <span class="sms-clip-status">100% Reach</span>
+              </div>
+              <p class="sms-clip-msg">If a handset is offline or non-RCS, Immense Air <strong>automatically delivers DLT SMS</strong> within seconds.</p>
+            </div>
+
+            <div class="sms-clip-foot">
+              <div class="sms-clip-meta">
+                <strong>UNIFIED API</strong>
+                <span>RCS First · SMS Backup</span>
+              </div>
+              <div class="sms-clip-num">
+                <strong>100%</strong>
+                <svg viewBox="0 0 28 14" fill="none" aria-hidden="true"><path d="M2 5c3-3 5-3 8 0s5 3 8 0 5-3 8 0M2 10c3-3 5-3 8 0s5 3 8 0 5-3 8 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Immense Air RCS: Smoky Navy Tower Infrastructure -->
+    <section class="sms-tower-section" id="rcs-features">
+      <div class="container">
+        <div class="sms-tower-header">
+          <div class="sms-tower-tag">Why Choose Immense Air RCS</div>
+          <h2 class="sms-tower-title">Verified Carrier RCS. <span>Built for Conversion.</span></h2>
+          <p class="sms-tower-subtitle">
+            Direct Google Jibe &amp; Indian operator RCS connectivity with verified branding, rich analytics, and instant SMS fallback.
+          </p>
+        </div>
+
+        <div class="sms-tower-layout">
+          <!-- Left Nodes -->
+          <div class="sms-tower-col sms-tower-col--left">
+            <div class="sms-tower-node">
+              <div class="sms-tower-icon sms-tower-icon--cyan" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
+                </svg>
+              </div>
+              <div class="sms-tower-copy">
+                <h3>Verified Brand Badge</h3>
+                <p>Logo &amp; Blue Tick<br>in Native Inbox</p>
+              </div>
+            </div>
+
+            <div class="sms-tower-node">
+              <div class="sms-tower-icon sms-tower-icon--green" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                  <polyline points="17 6 23 6 23 12" />
+                </svg>
+              </div>
+              <div class="sms-tower-copy">
+                <h3>3.5× Higher CTR</h3>
+                <p>Rich Cards vs Plain Text</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Center Tower -->
+          <div class="sms-tower-stage">
+            <div class="sms-tower-glow" aria-hidden="true"></div>
+            <div class="sms-tower-ring sms-tower-ring--1" aria-hidden="true"></div>
+            <div class="sms-tower-ring sms-tower-ring--2" aria-hidden="true"></div>
+            <img src="./assets/telecom-tower.png" alt="Immense Air Direct Carrier RCS Infrastructure" class="sms-tower-img" loading="lazy" />
+          </div>
+
+          <!-- Right Nodes -->
+          <div class="sms-tower-col sms-tower-col--right">
+            <div class="sms-tower-node">
+              <div class="sms-tower-icon sms-tower-icon--orange" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9" />
+                  <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5" />
+                  <circle cx="12" cy="12" r="2" />
+                  <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5" />
+                  <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19" />
+                </svg>
+              </div>
+              <div class="sms-tower-copy">
+                <h3>Google Jibe +<br>Carrier Direct</h3>
+                <p>Jio | Airtel | Vi RCS</p>
+              </div>
+            </div>
+
+            <div class="sms-tower-node">
+              <div class="sms-tower-icon sms-tower-icon--blue" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                  <polyline points="14 2 14 8 20 8" />
+                  <circle cx="11.5" cy="15.5" r="2.5" />
+                  <path d="M13.5 17.5L16 20" />
+                </svg>
+              </div>
+              <div class="sms-tower-copy">
+                <h3>Read Receipts &amp;<br>SMS Fallback</h3>
+                <p>Delivered | Read |<br>Button Clicks</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RCS FAQs (Exact Home Split-Stage FAQ) -->
+    <section class="faq-section" id="faqs">
+      <div class="container">
+        <div class="faq-card-wrapper">
+          <div class="hero-grid-pattern" aria-hidden="true"></div>
+          <div class="faq-split-grid">
+            <div class="faq-left-col">
+              <div class="section-tag">RCS FAQs</div>
+              <h2 class="section-title faq-left-title">
+                RCS Messaging Questions? <span class="title-accent">Answered.</span>
+              </h2>
+              <p class="section-subtitle faq-left-sub">
+                Everything you need to know about Verified Brand onboarding, carousels, pricing, and SMS fallback on Immense Air.
+              </p>
+
+              <div class="faq-support-card">
+                <div class="faq-support-pill">
+                  <span class="bento-secure-dot" aria-hidden="true"></span>
+                  <span>RCS Brand Onboarding</span>
+                </div>
+                <h3>Want to verify your RCS Brand Agent?</h3>
+                <p>Our team handles Google Jibe &amp; carrier verification, logo setup, and template approval end-to-end.</p>
+                <a href="./contact.html" class="btn-primary-orange">
+                  <span>Launch RCS Campaign</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="faq-list" id="faqList">
+              <div class="faq-item is-open">
+                <button type="button" class="faq-trigger" aria-expanded="true">
+                  <span class="faq-q-left">
+                    <span class="faq-num">01</span>
+                    <span class="faq-q-text">
+                      <span class="faq-q-cat">RCS vs SMS</span>
+                      <span class="faq-q-title">How is RCS different from standard Bulk SMS?</span>
+                    </span>
+                  </span>
+                  <span class="faq-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="12" y1="5" x2="12" y2="19" />
+                      <polyline points="19 12 12 19 5 12" />
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-panel" style="max-height: 220px;">
+                  <div class="faq-answer">
+                    RCS upgrades plain 160-character SMS into an app-like experience inside the native Android Messages inbox — with your verified brand logo, blue checkmark, HD images, swipeable product carousels, action buttons, and read receipts.
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button type="button" class="faq-trigger" aria-expanded="false">
+                  <span class="faq-q-left">
+                    <span class="faq-num">02</span>
+                    <span class="faq-q-text">
+                      <span class="faq-q-cat">Fallback</span>
+                      <span class="faq-q-title">What happens if a user's phone doesn't support RCS or is offline?</span>
+                    </span>
+                  </span>
+                  <span class="faq-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="12" y1="5" x2="12" y2="19" />
+                      <polyline points="19 12 12 19 5 12" />
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-panel">
+                  <div class="faq-answer">
+                    Immense Air automatically falls back to standard DLT-verified SMS when a handset is offline or doesn't support RCS, guaranteeing 100% campaign reach without manual splitting.
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button type="button" class="faq-trigger" aria-expanded="false">
+                  <span class="faq-q-left">
+                    <span class="faq-num">03</span>
+                    <span class="faq-q-text">
+                      <span class="faq-q-cat">Verification</span>
+                      <span class="faq-q-title">How long does Verified RCS Brand approval take?</span>
+                    </span>
+                  </span>
+                  <span class="faq-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="12" y1="5" x2="12" y2="19" />
+                      <polyline points="19 12 12 19 5 12" />
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-panel">
+                  <div class="faq-answer">
+                    Once you share your brand logo, business details, and sample use case, our onboarding team submits your RCS Agent for verification and typically gets it live within 3–5 business days.
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button type="button" class="faq-trigger" aria-expanded="false">
+                  <span class="faq-q-left">
+                    <span class="faq-num">04</span>
+                    <span class="faq-q-text">
+                      <span class="faq-q-cat">Developers</span>
+                      <span class="faq-q-title">Can we send RCS campaigns via API and track button clicks?</span>
+                    </span>
+                  </span>
+                  <span class="faq-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="12" y1="5" x2="12" y2="19" />
+                      <polyline points="19 12 12 19 5 12" />
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-panel">
+                  <div class="faq-answer">
+                    Yes! Trigger rich cards, carousels, and suggested-reply flows via our unified REST API, and receive real-time webhooks for Delivered, Read, and Button Click events.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Band -->
+    <div class="bottom-band">
+      <footer class="site-footer">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand-col">
+              <a href="./index.html#top" class="footer-brand-link" aria-label="Immense Air Home">
+                <img src="./assets/immense-air-logo.jpg" alt="Immense Air" class="footer-logo-img" />
+              </a>
+              <p class="footer-brand-desc">
+                Enterprise CPaaS &amp; omnichannel messaging platform built for high-deliverability Indian &amp; global campaigns.
+              </p>
+              <a href="./contact.html" class="footer-contact-pill">
+                <span>support@immenseair.in</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </a>
+            </div>
+
+            <div class="footer-col">
+              <h4 class="footer-col-title">Products</h4>
+              <ul class="footer-col-list">
+                <li><a href="./sms.html" class="footer-link">Bulk SMS</a></li>
+                <li><a href="./rcs.html" class="footer-link">RCS Messaging</a></li>
+                <li><a href="./products.html?channel=whatsapp" class="footer-link">Meta WhatsApp API</a></li>
+                <li><a href="./products.html?channel=obd" class="footer-link">OBD Voice Blast</a></li>
+                <li><a href="./products.html?channel=ivr" class="footer-link">Cloud IVR</a></li>
+                <li><a href="./products.html?channel=smpp" class="footer-link">SMPP Gateway</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4 class="footer-col-title">Platform</h4>
+              <ul class="footer-col-list">
+                <li><a href="./index.html#top" class="footer-link">Home</a></li>
+                <li><a href="./products.html" class="footer-link">All Products</a></li>
+                <li><a href="./index.html#industries" class="footer-link">Industries</a></li>
+                <li><a href="./index.html#how-it-works" class="footer-link">How it works</a></li>
+                <li><a href="./index.html#faqs" class="footer-link">FAQs</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4 class="footer-col-title">Legal &amp; Support</h4>
+              <ul class="footer-col-list">
+                <li><a href="./contact.html" class="footer-link">Contact Us</a></li>
+                <li><a href="./terms.html" class="footer-link">Terms &amp; Conditions</a></li>
+                <li><a href="./privacy.html" class="footer-link">Privacy Policy</a></li>
+                <li><a href="./contact.html" class="footer-link">Book a Demo</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-bottom-bar">
+            <div class="footer-copy">
+              &copy; 2026 Immense Air. All rights reserved.
+            </div>
+            <div class="footer-bottom-links">
+              <a href="./terms.html">Terms &amp; Conditions</a>
+              <span>&middot;</span>
+              <a href="./privacy.html">Privacy Policy</a>
+              <span>&middot;</span>
+              <a href="./contact.html">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    (() => {
+      const header = document.getElementById('siteHeader');
+      const hamburgerBtn = document.getElementById('hamburgerBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      function updateHeaderScroll() {
+        if (header) header.classList.toggle('is-scrolled', window.scrollY > 24);
+      }
+      window.addEventListener('scroll', updateHeaderScroll, { passive: true });
+      updateHeaderScroll();
+
+      if (hamburgerBtn && mobileMenu) {
+        hamburgerBtn.addEventListener('click', () => {
+          const isOpen = mobileMenu.classList.toggle('is-open');
+          hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
+          mobileMenu.setAttribute('aria-hidden', String(!isOpen));
+        });
+      }
+
+      // 1. Synced RCS Hero Phone Slides & Left Caption
+      const rcsCaptionData = {
+        rich: {
+          badge: 'VERIFIED RCS RICH CARD',
+          primary: 'Upgrade Plain SMS',
+          accent: 'To Rich Verified Chats.',
+          sub: 'Deliver your verified brand logo, high-res banners, and tap-to-shop buttons straight into the native Android Messages inbox.',
+          stats: [['3.5× CTR', 'vs Plain SMS'], ['Verified', 'Blue Checkmark'], ['100% Reach', 'Auto SMS Fallback']]
+        },
+        carousel: {
+          badge: 'RCS PRODUCT CAROUSEL',
+          primary: 'Showcase Up To 10',
+          accent: 'Products In One Swipe.',
+          sub: 'Let shoppers swipe through jackets, hoodies, prices, and direct checkout buttons without ever leaving their Messages app.',
+          stats: [['10 Cards', 'Swipeable SKUs'], ['Per-Card', 'Click Tracking'], ['Rich UI', 'Zero App Install']]
+        },
+        bot: {
+          badge: 'CONVERSATIONAL RCS BOT',
+          primary: 'Turn Alerts Into',
+          accent: 'Two-Way Conversations.',
+          sub: 'Automate appointment confirmations, COD verification, and instant support with one-tap suggested reply chips.',
+          stats: [['Read Logs', 'Live Receipts'], ['2-Way Bot', 'Webhook Ready'], ['24×7', 'Instant Replies']]
+        }
+      };
+
+      const rcsOrder = ['rich', 'carousel', 'bot'];
+      let rcsIdx = 0;
+      const rcsCaption = document.getElementById('rcsHeroCaption');
+      const rcsBadgeText = document.getElementById('rcsHeroBadgeText');
+      const rcsTitle = document.getElementById('rcsHeroTitle');
+      const rcsSubtitle = document.getElementById('rcsHeroSubtitle');
+      const rcsStats = document.getElementById('rcsHeroStats');
+      const rcsSlides = Array.from(document.querySelectorAll('.rcs-slide'));
+
+      function activateRcsSlide(key) {
+        const c = rcsCaptionData[key];
+        if (!c) return;
+        rcsSlides.forEach((s) => s.classList.toggle('is-active', s.dataset.rcs === key));
+        if (rcsCaption) {
+          rcsCaption.style.opacity = '0';
+          rcsCaption.style.transform = 'translateY(6px)';
+          setTimeout(() => {
+            if (rcsBadgeText) rcsBadgeText.textContent = c.badge;
+            if (rcsTitle) {
+              rcsTitle.innerHTML = `<span class="title-primary">${c.primary}</span><span class="title-accent">${c.accent}</span>`;
+            }
+            if (rcsSubtitle) rcsSubtitle.textContent = c.sub;
+            if (rcsStats) {
+              rcsStats.innerHTML = c.stats.map(([v, l]) => `<div class="sms-stat-chip"><strong>${v}</strong><span>${l}</span></div>`).join('');
+            }
+            rcsCaption.style.opacity = '1';
+            rcsCaption.style.transform = 'translateY(0)';
+          }, 160);
+        }
+      }
+
+      setInterval(() => {
+        rcsIdx = (rcsIdx + 1) % rcsOrder.length;
+        activateRcsSlide(rcsOrder[rcsIdx]);
+      }, 3800);
+
+      // 2. FAQ Accordion
+      document.querySelectorAll('.faq-trigger').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const item = btn.closest('.faq-item');
+          const panel = item?.querySelector('.faq-panel');
+          const isOpen = item.classList.contains('is-open');
+          document.querySelectorAll('.faq-item.is-open').forEach((openItem) => {
+            openItem.classList.remove('is-open');
+            openItem.querySelector('.faq-trigger')?.setAttribute('aria-expanded', 'false');
+            const p = openItem.querySelector('.faq-panel');
+            if (p) p.style.maxHeight = '0px';
+          });
+          if (!isOpen && item && panel) {
+            item.classList.add('is-open');
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
