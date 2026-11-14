@@ -1,0 +1,900 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Immense Air — Bulk SMS, RCS, Meta WhatsApp, IVR &amp; OBD Platform</title>
+  <meta name="description" content="Immense Air powers enterprise Bulk SMS, RCS Messaging, Meta WhatsApp Business API, Cloud IVR, and OBD campaigns." />
+  <link rel="icon" href="./assets/immense-air-logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- Top Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="#top" class="brand-logo" aria-label="Immense Air Home">
+        <img src="./assets/immense-air-logo.jpg" alt="Immense Air Logo" class="brand-logo-img" />
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="#products" class="nav-link">Products</a>
+        <a href="#how-it-works" class="nav-link">How it works</a>
+        <a href="#faqs" class="nav-link">FAQs</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#contact" class="nav-cta">Book Demo</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="4" cy="6" r="1.2" fill="currentColor" stroke="none" />
+            <line x1="8" y1="6" x2="21" y2="6" />
+            <circle cx="4" cy="12" r="1.2" fill="currentColor" stroke="none" />
+            <line x1="8" y1="12" x2="21" y2="12" />
+            <circle cx="4" cy="18" r="1.2" fill="currentColor" stroke="none" />
+            <line x1="8" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <a href="#products" class="mobile-nav-link">Products</a>
+      <a href="#how-it-works" class="mobile-nav-link">How it works</a>
+      <a href="#faqs" class="mobile-nav-link">FAQs</a>
+      <a href="#contact" class="mobile-nav-cta">Book Demo</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-card" id="heroCard">
+          <div class="hero-grid-pattern" aria-hidden="true"></div>
+          <div class="hero-glow hero-glow--blue" aria-hidden="true"></div>
+          <div class="hero-glow hero-glow--orange" aria-hidden="true"></div>
+
+          <div class="hero-grid">
+            <div class="hero-content">
+              <div class="hero-badge">
+                <span class="badge-dot" aria-hidden="true"></span>
+                <span>OMNICHANNEL MARKETING PLATFORM</span>
+              </div>
+
+              <h1 class="hero-title" id="heroRotatingTitle">
+                <span class="title-primary">Start your journey</span>
+                <span class="title-accent">with Immense Air.</span>
+              </h1>
+
+              <p class="hero-subtitle">
+                Immense Air unifies Bulk SMS, RCS, Meta WhatsApp, Cloud IVR, and OBD voice campaigns in one high-speed platform.
+              </p>
+
+              <div class="hero-actions-box">
+                <a href="#contact" class="btn-primary-orange">
+                  <span>Start Free Trial</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </a>
+                <a href="#products" class="btn-secondary-navy">Explore Products</a>
+              </div>
+
+              <div class="social-proof">
+                <div class="avatar-stack">
+                  <img src="./assets/A0pTVNVVvSatuBymUOgf4PEGY.png" alt="Client avatar" />
+                  <img src="./assets/pX5uHtDLyT9jpyAw4qH5ZmMtg.png" alt="Client avatar" />
+                  <img src="./assets/OgB4vbjCbnKjWfuwGTRkJHHRo.png" alt="Client avatar" />
+                </div>
+                <div class="proof-meta">
+                  <div class="proof-text">Trusted by 2,500+ businesses</div>
+                  <div class="rating-row">
+                    <div class="stars" aria-label="4.9 out of 5 stars">
+                      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <span class="rating-score">4.9 · DLT &amp; Meta Partner</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Interactive Live Channel Preview Phone with Pop-Out Cards -->
+            <div class="hero-visual">
+              <div class="phone-channel-bar" role="tablist" aria-label="Channel Preview">
+                <button type="button" class="phone-tab active" data-channel="rcs" role="tab" aria-selected="true">RCS</button>
+                <button type="button" class="phone-tab" data-channel="whatsapp" role="tab" aria-selected="false">WhatsApp</button>
+                <button type="button" class="phone-tab" data-channel="sms" role="tab" aria-selected="false">Bulk SMS</button>
+                <button type="button" class="phone-tab" data-channel="voice" role="tab" aria-selected="false">OBD &amp; IVR</button>
+              </div>
+              <div class="phone-stage">
+                <div class="popout-stack popout-stack--left" id="popoutLeft" data-channel="rcs">
+                  <div class="popout-card">
+                    <div class="popout-connector"></div>
+                    <div class="popout-card-row">
+                      <div>
+                        <div class="popout-kicker">Interactive Media</div>
+                        <div class="popout-title">Rich Media &amp; Carousels</div>
+                      </div>
+                      <span class="popout-icon-circle popout-icon-circle--blue">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                      </span>
+                    </div>
+                    <div class="popout-kicker" style="margin-bottom:0">Captivate with high-quality images, catalogs, and interactive media.</div>
+                  </div>
+                </div>
+                <div class="phone-mockup">
+                  <div class="phone-notch"></div>
+                  <div class="phone-screen">
+                    <div class="phone-statusbar">
+                      <span>9:41</span>
+                      <span class="statusbar-icons">5G · 100%</span>
+                    </div>
+
+                    <!-- Verified Brand Header inside Phone -->
+                    <div class="phone-chat-header" id="phoneChatHeader">
+                      <div class="chat-brand-left">
+                        <span class="chat-back" aria-hidden="true">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="19" y1="12" x2="5" y2="12" />
+                            <polyline points="12 19 5 12 12 5" />
+                          </svg>
+                        </span>
+                        <div class="chat-avatar">
+                          <img src="./assets/immense-air-logo.jpg" alt="Immense Air" class="chat-avatar-img" />
+                        </div>
+                        <div class="chat-brand-meta">
+                          <div class="chat-brand-name">
+                            <span>Immense Air</span>
+                            <svg class="blue-tick-svg" viewBox="0 0 24 24" aria-label="Verified">
+                              <circle cx="12" cy="12" r="10" fill="#1D9BF0" />
+                              <path d="M8.5 12.3l2.3 2.3 4.8-5.1" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </div>
+                          <div class="chat-brand-sub">Business Account</div>
+                        </div>
+                      </div>
+                      <span class="chat-more-dots" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                          <circle cx="12" cy="5.5" r="1.75" />
+                          <circle cx="12" cy="12" r="1.75" />
+                          <circle cx="12" cy="18.5" r="1.75" />
+                        </svg>
+                      </span>
+                    </div>
+
+                    <div class="phone-preview-body" id="phonePreviewBody">
+                      <div class="preview-card">
+                        <div class="rcs-mini-sender">
+                          <span>Immense Air</span>
+                          <svg class="blue-tick-svg" viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10" fill="#1D9BF0" />
+                            <path d="M8.5 12.3l2.3 2.3 4.8-5.1" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </div>
+                        <div class="preview-banner preview-banner--photo">
+                          <img src="./assets/rcs-winter-banner.jpg" alt="Exclusive Winter Sale" class="preview-banner-img" />
+                          <div class="banner-headline banner-headline--lg">Exclusive Winter Sale</div>
+                          <span class="banner-shop-pill">Shop Now</span>
+                        </div>
+                        <div class="rcs-carousel">
+                          <div class="rcs-prod-card">
+                            <div class="rcs-prod-thumb">
+                              <img src="./assets/rcs-cozy-jacket.jpg" alt="Cozy Jacket" />
+                            </div>
+                            <div class="rcs-prod-title">Cozy Jacket - Flat 20% Off</div>
+                          </div>
+                          <div class="rcs-prod-card">
+                            <div class="rcs-prod-thumb">
+                              <img src="./assets/rcs-warm-hoodie.jpg" alt="Warm Hoodie" />
+                            </div>
+                            <div class="rcs-prod-title">Warm Hoodie</div>
+                          </div>
+                        </div>
+                        <div class="rcs-cta-stack">
+                          <span class="rcs-cta-pill rcs-cta-pill--primary">Shop Now</span>
+                          <span class="rcs-cta-pill">View Catalog</span>
+                          <span class="rcs-cta-pill">Visit Website</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="phone-input-bar" aria-hidden="true">
+                      <span>+</span>
+                      <span class="input-placeholder">RCS message</span>
+                      <span class="input-send">➤</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Pop-out Cards OUTSIDE the Phone (Right Column: Top & Bottom) -->
+                <div class="popout-stack popout-stack--right" id="popoutStack" data-channel="rcs">
+                  <div class="popout-card">
+                    <div class="popout-connector"></div>
+                    <div class="popout-card-row">
+                      <div>
+                        <div class="popout-kicker">Blue Tick Trust</div>
+                        <div class="popout-title">Verified Sender &amp; Branding</div>
+                      </div>
+                      <svg class="blue-tick-svg" viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="10" fill="#1D9BF0" />
+                        <path d="M8.5 12.3l2.3 2.3 4.8-5.1" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                    <div class="popout-kicker" style="margin-bottom:0">Boost trust with your brand name, logo, and blue tick verified status.</div>
+                  </div>
+
+                  <div class="popout-card">
+                    <div class="popout-connector"></div>
+                    <div class="popout-card-row">
+                      <div>
+                        <div class="popout-kicker">Direct Response</div>
+                        <div class="popout-title">Interactive CTA Buttons</div>
+                      </div>
+                      <span class="popout-icon-circle popout-icon-circle--orange">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                      </span>
+                    </div>
+                    <div class="popout-kicker" style="margin-bottom:0">Drive higher conversions with direct response &amp; quick-action buttons.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Channel Ticker Section -->
+    <section class="ticker-section">
+      <div class="ticker-wrapper">
+        <div class="ticker-track">
+          <div class="ticker-group">
+            <div class="ticker-item">
+              <a href="./products.html?channel=sms" class="ticker-logo ticker-link">
+                <span class="ticker-icon ticker-icon--orange" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </span>
+                <span>Bulk SMS</span>
+                <span class="ticker-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+            <div class="ticker-item">
+              <a href="./products.html?channel=rcs" class="ticker-logo ticker-link">
+                <span class="ticker-icon ticker-icon--blue" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                </span>
+                <span>RCS Messaging</span>
+                <span class="ticker-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+            <div class="ticker-item">
+              <a href="./products.html?channel=whatsapp" class="ticker-logo ticker-link">
+                <span class="ticker-icon ticker-icon--orange" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                </span>
+                <span>Meta WhatsApp API</span>
+                <span class="ticker-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+            <div class="ticker-item">
+              <a href="./products.html?channel=ivr" class="ticker-logo ticker-link">
+                <span class="ticker-icon ticker-icon--blue" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </span>
+                <span>Cloud IVR</span>
+                <span class="ticker-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+            <div class="ticker-item">
+              <a href="./products.html?channel=obd" class="ticker-logo ticker-link">
+                <span class="ticker-icon ticker-icon--orange" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+                </span>
+                <span>OBD Voice Blast</span>
+                <span class="ticker-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+          <!-- Duplicate for seamless loop -->
+          <div class="ticker-group" aria-hidden="true">
+            <div class="ticker-item">
+              <a href="./products.html?channel=sms" class="ticker-logo ticker-link" tabindex="-1">
+                <span class="ticker-icon ticker-icon--orange" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </span>
+                <span>Bulk SMS</span>
+                <span class="ticker-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+            <div class="ticker-item">
+              <a href="./products.html?channel=rcs" class="ticker-logo ticker-link" tabindex="-1">
+                <span class="ticker-icon ticker-icon--blue" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                </span>
+                <span>RCS Messaging</span>
+                <span class="ticker-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+            <div class="ticker-item">
+              <a href="./products.html?channel=whatsapp" class="ticker-logo ticker-link" tabindex="-1">
+                <span class="ticker-icon ticker-icon--orange" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                </span>
+                <span>Meta WhatsApp API</span>
+                <span class="ticker-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+            <div class="ticker-item">
+              <a href="./products.html?channel=ivr" class="ticker-logo ticker-link" tabindex="-1">
+                <span class="ticker-icon ticker-icon--blue" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </span>
+                <span>Cloud IVR</span>
+                <span class="ticker-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+            <div class="ticker-item">
+              <a href="./products.html?channel=obd" class="ticker-logo ticker-link" tabindex="-1">
+                <span class="ticker-icon ticker-icon--orange" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+                </span>
+                <span>OBD Voice Blast</span>
+                <span class="ticker-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="industries-section" id="how-it-works">
+      <div class="container">
+        <div class="section-header-center">
+          <div class="section-tag">Industries we serve</div>
+          <h2 class="section-title">Built for every high-growth sector.</h2>
+          <p class="section-subtitle">
+            Craft a smarter, more efficient communication system that&#39;s fully customizable and ready to scale.
+          </p>
+        </div>
+
+        <div class="industries-grid">
+          <aside class="industries-sidebar">
+            <h3 class="industries-sidebar-title">Industries we serve</h3>
+            <div class="industries-mobile-select-wrap">
+              <div class="ind-dropdown" id="industriesMobileDropdown">
+                <button type="button" class="ind-dropdown-trigger" id="indDropdownTrigger" aria-expanded="false" aria-haspopup="listbox">
+                  <span class="ind-dropdown-left">
+                    <span class="industry-icon" id="indTriggerIcon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.66 3.13 3 7 3s7-1.34 7-3V6"/><path d="M5 12v6c0 1.66 3.13 3 7 3s7-1.34 7-3v-6"/></svg>
+                    </span>
+                    <span id="indTriggerLabel">Real Estate</span>
+                  </span>
+                  <svg class="ind-dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="ind-dropdown-menu" id="indDropdownMenu" role="listbox"></div>
+              </div>
+            </div>
+            <div class="industries-tabs" role="tablist" aria-label="Industries we serve">
+              <button type="button" class="industry-tab active" data-industry="realestate" role="tab" aria-selected="true">
+                <span class="industry-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg></span>
+                <span>Real Estate</span>
+              </button>
+              <button type="button" class="industry-tab" data-industry="banking" role="tab" aria-selected="false">
+                <span class="industry-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.66 3.13 3 7 3s7-1.34 7-3V6"/><path d="M5 12v6c0 1.66 3.13 3 7 3s7-1.34 7-3v-6"/></svg></span>
+                <span>Finance &amp; Fintech</span>
+              </button>
+              <button type="button" class="industry-tab" data-industry="ecommerce" role="tab" aria-selected="false">
+                <span class="industry-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></span>
+                <span>E-commerce</span>
+              </button>
+              <button type="button" class="industry-tab" data-industry="media" role="tab" aria-selected="false">
+                <span class="industry-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><polygon points="10 9 16 12 10 15 10 9"/></svg></span>
+                <span>Media &amp; Entertainment</span>
+              </button>
+              <button type="button" class="industry-tab" data-industry="logistics" role="tab" aria-selected="false">
+                <span class="industry-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span>
+                <span>Logistics &amp; Transportation</span>
+              </button>
+              <button type="button" class="industry-tab" data-industry="education" role="tab" aria-selected="false">
+                <span class="industry-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
+                <span>Education</span>
+              </button>
+              <button type="button" class="industry-tab" data-industry="travel" role="tab" aria-selected="false">
+                <span class="industry-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></span>
+                <span>Travel &amp; Tourism</span>
+              </button>
+            </div>
+          </aside>
+
+          <div class="industries-stage" id="industriesStage" aria-live="polite">
+            <div class="industries-cards-grid" id="industriesCardsGrid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products / Features Section -->
+    <section class="features-section" id="products">
+      <div class="container">
+        <div class="section-header-center">
+          <div class="section-tag">Our Products</div>
+          <h2 class="section-title">Everything your outreach needs.</h2>
+          <p class="section-subtitle">
+            Five enterprise communication channels under one roof — built for speed, compliance, and higher conversions.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Product 1: Bulk SMS (Tall Left Bento Card) -->
+          <a href="./products.html?channel=sms" class="feature-card feature-card--dark feature-card--sms">
+            <div>
+              <div class="feature-top">
+                <div class="feature-icon feature-icon--glow-blue">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                  </svg>
+                </div>
+                <h3>Bulk SMS</h3>
+              </div>
+              <p class="feature-desc" style="margin-top: 16px;">
+                Instant transactional, OTP, and promotional SMS with DLT compliance, custom Sender IDs, and 99.9% operator delivery.
+              </p>
+              <div class="feature-sms-metrics">
+                <div class="sms-metric-box"><strong>99.9%</strong><span>Delivery Rate</span></div>
+                <div class="sms-metric-box"><strong>&lt; 3 sec</strong><span>OTP Speed</span></div>
+                <div class="sms-metric-box"><strong>15 min</strong><span>DLT Approval</span></div>
+              </div>
+            </div>
+
+            <div class="bento-sms-visual" aria-hidden="true">
+              <div class="bento-bars">
+                <span style="height: 28%"></span>
+                <span style="height: 44%"></span>
+                <span style="height: 62%"></span>
+                <span style="height: 80%"></span>
+                <span class="is-peak" style="height: 100%"></span>
+              </div>
+              <div class="bento-secure-chip">
+                <span class="bento-secure-dot"></span>
+                <span>DLT Secure Route · 99.9% Live</span>
+              </div>
+            </div>
+
+            <div class="feature-tags">
+              <span>OTP &amp; Alerts</span>
+              <span>DLT Ready</span>
+              <span>HTTP/SMPP API</span>
+            </div>
+          </a>
+
+          <!-- Product 2: RCS Messaging (Middle Top) -->
+          <a href="./products.html?channel=rcs" class="feature-card feature-card--light feature-card--rcs">
+            <div class="bento-rcs-mini" aria-hidden="true">
+              <div class="bento-rcs-slide bento-rcs-slide--front">
+                <span class="bento-rcs-thumb"></span>
+                <span class="bento-rcs-line"></span>
+              </div>
+              <div class="bento-rcs-slide bento-rcs-slide--back">
+                <span class="bento-rcs-thumb bento-rcs-thumb--alt"></span>
+              </div>
+            </div>
+            <div>
+              <div class="feature-top">
+                <div class="feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                    <line x1="8" y1="21" x2="16" y2="21" />
+                    <line x1="12" y1="17" x2="12" y2="21" />
+                  </svg>
+                </div>
+                <h3>RCS Messaging</h3>
+              </div>
+              <p class="feature-desc" style="margin-top: 14px;">
+                Upgrade plain SMS into verified, branded experiences with rich carousels, high-res images, and interactive tap buttons.
+              </p>
+            </div>
+            <div class="feature-tags feature-tags--light">
+              <span>Verified Badge</span>
+              <span>Rich Carousels</span>
+              <span>Action Buttons</span>
+            </div>
+          </a>
+
+          <!-- Product 3: Meta WhatsApp API (Middle Bottom) -->
+          <a href="./products.html?channel=whatsapp" class="feature-card feature-card--dark feature-card--wa">
+            <div class="bento-wa-bubbles" aria-hidden="true">
+              <div class="bento-wa-msg"><span></span><i class="is-green">✓</i></div>
+              <div class="bento-wa-msg bento-wa-msg--alt"><span></span><i class="is-orange">✓</i></div>
+            </div>
+            <div>
+              <div class="feature-top">
+                <div class="feature-icon feature-icon--glow-green">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                  </svg>
+                </div>
+                <h3>Meta WhatsApp API</h3>
+              </div>
+              <p class="feature-desc" style="margin-top: 14px;">
+                Official Meta WhatsApp Business API for automated broadcasts, no-code chatbots, catalog sharing, and multi-agent live chat.
+              </p>
+            </div>
+            <div class="feature-tags">
+              <span>Green Tick Support</span>
+              <span>AI Chatbots</span>
+              <span>Broadcasts</span>
+            </div>
+          </a>
+
+          <!-- Product 4: Cloud IVR (Right Top) -->
+          <a href="./products.html?channel=ivr" class="feature-card feature-card--dark feature-card--ivr">
+            <div class="bento-ivr-radar" aria-hidden="true">
+              <span class="ivr-ring ivr-ring--1"></span>
+              <span class="ivr-ring ivr-ring--2"></span>
+              <span class="ivr-core">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M8 6v12M16 6v12M4 10v4M20 10v4"/></svg>
+              </span>
+            </div>
+            <div>
+              <div class="feature-top">
+                <div class="feature-icon feature-icon--glow-orange">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                </div>
+                <h3>Cloud IVR</h3>
+              </div>
+              <p class="feature-desc" style="margin-top: 14px;">
+                Professional multi-level welcome greetings, smart agent call routing, missed-call alerts, and cloud call recordings.
+              </p>
+            </div>
+            <div class="feature-tags">
+              <span>Multi-Level Menu</span>
+              <span>Call Recording</span>
+              <span>Toll-Free / Virtual</span>
+            </div>
+          </a>
+
+          <!-- Product 5: OBD Outbound Dialer (Right Bottom) -->
+          <a href="./products.html?channel=obd" class="feature-card feature-card--light feature-card--obd">
+            <div class="bento-obd-wave" aria-hidden="true">
+              <span style="height: 22%"></span>
+              <span style="height: 55%"></span>
+              <span style="height: 85%"></span>
+              <span style="height: 45%"></span>
+              <span style="height: 95%"></span>
+              <span style="height: 60%"></span>
+              <span style="height: 30%"></span>
+            </div>
+            <div>
+              <div class="feature-top">
+                <div class="feature-icon feature-icon--orange">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                  </svg>
+                </div>
+                <h3>OBD Voice Blast</h3>
+              </div>
+              <p class="feature-desc" style="margin-top: 14px;">
+                Broadcast pre-recorded regional voice messages with interactive DTMF keypress lead capture and instant retry scheduling.
+              </p>
+            </div>
+            <div class="feature-tags feature-tags--light">
+              <span>10,000+ Calls</span>
+              <span>DTMF Capture</span>
+              <span>Regional Voice</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="features-cta-row">
+          <a href="#contact" class="btn-primary-orange">
+            <span>Send Campaign</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section (Connect India Scattered Deck Style) -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-header-center">
+          <div class="section-tag">Rating &amp; Reviews</div>
+          <h2 class="section-title">Trusted by people.</h2>
+        </div>
+
+        <div class="reviews-deck" id="reviewsDeck">
+          <!-- Card 1: Deep Navy -->
+          <article class="review-deck-card review-deck-card--navy" data-pos="1" tabindex="0">
+            <div class="review-stars review-stars--orange" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-deck-quote">
+              Transitioning our payment OTP &amp; transaction alerts reduced latency to under 2 seconds across all Indian telecom circles. 99.98% delivery rate without drop-offs.
+            </p>
+            <div class="review-deck-divider"></div>
+            <div class="review-deck-author">PaySprint FinTech</div>
+          </article>
+
+          <!-- Card 2: Vibrant Orange -->
+          <article class="review-deck-card review-deck-card--orange" data-pos="2" tabindex="0">
+            <div class="review-stars review-stars--white" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-deck-quote">
+              Automated WhatsApp &amp; RCS site-visit reminders increased property viewing turnouts by 3.5X for our premium Mumbai &amp; Pune developments.
+            </p>
+            <div class="review-deck-divider"></div>
+            <div class="review-deck-author">Aura Realty Group</div>
+          </article>
+
+          <!-- Card 3: Pure White -->
+          <article class="review-deck-card review-deck-card--white" data-pos="3" tabindex="0">
+            <div class="review-stars review-stars--orange" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-deck-quote">
+              Recovered over ₹1.2 Cr in abandoned carts during the Diwali festive sale using automated WhatsApp interactive catalogues and RCS rich cards.
+            </p>
+            <div class="review-deck-divider"></div>
+            <div class="review-deck-author">UrbanTrend E-Commerce</div>
+          </article>
+
+          <!-- Card 4: Ice Blue -->
+          <article class="review-deck-card review-deck-card--ice" data-pos="4" tabindex="0">
+            <div class="review-stars review-stars--orange" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-deck-quote">
+              Instant KYC verification OTPs and automated voice broadcast integrations cut down our digital loan approval turnaround by 60%.
+            </p>
+            <div class="review-deck-divider"></div>
+            <div class="review-deck-author">BharatCredit Finserv</div>
+          </article>
+
+          <!-- Card 5: Zion Soft Peach -->
+          <article class="review-deck-card review-deck-card--peach" data-pos="5" tabindex="0">
+            <div class="review-stars review-stars--orange" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-deck-quote">
+              Zero bounce rates on real-time SMS broadcasts for luxury project launches. The direct operator routing gives us full transparency.
+            </p>
+            <div class="review-deck-divider"></div>
+            <div class="review-deck-author">DLX Infra Properties</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section (Split-Stage Interactive Q&A Console) -->
+    <section class="faq-section" id="faqs">
+      <div class="container">
+        <div class="faq-card-wrapper">
+          <div class="hero-grid-pattern" aria-hidden="true"></div>
+          <div class="faq-split-grid">
+            <div class="faq-left-col">
+              <div class="section-tag">FAQ</div>
+              <h2 class="section-title faq-left-title">
+                Questions? <span class="title-accent">We&#39;ve got you.</span>
+              </h2>
+              <p class="section-subtitle faq-left-sub">
+                Everything you need to know about Immense Air&#39;s messaging &amp; voice solutions.
+              </p>
+
+              <div class="faq-support-card">
+                <div class="faq-support-pill">
+                  <span class="bento-secure-dot" aria-hidden="true"></span>
+                  <span>24/7 DLT &amp; API Onboarding</span>
+                </div>
+                <h3>Still have custom campaign questions?</h3>
+                <p>Talk directly with our messaging specialists for DLT setup, WhatsApp Green Tick, or custom volume pricing.</p>
+                <a href="#contact" class="btn-primary-orange">
+                  <span>Talk to Expert</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="faq-list">
+              <div class="faq-item is-open">
+                <button class="faq-trigger" aria-expanded="true">
+                  <span class="faq-q-left">
+                    <span class="faq-num">01</span>
+                    <span class="faq-q-text">
+                      <span class="faq-q-cat">Platform</span>
+                      <span class="faq-q-title">What services does Immense Air offer?</span>
+                    </span>
+                  </span>
+                  <span class="faq-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="12" y1="5" x2="12" y2="19" />
+                      <polyline points="19 12 12 19 5 12" />
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-panel" style="max-height: 220px;">
+                  <div class="faq-answer">
+                    Immense Air provides an all-in-one communication suite including Bulk SMS (Transactional, OTP &amp; Promotional), RCS Messaging, Official Meta WhatsApp Business API, Cloud IVR, and OBD (Outbound Dialer) voice campaigns.
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-trigger" aria-expanded="false">
+                  <span class="faq-q-left">
+                    <span class="faq-num">02</span>
+                    <span class="faq-q-text">
+                      <span class="faq-q-cat">Compliance</span>
+                      <span class="faq-q-title">Do you help with DLT registration and Meta WhatsApp verification?</span>
+                    </span>
+                  </span>
+                  <span class="faq-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="12" y1="5" x2="12" y2="19" />
+                      <polyline points="19 12 12 19 5 12" />
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-panel">
+                  <div class="faq-answer">
+                    Yes! Our onboarding team handles end-to-end DLT entity/header/template approvals for Bulk SMS as well as Meta Business Manager and WhatsApp API verification.
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-trigger" aria-expanded="false">
+                  <span class="faq-q-left">
+                    <span class="faq-num">03</span>
+                    <span class="faq-q-text">
+                      <span class="faq-q-cat">RCS Rich Media</span>
+                      <span class="faq-q-title">How is RCS Messaging different from standard Bulk SMS?</span>
+                    </span>
+                  </span>
+                  <span class="faq-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="12" y1="5" x2="12" y2="19" />
+                      <polyline points="19 12 12 19 5 12" />
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-panel">
+                  <div class="faq-answer">
+                    RCS delivers verified brand logos, rich images, interactive carousels, and tap-to-act buttons directly inside native Android Messages — with automatic SMS fallback if a device is offline.
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-trigger" aria-expanded="false">
+                  <span class="faq-q-left">
+                    <span class="faq-num">04</span>
+                    <span class="faq-q-text">
+                      <span class="faq-q-cat">Voice &amp; IVR</span>
+                      <span class="faq-q-title">How do Cloud IVR and OBD voice campaigns work?</span>
+                    </span>
+                  </span>
+                  <span class="faq-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="12" y1="5" x2="12" y2="19" />
+                      <polyline points="19 12 12 19 5 12" />
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-panel">
+                  <div class="faq-answer">
+                    Cloud IVR routes incoming customer calls through customizable keypad menus to your team, while OBD automatically dials thousands of numbers to play pre-recorded voice messages and capture DTMF responses.
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-trigger" aria-expanded="false">
+                  <span class="faq-q-left">
+                    <span class="faq-num">05</span>
+                    <span class="faq-q-text">
+                      <span class="faq-q-cat">Developer API</span>
+                      <span class="faq-q-title">Can we integrate Immense Air with our CRM or website via API?</span>
+                    </span>
+                  </span>
+                  <span class="faq-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="12" y1="5" x2="12" y2="19" />
+                      <polyline points="19 12 12 19 5 12" />
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-panel">
+                  <div class="faq-answer">
+                    Yes. We provide developer-friendly REST APIs, webhooks, and SMPP connectivity so you can trigger OTPs, WhatsApp alerts, RCS messages, or OBD calls directly from your CRM or backend.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Band -->
+    <div class="bottom-band" id="contact">
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand-col">
+              <a href="#top" class="footer-brand-link" aria-label="Immense Air Home">
+                <img src="./assets/immense-air-logo.jpg" alt="Immense Air" class="footer-logo-img" />
+              </a>
+              <p class="footer-brand-desc">
+                Enterprise CPaaS &amp; omnichannel messaging platform built for high-deliverability Indian &amp; global campaigns.
+              </p>
+              <a href="./contact.html" class="footer-contact-pill">
+                <span>support@immenseair.in</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </a>
+            </div>
+
+            <div class="footer-col">
+              <h4 class="footer-col-title">Products</h4>
+              <ul class="footer-col-list">
+                <li><a href="./products.html?channel=sms" class="footer-link">Bulk SMS</a></li>
+                <li><a href="./products.html?channel=rcs" class="footer-link">RCS Messaging</a></li>
+                <li><a href="./products.html?channel=whatsapp" class="footer-link">Meta WhatsApp API</a></li>
+                <li><a href="./products.html?channel=obd" class="footer-link">OBD Voice Blast</a></li>
+                <li><a href="./products.html?channel=ivr" class="footer-link">Cloud IVR</a></li>
+                <li><a href="./products.html?channel=smpp" class="footer-link">SMPP Gateway</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4 class="footer-col-title">Platform</h4>
+              <ul class="footer-col-list">
+                <li><a href="#top" class="footer-link">Home</a></li>
+                <li><a href="./products.html" class="footer-link">All Products</a></li>
+                <li><a href="#industries" class="footer-link">Industries</a></li>
+                <li><a href="#how-it-works" class="footer-link">How it works</a></li>
+                <li><a href="#faqs" class="footer-link">FAQs</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4 class="footer-col-title">Legal &amp; Support</h4>
+              <ul class="footer-col-list">
+                <li><a href="./contact.html" class="footer-link">Contact Us</a></li>
+                <li><a href="./terms.html" class="footer-link">Terms &amp; Conditions</a></li>
+                <li><a href="./privacy.html" class="footer-link">Privacy Policy</a></li>
+                <li><a href="./contact.html" class="footer-link">Book a Demo</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-bottom-bar">
+            <div class="footer-copy">
+              &copy; 2026 Immense Air. All rights reserved.
+            </div>
+            <div class="footer-bottom-links">
+              <a href="./terms.html">Terms &amp; Conditions</a>
+              <span>&middot;</span>
+              <a href="./privacy.html">Privacy Policy</a>
+              <span>&middot;</span>
+              <a href="./contact.html">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
