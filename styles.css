@@ -6364,3 +6364,74 @@ img {
     grid-template-columns: 1fr;
   }
 }
+
+/* WhatsApp Meta Center Logo Hub (replaces tower in #wa-features) */
+.sms-tower-stage--meta {
+  min-height: 290px;
+}
+
+.sms-tower-stage--meta .sms-tower-glow {
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(0, 129, 251, 0.34) 0%, rgba(0, 194, 255, 0.14) 48%, transparent 72%);
+}
+
+.sms-tower-stage--meta .sms-tower-ring {
+  top: 50%;
+  margin-top: -70px;
+  border-color: rgba(56, 189, 248, 0.38);
+}
+
+.wa-meta-hub {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.wa-meta-orb {
+  width: 204px;
+  height: 204px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.14) 0%, rgba(15, 34, 72, 0.88) 65%, rgba(8, 21, 48, 0.96) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.32);
+  box-shadow:
+    0 24px 56px rgba(0, 0, 0, 0.45),
+    0 0 42px rgba(0, 129, 251, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.22);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.wa-meta-svg {
+  width: 112px;
+  height: 74px;
+  filter: drop-shadow(0 6px 18px rgba(0, 129, 251, 0.45));
+}
+
+.wa-meta-wordmark {
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.wa-meta-pill {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(0, 129, 251, 0.16);
+  border: 1px solid rgba(56, 189, 248, 0.36);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #bae6fd;
+}
