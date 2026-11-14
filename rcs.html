@@ -117,17 +117,30 @@
                     </div>
                   </div>
 
-                  <!-- Quick Switcher Tabs inside Phone: Rich Card | Carousel | Chatbot -->
-                  <div class="rcs-mode-tabs" role="tablist" aria-label="RCS Preview Formats">
-                    <button type="button" class="rcs-mode-tab is-active" data-rcs-tab="rich" role="tab" aria-selected="true">Rich Card</button>
+                  <!-- Quick Switcher Tabs inside Phone: Plain Text | Rich Card | Carousel | Chatbot -->
+                  <div class="rcs-mode-tabs rcs-mode-tabs--4" role="tablist" aria-label="RCS Preview Formats">
+                    <button type="button" class="rcs-mode-tab is-active" data-rcs-tab="text" role="tab" aria-selected="true">Plain Text</button>
+                    <button type="button" class="rcs-mode-tab" data-rcs-tab="rich" role="tab" aria-selected="false">Rich Card</button>
                     <button type="button" class="rcs-mode-tab" data-rcs-tab="carousel" role="tab" aria-selected="false">Carousel</button>
                     <button type="button" class="rcs-mode-tab" data-rcs-tab="bot" role="tab" aria-selected="false">Chatbot</button>
                   </div>
 
                   <!-- RCS Interactive Slides -->
                   <div class="rcs-stage-wrap" id="rcsStageWrap" aria-live="polite">
+                    <!-- Slide 0: Plain Text RCS -->
+                    <div class="rcs-slide is-active" data-rcs="text">
+                      <div class="rcs-text-bubble">
+                        <div class="rcs-text-meta">Verified Text RCS · Read ✓✓</div>
+                        <p>Hi <strong>Rahul</strong>, your Immense Air Festive Sale is LIVE! Get flat <strong>25% OFF</strong> on all annual messaging plans today. Reply <strong>OFFER</strong> or tap below.</p>
+                      </div>
+                      <div class="rcs-chip-row rcs-chip-row--wrap">
+                        <span class="rcs-chip rcs-chip--accent">Claim 25% OFF</span>
+                        <span class="rcs-chip">Call Sales</span>
+                      </div>
+                    </div>
+
                     <!-- Slide 1: Rich Card -->
-                    <div class="rcs-slide is-active" data-rcs="rich">
+                    <div class="rcs-slide" data-rcs="rich">
                       <div class="rcs-rich-card">
                         <img src="./assets/rcs-winter-banner.jpg" alt="Winter Sale RCS Banner" class="rcs-rich-img" />
                         <div class="rcs-rich-body">
@@ -175,18 +188,22 @@
                       </div>
                     </div>
 
-                    <!-- Slide 3: 2-Way RCS Chatbot (WhatsApp-style Automated Flow) -->
+                    <!-- Slide 3: 2-Way RCS Chatbot (User <-> Bot Communication) -->
                     <div class="rcs-slide" data-rcs="bot">
                       <div class="rcs-chat-thread">
                         <div class="rcs-user-msg">Hi, track my order #IA-84920</div>
                         <div class="rcs-bot-bubble">
-                          <strong>Immense Air AI Bot · Instant Reply</strong>
-                          <p>Order <strong>#IA-84920</strong> is Out for Delivery! Arriving today by <strong>4:30 PM</strong>. What would you like to do?</p>
+                          <strong>Immense Air Bot · Instant Reply</strong>
+                          <p>Order <strong>#IA-84920</strong> is Out for Delivery! Arriving today by <strong>4:30 PM</strong>.</p>
+                        </div>
+                        <div class="rcs-user-msg">Can I reschedule to tomorrow?</div>
+                        <div class="rcs-bot-bubble">
+                          <strong>Slot Updated ✓</strong>
+                          <p>Done! Rescheduled for <strong>Tomorrow, 11 AM</strong>.</p>
                         </div>
                       </div>
                       <div class="rcs-chip-row rcs-chip-row--wrap">
                         <span class="rcs-chip rcs-chip--accent">📍 Live Track</span>
-                        <span class="rcs-chip">Reschedule</span>
                         <span class="rcs-chip">Talk to Agent</span>
                       </div>
                     </div>
@@ -384,6 +401,107 @@
               </div>
             </div>
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dedicated RCS Chatbot Section (User <-> Chatbot Interactive Flow + Corner Bot Badge) -->
+    <section class="rcs-bot-section" id="rcs-chatbot">
+      <div class="container">
+        <div class="rcs-bot-grid">
+          <div class="rcs-bot-visual">
+            <div class="rcs-bot-phone-wrap">
+              <!-- Floating Chatbot Mascot Image at Phone Corner -->
+              <div class="rcs-bot-corner-badge" aria-hidden="true">
+                <img src="./assets/rcs-chatbot-icon.png" alt="Immense Air RCS AI Chatbot" />
+                <span>AI Bot 24×7</span>
+              </div>
+
+              <div class="phone-mockup phone-mockup--sms-notif">
+                <div class="phone-screen phone-screen--rcs">
+                  <div class="phone-notch" aria-hidden="true"></div>
+                  <div class="phone-statusbar">
+                    <span>9:41</span>
+                    <span class="statusbar-icons">5G · RCS Bot</span>
+                  </div>
+
+                  <div class="rcs-phone-hdr">
+                    <div class="rcs-phone-brand">
+                      <img src="./assets/rcs-chatbot-icon.png" alt="RCS Chatbot" class="rcs-phone-avatar" />
+                      <div>
+                        <div class="rcs-phone-name">
+                          <span>Immense Air Bot</span>
+                          <svg viewBox="0 0 20 20" fill="currentColor" class="rcs-verified-tick" aria-label="Verified">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                          </svg>
+                        </div>
+                        <span class="rcs-phone-sub">Automated Assistant · Online</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="rcs-bot-thread" id="rcsBotThread" aria-live="polite">
+                    <div class="rcs-user-msg">Hi! I want to check Bulk RCS pricing &amp; book a demo.</div>
+                    <div class="rcs-bot-bubble">
+                      <strong>Immense Air Bot · Just now</strong>
+                      <p>Namaste! 👋 I can help you right away. Tap an option below to see how our RCS Chatbot responds:</p>
+                    </div>
+                    <div class="rcs-user-msg" id="rcsBotUserReply">Show RCS Pricing</div>
+                    <div class="rcs-bot-bubble" id="rcsBotAnswer">
+                      <strong>Instant Quote · Verified RCS</strong>
+                      <p>Plans start with <strong>free brand verification</strong> &amp; custom volume slabs. Want our team to send a proposal on your email?</p>
+                    </div>
+                  </div>
+
+                  <div class="rcs-chip-row rcs-chip-row--wrap" id="rcsBotActions">
+                    <button type="button" class="rcs-chip rcs-chip--btn is-selected" data-bot-q="Show RCS Pricing" data-bot-a="Plans start with <strong>free brand verification</strong> &amp; custom volume slabs. Want our team to send a proposal on your email?">💰 Pricing</button>
+                    <button type="button" class="rcs-chip rcs-chip--btn" data-bot-q="Track Order #IA-84920" data-bot-a="Order <strong>#IA-84920</strong> is Out for Delivery and arriving today by <strong>4:30 PM</strong>. Live link sent!">📦 Track Order</button>
+                    <button type="button" class="rcs-chip rcs-chip--btn" data-bot-q="Book a 15-min Demo" data-bot-a="Slot reserved! 📅 Pick <strong>11:30 AM</strong> or <strong>4:00 PM</strong> tomorrow and our RCS specialist will call you.">📅 Book Demo</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rcs-bot-content">
+            <div class="section-tag">WhatsApp-Style RCS Chatbot</div>
+            <h2 class="section-title">Automate 2-way customer chats inside native Messages.</h2>
+            <p class="section-subtitle">
+              Just like a WhatsApp Business bot, Immense Air RCS Chatbots reply instantly 24×7 — qualifying leads, confirming orders, and handing off complex queries to live agents without any extra app.
+            </p>
+
+            <div class="rcs-bot-features">
+              <div class="rcs-bot-feat-item">
+                <span class="rcs-bot-feat-dot">01</span>
+                <div>
+                  <h3>24×7 Instant Auto-Replies</h3>
+                  <p>Answer FAQs, share catalogs, and capture leads automatically with zero wait time.</p>
+                </div>
+              </div>
+              <div class="rcs-bot-feat-item">
+                <span class="rcs-bot-feat-dot">02</span>
+                <div>
+                  <h3>One-Tap Quick Reply Flows</h3>
+                  <p>Guide users with interactive buttons for COD confirmation, slot booking, and feedback.</p>
+                </div>
+              </div>
+              <div class="rcs-bot-feat-item">
+                <span class="rcs-bot-feat-dot">03</span>
+                <div>
+                  <h3>CRM &amp; Live Agent Handoff</h3>
+                  <p>Sync replies directly to your CRM via webhooks and route VIP chats to human agents.</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="./contact.html" class="btn-primary-orange">
+              <span>Build Your RCS Chatbot</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -697,6 +815,13 @@
 
       // 1. Synced RCS Hero Phone Slides & Left Caption
       const rcsCaptionData = {
+        text: {
+          badge: 'VERIFIED PLAIN TEXT RCS',
+          primary: 'Verified Brand Text',
+          accent: 'With Read Receipts.',
+          sub: 'Send clean text campaigns with your verified brand logo, blue checkmark, and instant tap-to-act chips inside Android Messages.',
+          stats: [['Blue Tick', 'Verified Sender'], ['Read ✓✓', 'Live Receipts'], ['100% Reach', 'Auto SMS Fallback']]
+        },
         rich: {
           badge: 'VERIFIED RCS RICH CARD',
           primary: 'Upgrade Plain SMS',
@@ -720,7 +845,7 @@
         }
       };
 
-      const rcsOrder = ['rich', 'carousel', 'bot'];
+      const rcsOrder = ['text', 'rich', 'carousel', 'bot'];
       let rcsIdx = 0;
       const rcsCaption = document.getElementById('rcsHeroCaption');
       const rcsBadgeText = document.getElementById('rcsHeroBadgeText');
@@ -768,6 +893,21 @@
         rcsIdx = (rcsIdx + 1) % rcsOrder.length;
         activateRcsSlide(rcsOrder[rcsIdx]);
       }, 3800);
+
+      // 1b. Interactive RCS Chatbot Demo Buttons
+      const botUserReply = document.getElementById('rcsBotUserReply');
+      const botAnswer = document.getElementById('rcsBotAnswer');
+      const botBtns = Array.from(document.querySelectorAll('[data-bot-q]'));
+      botBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          botBtns.forEach((b) => b.classList.remove('is-selected'));
+          btn.classList.add('is-selected');
+          if (botUserReply) botUserReply.textContent = btn.dataset.botQ;
+          if (botAnswer) {
+            botAnswer.innerHTML = `<strong>Immense Air Bot · Instant Reply</strong><p>${btn.dataset.botA}</p>`;
+          }
+        });
+      });
 
       // 2. FAQ Accordion
       document.querySelectorAll('.faq-trigger').forEach((btn) => {

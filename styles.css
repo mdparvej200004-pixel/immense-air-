@@ -5884,6 +5884,38 @@ img {
   margin-bottom: 8px;
 }
 
+.rcs-mode-tabs--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.rcs-mode-tabs--4 .rcs-mode-tab {
+  font-size: 9px;
+  padding: 5px 3px;
+}
+
+.rcs-text-bubble {
+  background: #ffffff;
+  border: 1px solid rgba(11, 37, 89, 0.1);
+  border-radius: 14px 14px 14px 4px;
+  padding: 13px;
+  margin-bottom: 12px;
+  box-shadow: 0 8px 20px rgba(11, 37, 89, 0.06);
+}
+
+.rcs-text-meta {
+  font-size: 9.5px;
+  font-weight: 800;
+  color: #2563eb;
+  margin-bottom: 6px;
+}
+
+.rcs-text-bubble p {
+  margin: 0;
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: var(--primary);
+}
+
 .rcs-mode-tab {
   border: 0;
   background: transparent;
@@ -6120,6 +6152,137 @@ img {
 .rcs-read-receipt {
   font-weight: 700;
   color: #2563eb;
+}
+
+/* Dedicated RCS Chatbot Section */
+.rcs-bot-section {
+  padding: 92px 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f5f8fd 100%);
+  contain: layout style;
+}
+
+.rcs-bot-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.rcs-bot-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.rcs-bot-phone-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.rcs-bot-corner-badge {
+  position: absolute;
+  top: -18px;
+  right: -28px;
+  z-index: 6;
+  background: #ffffff;
+  border: 1.5px solid rgba(11, 37, 89, 0.12);
+  border-radius: 20px;
+  padding: 8px 12px 8px 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 16px 32px rgba(11, 37, 89, 0.16);
+}
+
+.rcs-bot-corner-badge img {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.rcs-bot-corner-badge span {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--primary);
+  white-space: nowrap;
+}
+
+.rcs-bot-thread {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.rcs-chip--btn {
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.rcs-chip--btn.is-selected,
+.rcs-chip--btn:hover {
+  background: var(--accent-orange);
+  border-color: var(--accent-orange);
+  color: #ffffff;
+}
+
+.rcs-bot-features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 26px 0 30px;
+}
+
+.rcs-bot-feat-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: #ffffff;
+  border: 1px solid rgba(11, 37, 89, 0.08);
+  border-radius: 16px;
+  padding: 16px 18px;
+}
+
+.rcs-bot-feat-dot {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--accent-orange-tint);
+  color: var(--accent-orange);
+  font-size: 12px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.rcs-bot-feat-item h3 {
+  margin: 0 0 3px;
+  font-size: 15.5px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.rcs-bot-feat-item p {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .rcs-bot-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .rcs-bot-corner-badge {
+    right: -10px;
+  }
 }
 
 @media (max-width: 809px) {
