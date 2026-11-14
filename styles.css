@@ -6443,3 +6443,16 @@ img {
   text-transform: uppercase;
   color: #bae6fd;
 }
+
+.wa-btn-icon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  vertical-align: -2px;
+  margin-right: 4px;
+  display: inline-block;
+}
+
+.rcs-chip--btn.is-selected .wa-btn-icon {
+  filter: brightness(0) invert(1);
+}
