@@ -5569,6 +5569,220 @@ img {
   }
 }
 
+/* Direct Operator Tower Infrastructure Section */
+.sms-tower-section {
+  position: relative;
+  padding: 96px 0 84px;
+  background: radial-gradient(circle at 50% 42%, #0c1830 0%, #030711 65%, #010308 100%);
+  color: #ffffff;
+  overflow: hidden;
+  contain: layout style;
+}
+
+.sms-tower-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 40px;
+}
+
+.sms-tower-tag {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ff8c42;
+  background: rgba(255, 90, 0, 0.14);
+  border: 1px solid rgba(255, 90, 0, 0.28);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.sms-tower-title {
+  font-size: clamp(28px, 3.6vw, 42px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin: 0 0 12px;
+  color: #ffffff;
+}
+
+.sms-tower-title span {
+  color: #ff7324;
+}
+
+.sms-tower-subtitle {
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: rgba(226, 232, 240, 0.68);
+}
+
+.sms-tower-layout {
+  display: grid;
+  grid-template-columns: 1fr minmax(260px, 360px) 1fr;
+  align-items: center;
+  gap: 28px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.sms-tower-col {
+  display: flex;
+  flex-direction: column;
+  gap: 110px;
+}
+
+.sms-tower-col--left {
+  align-items: flex-end;
+}
+
+.sms-tower-col--right {
+  align-items: flex-start;
+}
+
+.sms-tower-node {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 260px;
+}
+
+.sms-tower-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.sms-tower-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.sms-tower-icon--cyan {
+  color: #38bdf8;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.22) 0%, rgba(56, 189, 248, 0.05) 100%);
+  box-shadow: 0 0 26px rgba(56, 189, 248, 0.22);
+}
+
+.sms-tower-icon--green {
+  color: #4ade80;
+  background: radial-gradient(circle, rgba(74, 222, 128, 0.22) 0%, rgba(74, 222, 128, 0.05) 100%);
+  box-shadow: 0 0 26px rgba(74, 222, 128, 0.22);
+}
+
+.sms-tower-icon--orange {
+  color: #fb923c;
+  background: radial-gradient(circle, rgba(251, 146, 60, 0.22) 0%, rgba(251, 146, 60, 0.05) 100%);
+  box-shadow: 0 0 26px rgba(251, 146, 60, 0.22);
+}
+
+.sms-tower-icon--blue {
+  color: #60a5fa;
+  background: radial-gradient(circle, rgba(96, 165, 250, 0.22) 0%, rgba(96, 165, 250, 0.05) 100%);
+  box-shadow: 0 0 26px rgba(96, 165, 250, 0.22);
+}
+
+.sms-tower-copy h3 {
+  margin: 0 0 4px;
+  font-size: 16.5px;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #ffffff;
+}
+
+.sms-tower-copy p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: rgba(203, 213, 225, 0.72);
+}
+
+.sms-tower-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+}
+
+.sms-tower-glow {
+  position: absolute;
+  top: 6%;
+  left: 50%;
+  width: 220px;
+  height: 220px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 90, 0, 0.16) 0%, rgba(56, 189, 248, 0.08) 45%, transparent 72%);
+  pointer-events: none;
+}
+
+.sms-tower-ring {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  width: 140px;
+  height: 140px;
+  margin-left: -70px;
+  border-radius: 50%;
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  pointer-events: none;
+  will-change: transform, opacity;
+  animation: towerPulse 3.6s ease-out infinite;
+}
+
+.sms-tower-ring--2 {
+  animation-delay: 1.8s;
+}
+
+@keyframes towerPulse {
+  0% { transform: scale(0.45); opacity: 0.7; }
+  100% { transform: scale(2.1); opacity: 0; }
+}
+
+.sms-tower-img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 310px;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .sms-tower-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .sms-tower-stage {
+    order: -1;
+  }
+
+  .sms-tower-img {
+    max-width: 240px;
+  }
+
+  .sms-tower-col {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px 36px;
+  }
+
+  .sms-tower-col--left,
+  .sms-tower-col--right {
+    align-items: flex-start;
+  }
+}
+
 @media (max-width: 809px) {
   .legal-card {
     padding: 28px 20px;
